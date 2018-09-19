@@ -1,0 +1,8 @@
+1.1.0
+--------
+* fixed bug in date time where xsd:Datetimes where bound to DatatypeConverter.printDate
+  causing the dateTime to lose the time precision  
+ 
+1.0.0
+---------
++ Initial version

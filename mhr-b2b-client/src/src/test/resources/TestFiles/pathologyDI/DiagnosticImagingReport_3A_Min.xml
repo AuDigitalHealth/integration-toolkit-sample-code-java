@@ -1,0 +1,477 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="NEHTA_Generic_CDA_Stylesheet.xsl" type="text/xsl"?>
+<!--Generated using 'NEHTA Vendor Library - CDA' version 4.0.1.0-->
+<!--The following template Packages are supported for Diagnostic Imaging Report: 1.2.36.1.2001.1006.1.222 .1(3A) .3(3B) .2(3A) .4(3B)-->
+<ClinicalDocument xmlns:ext="http://ns.electronichealth.net.au/Ci/Cda/Extensions/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="1.2.36.1.2001.1001.100.1002.222" extension="1.0" />
+  <templateId root="1.2.36.1.2001.1001.100.149" extension="1.0" />
+  <id root="2.25.295174597257725062237681213458804433792" />
+  <code code="100.16957" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Diagnostic Imaging Report" />
+  <title>Diagnostic Imaging Report</title>
+  <effectiveTime value="20141001113702+1000" />
+  <confidentialityCode nullFlavor="NA" />
+  <languageCode code="en-AU" />
+  <setId root="0ef959db-72ea-44d5-add9-14a4814c57f4" />
+  <versionNumber value="1" />
+  <ext:completionCode code="F" codeSystem="1.2.36.1.2001.1001.101.104.20104" codeSystemName="NCTIS Document Status Values" displayName="Final" />
+  <recordTarget typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id root="8ac05c18-8aa8-4b4d-89ff-5bf00be7353e" />
+      <addr nullFlavor="NA" />
+      <addr nullFlavor="NA" />
+      <patient>
+        <name>
+          <family>Harding</family>
+        </name>
+        <name>
+          <family>Harding</family>
+        </name>
+        <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.13.68" codeSystemName="AS 5017-2006 Health Care Client Identifier Sex" displayName="Male" />
+        <birthTime value="19571001113702+1000" />
+        <ethnicGroupCode code="4" codeSystem="2.16.840.1.113883.3.879.291036" codeSystemName="METeOR Indigenous Status" displayName="Neither Aboriginal nor Torres Strait Islander origin" />
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003608666701594" assigningAuthorityName="IHI" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4" extension="123456" assigningAuthorityName="Croydon GP Centre" />
+          <ext:code code="MR" codeSystem="2.16.840.1.113883.12.203" codeSystemName="Identifier Type (HL7)" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.5001.1.0.7" extension="59501704511" assigningAuthorityName="Individual Medicare Card Number" />
+          <ext:code code="MC" codeSystem="2.16.840.1.113883.12.203" codeSystemName="Identifier Type (HL7)" />
+        </ext:asEntityIdentifier>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT">
+    <time value="20141001113702+1000" />
+    <assignedAuthor>
+      <id root="f3b4cc01-1e74-4237-8a0d-2999a661ed0d" />
+      <code code="234611" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1" displayName="Medical Laboratory Scientist" />
+      <assignedPerson>
+        <name>
+          <family>Doctor</family>
+        </name>
+        <name>
+          <family>Doctor</family>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003615833334118" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEmployment classCode="EMP">
+          <ext:employerOrganization>
+            <id root="78bceed1-d011-4893-94e7-33f36cb80664" />
+            <asOrganizationPartOf>
+              <wholeOrganization>
+                <name>Queensland Diagnostic Services</name>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.36.1.2001.1003.0.8003620833333789" assigningAuthorityName="HPI-O" />
+                  <ext:assigningGeographicArea classCode="PLC">
+                    <ext:name>National Identifier</ext:name>
+                  </ext:assigningGeographicArea>
+                </ext:asEntityIdentifier>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </ext:employerOrganization>
+        </ext:asEmployment>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="dd9208b0-55cb-4172-adcf-a1e5c8150ef1" />
+        <name>Queensland Diagnostic Services</name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1007.1.8003640001000036" assigningAuthorityName="PAI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="201410011137+1000" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="c63e01e6-2080-4d3a-9a19-58512837b5be" />
+      <assignedPerson>
+        <name use="L">
+          <family>Doctor</family>
+          <given>Good</given>
+          <prefix>Doctor</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003615833334118" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </assignedPerson>
+    </assignedEntity>
+  </legalAuthenticator>
+  <participant typeCode="REF">
+    <time value="20141001113702+1000" />
+    <associatedEntity classCode="ASSIGNED">
+      <id root="b95100fa-fbb5-41e2-9f24-b01ed70ea1b4" />
+      <code code="234611" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1" displayName="Medical Laboratory Scientist" />
+      <associatedPerson>
+        <name>
+          <family>Requester</family>
+        </name>
+        <ext:asEmployment classCode="EMP">
+          <ext:employerOrganization>
+            <id root="7d60118d-863f-4323-9de1-d2ca601a1a1b" />
+            <asOrganizationPartOf>
+              <wholeOrganization>
+                <name>Bay Bill Hospital</name>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </ext:employerOrganization>
+        </ext:asEmployment>
+      </associatedPerson>
+    </associatedEntity>
+  </participant>
+  <inFulfillmentOf>
+    <order>
+      <id root="1.2.36.1.2001.1005.53.8003620833333789" extension="10523475" />
+    </order>
+  </inFulfillmentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <id root="f1153cb0-bd03-4ad6-9a9d-10c5c9efe550" />
+          <code code="101.16945" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DIAGNOSTIC IMAGING" />
+          <title>Diagnostic Imaging</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Related Document</caption>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Document</td>
+                  <td>
+                    <content>
+                      <linkHtml href="attachment.pdf" ID="b133e86a-1d6a-47c5-983a-f70cea680dde">Attachment PDF</linkHtml>
+                    </content>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Report Description</td>
+                  <td>Report Description</td>
+                </tr>
+                <tr>
+                  <td>Report Date</td>
+                  <td>1 Oct 2014 11:37+1000</td>
+                </tr>
+                <tr>
+                  <td>Report Status</td>
+                  <td>Final results; results stored and verified. Can only be changed with a corrected result.</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Reporting Radiologist</caption>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Reporting Radiologist</td>
+                  <td>RADIOLOGIST</td>
+                </tr>
+                <tr>
+                  <td>Reporting Radiologist - Organisation Name</td>
+                  <td>Hay Bill Hospital</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <author typeCode="AUT">
+            <time xsi:type="IVL_TS" value="20141001113702+1000" />
+            <assignedAuthor>
+              <id root="4d6b3d3b-d1cc-40bc-847f-79667f97d21d" />
+              <code code="234611" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1" displayName="Medical Laboratory Scientist" />
+              <assignedPerson>
+                <name>
+                  <family>Radiologist</family>
+                </name>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.36.1.2001.1003.0.8003615833334118" assigningAuthorityName="HPI-I" />
+                  <ext:assigningGeographicArea classCode="PLC">
+                    <ext:name>National Identifier</ext:name>
+                  </ext:assigningGeographicArea>
+                </ext:asEntityIdentifier>
+                <ext:asEmployment classCode="EMP">
+                  <ext:code>
+                    <originalText>Radiologist</originalText>
+                  </ext:code>
+                  <ext:jobCode code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, Revision 1" displayName="General Medical Practitioner" />
+                  <ext:jobClassCode>
+                    <originalText>Casual</originalText>
+                  </ext:jobClassCode>
+                  <ext:employerOrganization>
+                    <id root="a49f72a7-e364-49d4-9b72-17a66525acdb" />
+                    <name>Some department service provider</name>
+                    <asOrganizationPartOf>
+                      <wholeOrganization>
+                        <name use="ORGX">Hay Bill Hospital</name>
+                        <ext:asEntityIdentifier classCode="IDENT">
+                          <ext:id root="1.2.36.1.2001.1003.0.8003620833333789" assigningAuthorityName="HPI-O" />
+                          <ext:assigningGeographicArea classCode="PLC">
+                            <ext:name>National Identifier</ext:name>
+                          </ext:assigningGeographicArea>
+                        </ext:asEntityIdentifier>
+                        <ext:asEntityIdentifier classCode="IDENT">
+                          <ext:id root="1.2.3.4.5.66666" assigningAuthorityName="SampleReportingId" />
+                        </ext:asEntityIdentifier>
+                      </wholeOrganization>
+                    </asOrganizationPartOf>
+                  </ext:employerOrganization>
+                </ext:asEmployment>
+              </assignedPerson>
+            </assignedAuthor>
+          </author>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <id root="5f68472c-6a96-42fb-b1c4-504d86aa45b6" />
+              <code code="102.16971" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Related Document" />
+              <effectiveTime>
+                <low value="20141001113702+1000" />
+              </effectiveTime>
+              <entryRelationship typeCode="COMP">
+                <act classCode="ACT" moodCode="EVN">
+                  <code code="103.16966" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Document Title" />
+                  <text xsi:type="ST">Report Description</text>
+                </act>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="e1edcee6-72f9-4da5-b3d8-9f6e800cb4c3" />
+                  <code code="103.20104" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Document Status" />
+                  <value xsi:type="CD" code="F" codeSystem="2.16.840.1.113883.12.123" codeSystemName="HL7 Result Status" displayName="Final results; results stored and verified. Can only be changed with a corrected result." />
+                </observation>
+              </entryRelationship>
+              <reference typeCode="XCRPT">
+                <seperatableInd value="true" />
+                <externalDocument>
+                  <code code="18748-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Diagnostic imaging study">
+                    <originalText>Diagnostic imaging study</originalText>
+                  </code>
+                  <text mediaType="application/pdf" integrityCheck="NPdy0GkAHgvThLC95bUSXThuw9M=">
+                    <reference value="attachment.pdf" />
+                  </text>
+                </externalDocument>
+              </reference>
+            </act>
+          </entry>
+          <component>
+            <section>
+              <id root="885adcd2-671f-4c6e-bb8e-b429f11e1d3e" />
+              <code code="102.16145" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result" />
+              <title>Imaging Examination Result</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Imaging Examination Result</caption>
+                  <thead>
+                    <tr>
+                      <th>Field</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Examination Result Name (Imaging Examination Result Name)</td>
+                      <td>chest x-ray</td>
+                    </tr>
+                    <tr>
+                      <td>Overall Result Status</td>
+                      <td>Final results; results stored and verified. Can only be changed with a corrected result.</td>
+                    </tr>
+                    <tr>
+                      <td>Modality (Imaging Modality)</td>
+                      <td>x-ray</td>
+                    </tr>
+                    <tr>
+                      <td>Image Date Time</td>
+                      <td>1 Oct 2014 11:37+1000</td>
+                    </tr>
+                    <tr>
+                      <td>Examination Procedure</td>
+                      <td>The examination was carried out using the particular procedure.</td>
+                    </tr>
+                    <tr>
+                      <td>Observation Date Time</td>
+                      <td>1 Oct 2014 11:37+1000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="e3ac6d46-b07f-4ed1-9af9-07c1c119c3aa" />
+                  <code code="399208008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="chest x-ray" />
+                  <methodCode code="363680008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="x-ray" />
+                  <entryRelationship typeCode="REFR">
+                    <act classCode="ACT" moodCode="EVN">
+                      <id root="5d080a5f-3c54-4304-bc10-b1f31ce0387d" />
+                      <code code="105.16633" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Procedure" />
+                      <text xsi:type="ST">The examination was carried out using the particular procedure.</text>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="308552006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" codeSystemVersion="20110531" displayName="report status" />
+                      <value xsi:type="CD" code="F" codeSystem="2.16.840.1.113883.12.123" codeSystemName="HL7 Result Status" displayName="Final results; results stored and verified. Can only be changed with a corrected result." />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <code code="102.16511" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Request Details" />
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="89bff9b2-07a9-46db-9716-465f245aa896" />
+                          <code code="102.16515" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Image Details" />
+                          <effectiveTime value="20141001113702+1000" />
+                        </observation>
+                      </entryRelationship>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="3dc4c384-cc6c-4495-9621-5b6a704eb894" />
+                      <code code="103.16589" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result DateTime" />
+                      <effectiveTime value="20141001113702+1000" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <id root="038b4dae-806e-4cf4-821a-ff77212484ff" />
+              <code code="102.16145" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result" />
+              <title>Imaging Examination Result</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Imaging Examination Result</caption>
+                  <thead>
+                    <tr>
+                      <th>Field</th>
+                      <th>Value</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Examination Result Name (Imaging Examination Result Name)</td>
+                      <td>chest x-ray</td>
+                    </tr>
+                    <tr>
+                      <td>Overall Result Status</td>
+                      <td>Final results; results stored and verified. Can only be changed with a corrected result.</td>
+                    </tr>
+                    <tr>
+                      <td>Modality (Imaging Modality)</td>
+                      <td>x-ray</td>
+                    </tr>
+                    <tr>
+                      <td>Image Date Time</td>
+                      <td>1 Oct 2014 11:37+1000</td>
+                    </tr>
+                    <tr>
+                      <td>Examination Procedure</td>
+                      <td>The examination was carried out using the particular procedure.</td>
+                    </tr>
+                    <tr>
+                      <td>Observation Date Time</td>
+                      <td>1 Oct 2014 11:37+1000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="8a3d4357-e692-4783-b9d1-52c9d2e1859e" />
+                  <code code="399208008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="chest x-ray" />
+                  <methodCode code="363680008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="x-ray" />
+                  <entryRelationship typeCode="REFR">
+                    <act classCode="ACT" moodCode="EVN">
+                      <id root="3ba2d035-1df2-4263-80a0-fb2ddd2a5bfa" />
+                      <code code="105.16633" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Procedure" />
+                      <text xsi:type="ST">The examination was carried out using the particular procedure.</text>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="308552006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" codeSystemVersion="20110531" displayName="report status" />
+                      <value xsi:type="CD" code="F" codeSystem="2.16.840.1.113883.12.123" codeSystemName="HL7 Result Status" displayName="Final results; results stored and verified. Can only be changed with a corrected result." />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <code code="102.16511" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Request Details" />
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="4589c212-fe5b-417a-b131-b0c1d81891da" />
+                          <code code="102.16515" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Image Details" />
+                          <effectiveTime value="20141001113702+1000" />
+                        </observation>
+                      </entryRelationship>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="eda0968c-d709-4e65-be33-7211e49c5299" />
+                      <code code="103.16589" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result DateTime" />
+                      <effectiveTime value="20141001113702+1000" />
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entry>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="0a0ab2a5-7009-44fa-b9ef-b3468413a706" />
+          <code code="102.16080" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Administrative Observations" />
+          <title>Administrative Observations</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <paragraph>This section contains no entries.</paragraph>
+          </text>
+        </section>
+      </component>
+      <component>
+        <section>
+          <entry>
+            <observationMedia ID="LOGO" classCode="OBS" moodCode="EVN">
+              <id root="d4bca1ca-78b2-4d58-9a55-750c571dc595" />
+              <value mediaType="image/png" integrityCheck="9YrohydDw1atoMapcwcQdUBWcek=">
+                <reference value="logo.png" />
+              </value>
+            </observationMedia>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:tns="http://ns.electronichealth.net.au/cdaPackage/xsd/eSignature/2012"
+    xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+    targetNamespace="http://ns.electronichealth.net.au/cdaPackage/xsd/eSignature/2012"
+    elementFormDefault="qualified">
+    <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#"
+        schemaLocation="External/xmldsig-core-schema.xsd"/>
+    <xsd:complexType name="ApproverType">
+        <xsd:sequence>
+            <xsd:element name="personId" type="xsd:anyURI" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="personName" type="tns:PersonNameType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:element name="eSignature" type="tns:eSignatureType"/>
+    <xsd:complexType name="eSignatureType">
+        <xsd:sequence>
+            <xsd:element ref="ds:Manifest" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="signingTime" type="xsd:dateTime" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="approver" type="tns:ApproverType" minOccurs="1" maxOccurs="1"/>
+            <xsd:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="PersonNameType">
+        <xsd:sequence>
+            <xsd:element name="nameTitle" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="givenName" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element name="familyName" type="xsd:string" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="nameSuffix" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

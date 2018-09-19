@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings
+        jaxb:version="2.0"
+        xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+        jaxb:extensionBindingPrefixes="xjc"
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+    <jaxb:bindings>
+        <jaxb:globalBindings generateElementProperty="false">
+
+            <xjc:simple/>
+            <!-- wsimport by default uses the XMLGregorianCalendar class to represent an xsd:date. The XMLGregorianCalendar class
+  is very user unfriendly. Use the standard java.util.Calendar class instead. -->
+  
+  
+  	<!--  we must use this custom adapter since eSignature also has a date time converter
+          that works differently and is also generated in a org.w3._2001.xmlschema.Adpater1 class 		
+          by having a custom adapter we can avoid the class loading conflicts
+  	   -->
+          <xjc:javaType
+                    name="java.util.Calendar"
+                    xmlType="xsd:date"
+                    adapter="au.gov.nehta.schema.DateAdapter" />
+       <!--   <jaxb:javaType
+                    name="java.util.Calendar"
+                    xmlType="xsd:date"
+                    parseMethod="javax.xml.bind.DatatypeConverter.parseDate"
+                    printMethod="javax.xml.bind.DatatypeConverter.printDate"/>      --> 
+        </jaxb:globalBindings>
+    </jaxb:bindings>
+
+</jaxb:bindings> 

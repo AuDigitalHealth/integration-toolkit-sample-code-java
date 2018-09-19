@@ -1,0 +1,22 @@
+ <jaxb:bindings jaxb:version="2.0"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- DoesPCEHRExist enums -->
+    <jaxb:bindings schemaLocation="../schema/External/PCEHR_RemoveDocument.xsd" node="/xs:schema">
+
+        <!-- ID Type -->
+        <jaxb:bindings node="//xs:element[@name='removeDocument']/xs:complexType/xs:sequence/xs:element[@name='reasonForRemoval']/xs:simpleType">
+            <jaxb:typesafeEnumClass name="DocumentRemovalReason"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+    
+       <!-- having multiple org.w3._2000._09.xmldsig classes on the classpath can cause problems 
+        	 for down stream projects so map to a different namespace-->
+        <jaxb:bindings schemaLocation="../schema/Common/xmldsig-core-schema.xsd" node="/xs:schema">
+        <jaxb:schemaBindings>
+            <jaxb:package name="pcehr_override.org.w3"/>
+        </jaxb:schemaBindings>
+	    </jaxb:bindings>
+	    
+</jaxb:bindings>

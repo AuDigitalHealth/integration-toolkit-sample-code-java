@@ -1,0 +1,17 @@
+<jaxws:bindings wsdlLocation="@service@@versionSepChar@@version@.wsdl" version="2.0"
+    xmlns:jaxws="http://java.sun.com/xml/ns/jaxws"
+    xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+
+  <jaxws:bindings node="wsdl:definitions">
+    <jaxws:package name="@package.name@"/>
+  </jaxws:bindings>
+
+  <jaxws:bindings node="wsdl:definitions">
+    <jaxb:schemaBindings>
+      <jaxb:package name="@package.name@"/>
+    </jaxb:schemaBindings>
+  </jaxws:bindings>
+
+</jaxws:bindings>

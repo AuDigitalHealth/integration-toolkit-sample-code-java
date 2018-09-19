@@ -1,0 +1,13 @@
+<jaxb:bindings jaxb:version="2.0"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- CommonType enums -->
+    <jaxb:bindings schemaLocation="../schema/Common/PCEHR_CommonTypes_Supplementary.xsd" node="/xs:schema">
+
+        <!-- Date accuracy indicator type -->
+        <jaxb:bindings node="//xs:element[@name='dateAccuracyIndicatorType']/xs:simpleType">
+            <jaxb:typesafeEnumClass name="DateAccuracyIndicatorTypeSupp"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+</jaxb:bindings>

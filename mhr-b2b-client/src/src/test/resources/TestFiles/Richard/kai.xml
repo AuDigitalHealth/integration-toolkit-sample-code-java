@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+    <soap:Header>
+        <wsa:Action xmlns:wsa="http://www.w3.org/2005/08/addressing">
+            http://ns.electronichealth.net.au/pcehr/svc/PCEHRProfile/1.1/PCEHRProfilePortType/doesPCEHRExistResponse
+        </wsa:Action>
+        <wsa:MessageID xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:39b44709-47f5-4a5d-99e6-6687654f203f</wsa:MessageID>
+        <wsa:RelatesTo xmlns:wsa="http://www.w3.org/2005/08/addressing">urn:uuid:b933fd8c-95d1-4277-a5aa-aa7518af6eb7</wsa:RelatesTo>
+        <ns:signature xmlns:ns="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0">
+            <dsig:Signature xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" Id="Id-0001340170789440-05de82b24fe1622531390000-3">
+                <dsig:SignedInfo>
+                    <dsig:CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+                    <dsig:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+                    <dsig:Reference URI="#Id-0001340170789440-05de82b24fe1622531390000-2">
+                        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+                        <dsig:DigestValue>3r7qDgXT1Gl/Ee7IzKSsKSWHv68=</dsig:DigestValue>
+                    </dsig:Reference>
+                </dsig:SignedInfo>
+                <dsig:SignatureValue>gjaWW2uJ2guRgKahq0QnMtTcUn+3bAPL4D8AHqV2P7AupwUd88J/Ao/SDcJ+jF/g
+                    DQjb1IlLjagLZV7aN+vZmjLHnxFoSuOu0IlV7g5l3Y5nazuCb+a+85adVeWzkohj
+                    LlAZnNcI7UmVCqKJUGrhVnmt0+X/76TAHmsx4OEcAiUD2bgG1gQnY1kJH41gsTrt
+                    nwAZ+QnQjH3KepJEHg3jyGBHxFyaEzL/8e5VT+beYMsNvg+ysvUBJgT3SBMsEBMu
+                    drn7z653hVOGGNLFecG9nwrrhCQXddftbydtdbbSVRYS6sgZaRijX8/x2gjcv6Zl
+                    XV3RUnkxNiJNEZYq+wherw==
+                </dsig:SignatureValue>
+                <dsig:KeyInfo Id="Id-0001340170789440-05de82b24fe1622531390000-4">
+                    <dsig:X509Data>
+                        <dsig:X509Certificate>
+                            MIIFqDCCBJCgAwIBAgIDBKyXMA0GCSqGSIb3DQEBBQUAMH8xCzAJBgNVBAYTAkFVMQwwCgYDVQQKEwNHT1YxGzAZBgNVBAsTEk1lZGljYXJlIEF1c3RyYWxpYTFFMEMGA1UEAxM8VGVzdCBNZWRpY2FyZSBBdXN0cmFsaWEgT3JnYW5pc2F0aW9uIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MB4XDTExMTEwODAzNTIzOFoXDTE2MDgxNDA1NDMwOFowgZQxCzAJBgNVBAYTAkFVMQwwCgYDVQQIEwNBQ1QxFDASBgNVBAcTC1RVR0dFUkFOT05HMRswGQYDVQQKExJQQ0VIUiBURVNUTG9jYXRpb24xGzAZBgNVBAsTElBDRUhSIFRFU1RMb2NhdGlvbjEnMCUGA1UEAxMeUENFSFIgVEVTVExvY2F0aW9uIDo1NzEwMjA4ODkyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Ytt71ZGTBZKKJ8mz/pw7FrovlY/PUvPEpxV9H0lOidmrRpDrxVLMuPDt9xw+na7dG7u4xnjj/SGI0CQbiR7pQhjr8G3hFcyuPcDy14ZvQe6a6qpseSOyZkiNyTH4yZ9yczG1mMIhE7ZOL8BLkIkcmNlFD2M9HoB0U0IV6mCrgI78RWPsSFvcZdpmNj/i6GhWV8py2D93Vpv+/KajO1At029fAMWdJT/vioQkQJxznBWUnmT5+6HqpGigfBbhs69q1VxK1AkFMXl5Q+NWnMdcAUZ7x0he5qtZXnn7MW4s/0yFw0SggXmz7UCCxZQL6gYMWaiwaYz0Kw4gJNzRxeeZQIDAQABo4ICFTCCAhEwDAYDVR0TAQH/BAIwADBPBggrBgEFBQcBAQRDMEEwPwYIKwYBBQUHMAGGM2h0dHA6Ly9vY3NwLmNlcnRpZmljYXRlcy1hdXN0cmFsaWEuY29tLmF1L21hb2NhLnBreDCCASEGA1UdIASCARgwggEUMIIBEAYKKiTS/oB3AQYBAjCCAQAwgcsGCCsGAQUFBwICMIG+GoG7Q2VydGlmaWNhdGVzIGlzc3VlZCB1bmRlciB0aGlzIENQIG11c3Qgb25seSBiZSByZWxpZWQgb24gYnkgZW50aXRpZXMgd2l0aGluIHRoZSBDb21tdW5pdHkgb2YgSW50ZXJlc3QsIHVubGVzcyBvdGhlcndpc2UgYWdyZWVkLCBhbmQgbm90IGZvciBwdXJwb3NlcyBvdGhlciB0aGFuIHRob3NlIHBlcm1pdHRlZCBieSB0aGlzIENQLjAwBggrBgEFBQcCARYkaHR0cDovL3d3dy5tZWRpY2FyZWF1c3RyYWxpYS5nb3YuYXUvMBkGCSoko5CVFwHOGQQMFgo1NzEwMjA4ODkyMA4GA1UdDwEB/wQEAwIHgDATBgNVHSMEDDAKgAhAd6hRCEOMszA4BgNVHR8EMTAvMC2gK6AphidodHRwOi8vbWEtdGVzdC1wa2kvTUFPQ0FDUkxzL2xhdGVzdC5jcmwwEQYDVR0OBAoECELFSB2OHCWJMA0GCSqGSIb3DQEBBQUAA4IBAQAa+/PZFMnQVNrFgR1v5/WUsrqF7NKJVjQZ1gHtNnaDAeOUVeDY7yYQ0Gl6uHDzG3z1PJJecyO3lN1Gu64Q/1sZxZJPPvRrzRpmK3L9+Zay0WyJ17FL0SvZApd/FZ3+1eKK3j1cxhObYXTTU5XdvyQSUeAXzgb43uCUAOQZQ/P/uYC/wDOq4cqSBnuX/iCxX/xd1ArOo0iLGBhdVmeGbfT+Xu511edkB2xxWU36RX5qhwPtPpwPkbRQt/++K2hitGGqwCOKgx1ug4BKPXoN1y1eTvIbw4mn0CR9B+ApqxBsr+1LYSG0IwHfptS8p5wORCi6KQZRBeG+ZYIJ1OpufK1t
+                        </dsig:X509Certificate>
+                    </dsig:X509Data>
+                </dsig:KeyInfo>
+            </dsig:Signature>
+        </ns:signature>
+    </soap:Header>
+    <S:Body xmlns:S="http://www.w3.org/2003/05/soap-envelope" xml:id="Id-0001340170789440-05de82b24fe1622531390000-2">
+        <ns:doesPCEHRExistResponse xmlns:ns="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PCEHRProfile/1.0">
+            <ns:PCEHRExists>true</ns:PCEHRExists>
+            <ns:accessCodeRequired>AccessGranted</ns:accessCodeRequired>
+        </ns:doesPCEHRExistResponse>
+    </S:Body>
+</soap:Envelope>

@@ -1,0 +1,243 @@
+<?xml version="1.0" standalone="yes"?>
+<project basedir="." default="dist" >
+	<description>
+        JAXB Compiler for CDA Super schema
+    </description>
+
+	<!--
+   **************************************************************************
+   *******                               ANT VARIABLES                                     *******
+   **************************************************************************
+    -->
+	<!-- Build property file for custom properties -->
+	<property file="build.properties" />
+
+	<property name="dist.dir" value="${basedir}/dist" />
+	<property name="build.dir" value="${dist.dir}" />
+	<property name="classes.dir" value="${basedir}/build/classes" />
+	<property name="src.dir" value="${basedir}/src" />
+	<property name="extern.dir" value="${basedir}/extern" />
+	<property name="lib.dir" value="${basedir}/lib/provided" />
+	<property name="schema.dir" value="${basedir}/lib/xsd_java_mods" />
+	<property name="gen.dir" value="${basedir}/gen-src" />
+	<property name="temp.dir" value="temp" />
+	<property name="javadoc.dir" value="${temp.dir}/docs/api" />
+	<property name="binding.dir" value="${basedir}/binding" />
+
+	<!--<property file="documentGenerator.properties" />-->
+
+	<path id="classpath">
+		<fileset dir="${lib.dir}" includes="**/*.jar" />
+		<pathelement path="src" />
+		<pathelement path="build/classes" />
+		<pathelement path="schemas" />
+		<!-- Include the jar files from the lib directory -->
+		<fileset dir="${extern.dir}" includes="**/*.jar" />
+	</path>
+
+	<path id="src.path">
+		<pathelement path="${gen.dir}" />
+	</path>
+
+	
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJC2Task" >
+		<classpath refid="classpath" />
+	</taskdef>
+
+	<!--
+   **************************************************************************
+   *******                                       INIT	                                           *******
+   **************************************************************************
+    -->
+	<target name="init" description="Sets and checks properties">
+		<!-- Get today's date -->
+		<tstamp>
+			<format property="today" pattern="yyyyMMdd" />
+		</tstamp>
+
+		<!-- Append today's date if project version is latest -->
+		<condition property="project.vname" value="${project.name}-${project.version}-${today}"
+                   else="${project.name}-${project.version}">
+			<equals arg1="${project.version}" arg2="latest" trim="true" casesensitive="true" />
+		</condition>
+
+		<!-- Build and distribution files -->
+		<property name="build.file" value="${jarfilenamePrefix}.jar" />
+		<property name="build.src.file" value="${jarfilenamePrefix}_src.jar" />
+
+		<property name="dist.prefix" value="${project.vname}" />
+		<property name="dist.file" value="${dist.prefix}.zip" />
+
+		<!-- Environment variables -->
+		<property environment="env" />
+
+		<!-- Class paths -->
+			<path id="compile.classpath">
+				<fileset dir="${extern.dir}" includes="**/*.jar" />
+				<fileset dir="${lib.dir}" includes="**/*.jar" />
+			</path>
+	</target>
+
+	<!--
+   **************************************************************************
+   *******                                  COMPILE       >                               *******
+   **************************************************************************
+    -->
+	<!--compile Java source files-->
+	<target name="compile" description="Compile all Java source files">
+		<!-- Stop generating the files-->
+		<echo message="Compiling the schema..." />
+		<xjc destdir="${gen.dir}" binding="${binding.dir}/${jaxbBindingfile}" target="2.0" >
+			<schema dir="${schema.dir}"  includes="${schemaFiles} " />
+			<arg value="-nv"/>
+			<arg value="-verbose"/>
+			<arg value="-extension"/>
+			<produces dir="${gen.dir}" includes="**/*.java" />
+		</xjc>
+		
+		<!-- some spurious includes will pull in voc_V3_0 under an empty namespace-->
+		<!-- which becomes "generated", so do some clean up and delete this -->
+		<!-- TODO: find and kill the bad imports in xsd_java_mods  -->
+		<delete dir="${gen.dir}/generated" />
+			
+			
+		<echo message="Compiling the java source files..." />
+		<javac destdir="build/classes" debug="on" includeantruntime="false">
+			<src path="src" />
+			<src path="${gen.dir}" />
+			<classpath refid="classpath" />
+			<classpath refid="src.path" />
+		</javac>
+	</target>
+
+	<!--
+   **************************************************************************
+   *******                                         BUILD                                         *******
+   **************************************************************************
+    -->
+	<target name="build" depends="clean,init,prepare,compile" description="Generates Java objects for
+    the Prescription CXML schema ">
+		<echo message="Runs Schema compiler and genretates XML document." />
+		<tstamp>
+			<format property="current.time" pattern="dd-MMM-yyyy hh:mm aa" />
+		</tstamp>
+
+		<!--Pack the class files as seperate jar-->
+		<jar destfile="${build.dir}/${build.file}">
+
+			<fileset dir="${classes.dir}">
+				<include name="**/*.class" />
+			</fileset>
+
+			<!--Pack the schema file for schema validation purpose-->
+			<fileset dir="${schema.dir}">
+				<include name="**/*.xsd" />
+			</fileset>
+
+			<manifest>
+				<attribute name="Implementation-Title" value="${project.title}" />
+				<attribute name="Implementation-Version" value="${project.version}" />
+				<attribute name="Implementation-Vendor" value="${project.organisation}" />
+				<attribute name="Generated-On" value="${current.time}" />
+			</manifest>
+		</jar>
+
+		<!--Pack the source files to a seperatejar-->
+		<jar destfile="${build.dir}/${build.src.file}">
+
+			<fileset dir="${gen.dir}">
+				<include name="**/*.java" />
+			</fileset>
+
+			<!--Pack the schema file for schema validation purpose-->
+			<fileset dir="${schema.dir}">
+				<include name="**/*.xsd" />
+			</fileset>
+
+			<manifest>
+				<attribute name="Implementation-Title" value="${project.title}" />
+				<attribute name="Implementation-Version" value="${project.version}" />
+				<attribute name="Implementation-Vendor" value="${project.organisation}" />
+				<attribute name="Generated-On" value="${current.time}" />
+			</manifest>
+		</jar>
+
+	</target>
+
+	<!--
+   **************************************************************************
+   *******                                        DIST		                                    *******
+   **************************************************************************
+    -->
+	<target name="dist" depends="build,javadoc" description="Creates a distribution zip file">
+		<!-- Copy the jar file to dist directory -->
+		<copy file="${build.dir}/${build.file}" todir="${dist.dir}">
+		</copy>
+		<zip destfile="${dist.dir}/${dist.file}">
+			<!-- current jar file -->
+			<zipfileset dir="${build.dir}" prefix="${dist.prefix}">
+				<include name="**/*.jar" />
+			</zipfileset>
+
+			<!--Uncomment this section to include third party libraries-->
+			<!-- Third party libraries -->
+			<!--<zipfileset dir="${lib.dir}" prefix="${dist.prefix}/lib">-->
+			<!--&lt;!&ndash;<include name="**/*.jar" />&ndash;&gt;-->
+			<!--<include name="**/*LICENSE*.*" />-->
+			<!--<include name="**/*license*.*" />-->
+			<!--<exclude name="**/.svn" />-->
+			<!--</zipfileset>-->
+
+			<!-- Javadoc -->
+			<zipfileset dir="${javadoc.dir}" prefix="${dist.prefix}/docs/api" />
+		
+		</zip>
+	</target>
+	<!--
+   **************************************************************************
+   *******                                        JAVADOC                               *******
+   **************************************************************************
+    -->
+
+	<target name="javadoc" depends="prepare,init" description="Generates Javadoc">
+		<javadoc destdir="${javadoc.dir}" useexternalfile="true" classpathref="classpath">
+			<fileset dir="${gen.dir}">
+				<include name="**/*.java" />
+				<exclude name="**/package.html" />
+				<exclude name="**/*Test.java" />
+			</fileset>
+		</javadoc>
+	</target>
+	<!--
+   **************************************************************************
+   *******                                        CLEAN                                        *******
+   **************************************************************************
+    -->
+	<target name="clean" depends="init" description="Deletes all the generated artifacts.">
+
+		<delete dir="${classes.dir}" />
+		<delete dir="${temp.dir}" />
+		<delete dir="${gen.dir}" />
+		<delete dir="${src.dir}" />
+		<delete dir="build" />
+
+		<!-- <delete dir="${dist.dir}" />  keep this so we can tag dist files in svn ? -->
+		<delete dir="${temp.dir}" /> 
+
+	</target>
+	<!--
+   **************************************************************************
+   *******                                      PREPARE                                       *******
+   **************************************************************************
+    -->
+	<target name="prepare" description="Does initialisation actions, e.g. create directories">
+		<mkdir dir="${gen.dir}" />
+		<mkdir dir="${src.dir}" />
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${temp.dir}" />
+		<mkdir dir="${javadoc.dir}" />
+	</target>
+
+</project>
+

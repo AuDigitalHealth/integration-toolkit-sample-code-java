@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<project name="PCHERExistCompiledWSDL"
+         default="package"
+         xmlns:ac="antlib:net.sf.antcontrib">
+    <property file="build.properties"/>
+
+    <!-- Classpath for compilation -->
+    <path id="compile.path">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <!-- Classpath for compilation -->
+    <path id="wsimport.path">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+	
+	
+
+    <!-- wsimport task definition -->
+    <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+        <classpath refid="wsimport.path"/>
+    </taskdef>
+	
+	<taskdef name="xjc" classname="com.sun.tools.xjc.XJC2Task" >
+		<classpath refid="wsimport.path" />
+	</taskdef>
+	
+	
+
+    <!-- clean: Removes all temporary/rebuildable files/directories -->
+    <target name="clean"
+            description="Deletes the files and directories generated during the build">
+    	<echo>VM: ${java.vm.name}</echo>
+    	<echo>VM: ${java.vendor}</echo>
+    	<echo>VM: ${java.version}</echo>
+        <delete dir="${build.dir}"/>
+        <delete dir="${classes.dir}"/>
+        <delete dir="${src.dir}"/>
+        <!--<delete dir="${dist.dir}"/>-->
+        <delete dir="${doc.dir}"/>
+    </target>
+
+    <!-- prepare: Create temporary directories -->
+    <target name="prepare"
+            depends="clean"
+            description="Does initialisation actions, e.g. create directories">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${src.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${doc.dir}"/>
+        <mkdir dir="${extern.dir}"/>
+    </target>
+
+
+    <!--generate-wsdl-src: internal target to generate java classes from a given WSDL file.
+    param: wsdl
+    param: interface.wsdl
+    -->
+    <macrodef name="macro-generate-wsdl-java"
+              description="Generates Java classes from the WSDL definition">
+        <attribute name="wsdl.file"/>
+        <attribute name="binding.files"/>
+        <sequential>
+            <echo message="@{binding.files}"/>
+            <echo message="Generating web service classes: @{wsdl.file}"/>
+
+            <!-- Generate Java classes -->
+            <wsimport wsdl="${wsdl.dir}/@{wsdl.file}"
+                      wsdllocation="wsdl/@{wsdl.file}"
+                      extension="true"
+                      destdir="${classes.dir}"
+                      keep="true"
+                      sourcedestdir="${src.dir}"
+                      xadditionalHeaders="true"
+                      xendorsed="true"
+                      verbose="true"
+            		
+                      fork="true">
+                <arg value="-B-XautoNameResolution"/>
+            	
+            
+                 <binding dir="${binding.dir}"
+                         includes="@{binding.files}"/> 
+            </wsimport>
+        </sequential>
+    </macrodef>
+
+    <!-- generate-src: Generate Java classes from each WSDL -->
+    <target name="generate-src"
+            depends="prepare"
+            description="Generates classes from the WSDL definition">
+
+    	    	<copy file="src/main/java/au/gov/nehta/schema/DateAdapter.java" todir="build/src/main/java/au/gov/nehta/schema/"/>
+    			
+    	
+    	
+    	    	<javac srcdir="${src.dir}"
+    	        	   destdir="${build.dir}/classes"
+    	    		   includeantruntime="false"     	   />
+    	<jar jarfile="/lib/provided/adapter.jar"
+    	     basedir="build/classes"
+    	     includes="au/gov/**" >
+    	</jar>
+    
+        <ac:for param="absolute.wsdl.file">
+            <ac:path>
+                <fileset dir="${wsdl.dir}">
+                    <include name="**/*.wsdl"/>
+                    <exclude name="**/*Interface*.wsdl"/>
+                </fileset>
+            </ac:path>
+            <ac:sequential>
+                <ac:var name="relative.wsdl.file" unset="true"/>
+                <basename property="relative.wsdl.file" file="@{absolute.wsdl.file}"/>
+                <macro-generate-wsdl-java wsdl.file="${relative.wsdl.file}"
+                                          binding.files="GlobalBindings.jxb, PCEHR_CommonTypes.xsd.jxb, ${relative.wsdl.file}.jxb"/>
+            </ac:sequential>
+        </ac:for>
+    	
+    	<!-- also generate the extra external views for getView
+    	<xjc  destdir="${src.dir}" >
+			    	<binding dir="${binding.dir}">
+			    	  <include name="GlobalBindings.jxb"/>
+			    		 <include name="PCEHR_CommonTypes.xsd.jxb"/>
+			    	</binding>
+    				<schema dir="${view.schema.dir}"  includes="*.xsd" />
+    				<arg value="-nv"/>
+    				<arg value="-verbose"/>
+    				<arg value="-extension"/>
+    	</xjc>
+    	-->
+    	
+    	<!-- 
+        classpathref="compile.classpath"
+   		       	           includeAntRuntime="no"
+   		       	           updatedproperty="compiled.src"-->
+		 <javac destdir="${classes.dir}"
+		       	           srcdir="${src.dir}"
+		       	          
+		       	           fork="true"
+		       	      
+    						/>
+    </target>
+	
+	
+
+    <!-- compile: Compile all Java classes -->
+    <target name="compile"
+            depends="generate-src"
+            description="Compiles the source code">
+   	
+       	
+    </target>
+
+    <target name="docs"
+            depends="compile"
+            description="Generate javadoc">
+
+        <javadoc destdir="${doc.dir}" classpathref="compile.path" useexternalfile="true">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
+
+    <!-- Build all JAR -->
+    <target name="build"
+            depends="docs"
+            description="Packages the classes/WSDLS etc into JAR files">
+     
+    	
+        <!-- Create a JAR file containing the core classes. -->
+        <jar destfile="${build.dir}/${jar.file}">
+            <fileset dir="${classes.dir}">
+                <include name="**/*.class"/>
+                <include name="**/*.xml"/>
+            </fileset>
+            <zipfileset dir="${wsdl.dir}" prefix="wsdl" includes="*.wsdl"/>
+              	<zipfileset dir="${view.schema.dir}" prefix="schema/External/view" includes="*.xsd"/>
+                  <zipfileset dir="${xsd.dir}" prefix="xsd" includes="*.xsd"/>
+             
+           
+        </jar>
+
+        <!-- Create a JAR file containing the source files. -->
+        <jar destfile="${build.dir}/${src.jar.file}">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+    	  <zipfileset dir="${wsdl.dir}/../.." prefix="wsdls" >
+        	            	  <include name="**/*.wsdl"/>
+        	                  <include name="**/*.xsd"/>
+        	</zipfileset>
+        </jar>
+
+        <!-- Create a JAR file containing javadoc files. -->
+        <jar basedir="${doc.dir}" destfile="${build.dir}/${doc.jar.file}"/>
+    </target>
+
+    <target name="package"
+            depends="build,docs"
+            description="Packages all build artefacts into distributable ZIP.">
+
+        <zip destfile="${dist.file}">
+            <zipfileset dir="${basedir}">
+                <include name="${license.file}"/>
+                <include name="${readme.file}"/>
+                <include name="${revision.file}"/>
+            </zipfileset>
+
+            <!--These aren't really required as they're generated on build and
+            aren't stored in SVN-->
+            <!--&lt;!&ndash;Include src and java files&ndash;&gt;-->
+            <!--<zipfileset dir="${src.dir}" prefix="src/main/java">-->
+            <!--<include name="**/*.java"/>-->
+            <!--</zipfileset>-->
+
+            <!-- Include src and wsdl/xsd files-->
+            <zipfileset dir="${resources.dir}" prefix="src/main/resources">
+                <include name="**/*.xsd"/>
+                <include name="**/*.wsdl"/>
+            </zipfileset>
+        	
+        	 <zipfileset dir="${resources.dir}" prefix="src/main/resources">
+        	                <include name="**/*.xsd"/>
+        	                <include name="**/*.wsdl"/>
+	            </zipfileset>
+
+            <!--Include compiled client library jar, source and javadoc jars.-->
+            <zipfileset dir="${build.dir}" prefix="api">
+                <include name="${jar.file}"/>
+                <include name="${src.jar.file}"/>
+                <include name="${doc.jar.file}"/>
+            </zipfileset>
+
+            <!--Include dependency jar file-->
+            <zipfileset dir="${lib.provided.dir}" prefix="lib/provided">
+                <include name="**/*.jar"/>
+            </zipfileset>
+        </zip>
+        <copy todir="${extern.dir}">
+            <fileset dir="${build.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </copy>
+    </target>
+</project>

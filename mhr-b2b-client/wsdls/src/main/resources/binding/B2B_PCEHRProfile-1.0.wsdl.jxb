@@ -1,0 +1,13 @@
+<jaxb:bindings jaxb:version="2.0"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- DoesPCEHRExist enums -->
+    <jaxb:bindings schemaLocation="../schema/External/PCEHR_DoesPCEHRExist-1.0.xsd" node="/xs:schema">
+
+        <!-- ID Type -->
+        <jaxb:bindings node="//xs:element[@name='doesPCEHRExistResponse']/xs:complexType/xs:sequence/xs:element[@name='accessCodeRequired']/xs:simpleType">
+            <jaxb:typesafeEnumClass name="AccessCodeRequired"/>
+        </jaxb:bindings>
+    </jaxb:bindings>
+</jaxb:bindings>

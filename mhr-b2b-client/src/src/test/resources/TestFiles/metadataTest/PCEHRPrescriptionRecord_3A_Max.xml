@@ -1,0 +1,643 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml-stylesheet href="NEHTA_Generic_CDA_Stylesheet.xsl" type="text/xsl"?>
+<!--Generated using 'NEHTA Vendor Library - CDA' version 3.0.6.0-->
+<!--Compliant with CCA Validator version 1.12.5-->
+<ClinicalDocument xmlns:ext="http://ns.electronichealth.net.au/Ci/Cda/Extensions/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="1.2.36.1.2001.1001.100.1002.170" extension="1.0" />
+  <templateId root="1.2.36.1.2001.1001.100.149" extension="1.0" />
+  <id root="2.25.307877491303311060027449190626924277966" />
+  <code code="100.16764" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="PCEHR Prescription Record" />
+  <title>PCEHR Prescription Record</title>
+  <effectiveTime value="20130226155638+1000" />
+  <confidentialityCode nullFlavor="NA" />
+  <languageCode code="en-AU" />
+  <setId root="4ece369b-d3b1-4334-807f-47a0ca81c8cd" />
+  <versionNumber value="2" />
+  <recordTarget typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id root="ac9803c2-bf64-41b2-84be-c2503039c847" />
+      <addr use="H">
+        <country>Australia</country>
+        <state>NSW</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Clinician Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <addr use="TMP">
+        <country>New Caledonia</country>
+        <state>Foreign Land</state>
+        <postalCode>12345</postalCode>
+        <streetAddressLine>1 Overseas Street</streetAddressLine>
+      </addr>
+      <telecom value="tel:0345754566" use="WP" />
+      <telecom value="mailto:authen@globalauthens.com" use="WP" />
+      <patient>
+        <name use="L">
+          <family>Grant</family>
+          <given>Sally</given>
+          <given>Wally</given>
+          <prefix>Miss</prefix>
+        </name>
+        <name use="NB">
+          <family>Grant</family>
+          <given>Wally</given>
+          <prefix>Mr</prefix>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.13.68" codeSystemName="AS 5017-2006 Health Care Client Identifier Sex" displayName="Female" />
+        <birthTime value="19560226155638+1000" />
+        <ethnicGroupCode code="4" codeSystem="2.16.840.1.113883.3.879.291036" codeSystemName="METeOR Indigenous Status" displayName="Neither Aboriginal nor Torres Strait Islander origin" />
+        <ext:multipleBirthInd value="true" />
+        <ext:multipleBirthOrderNumber value="2" />
+        <ext:deceasedInd value="true" />
+        <ext:deceasedTime value="20130226" />
+        <birthplace>
+          <place>
+            <addr>
+              <country>Australia</country>
+              <state>QLD</state>
+            </addr>
+          </place>
+        </birthplace>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003604444567894" assigningAuthorityName="IHI" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4" extension="123456" assigningAuthorityName="Croydon GP Centre" />
+          <ext:code code="MR" codeSystem="2.16.840.1.113883.12.203" codeSystemName="Identifier Type (HL7)" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.5001.1.0.7.1" extension="1234567881" assigningAuthorityName="Medicare Card Number" />
+          <ext:code code="MC" codeSystem="2.16.840.1.113883.12.203" codeSystemName="Identifier Type (HL7)" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.22.333.444.55555" extension="457456" assigningAuthorityName="SampleAuthority" />
+          <ext:code code="1.1.1.1.1.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DisplayName">
+            <originalText>Original Text</originalText>
+          </ext:code>
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>State or Territory Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT">
+    <time value="20130226155638+1000" />
+    <assignedAuthor>
+      <id root="02da8de8-ccdd-4451-86a0-c1c379684083" />
+      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Clinician Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel:0345754566" use="WP" />
+      <telecom value="mailto:authen@globalauthens.com" use="WP" />
+      <assignedPerson>
+        <name use="L">
+          <family>Doctor</family>
+          <given>Good</given>
+          <prefix>Doctor</prefix>
+        </name>
+        <name use="NB">
+          <family>Wong</family>
+          <given>Davey</given>
+          <prefix>Brother</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4.5.66666" assigningAuthorityName="SampleAuthority" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003615833334118" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEmployment classCode="EMP">
+          <ext:jobCode code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+        </ext:asEmployment>
+        <ext:asQualifications classCode="QUAL">
+          <ext:code>
+            <originalText>M.B.B.S., F.R.A.C.S.</originalText>
+          </ext:code>
+        </ext:asQualifications>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="0802c1df-1f8a-4183-a803-07aa2889a239" />
+        <name>General Practice Clinic</name>
+        <telecom value="tel:0712341234" use="WP" />
+        <addr use="WP">
+          <country>Australia</country>
+          <state>QLD</state>
+          <city>Nehtaville</city>
+          <postalCode>5555</postalCode>
+          <streetAddressLine>1 Clinician Street</streetAddressLine>
+          <additionalLocator>32568931</additionalLocator>
+        </addr>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4.5.66666" assigningAuthorityName="SampleAuthority" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003620833333789" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <legalAuthenticator>
+    <time value="201302261556+1000" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="02da8de8-ccdd-4451-86a0-c1c379684083" />
+      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+      <addr use="H">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Clinician Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel:0345754566" use="WP" />
+      <telecom value="mailto:authen@globalauthens.com" use="WP" />
+      <assignedPerson>
+        <name use="L">
+          <family>Doctor</family>
+          <given>Good</given>
+          <prefix>Doctor</prefix>
+        </name>
+        <name use="NB">
+          <family>Wong</family>
+          <given>Davey</given>
+          <prefix>Brother</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4.5.66666" assigningAuthorityName="SampleAuthority" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003615833334118" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </assignedPerson>
+      <representedOrganization>
+        <name>West End Healthiness</name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4.5.66666" assigningAuthorityName="SampleAuthority" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003620833333789" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+  <relatedDocument typeCode="XFRM">
+    <parentDocument>
+      <id root="1.2.76.56.4567.6654.45" extension="587b49b7-2e7a-4320-861f-a06bd4ea12a1" />
+      <text nullFlavor="NA" />
+      <versionNumber value="1" />
+    </parentDocument>
+  </relatedDocument>
+  <relatedDocument typeCode="RPLC">
+    <parentDocument>
+      <id root="1.2.36.1.2001.1005.35" extension="733dcbc0-621c-4660-8927-38042c380bfa" />
+      <code xsi:type="CE" code="100.16764" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="PCEHR Prescription Record" />
+      <text nullFlavor="NA" />
+      <setId root="4ece369b-d3b1-4334-807f-47a0ca81c8cd" />
+      <versionNumber value="1" />
+    </parentDocument>
+  </relatedDocument>
+  <componentOf>
+    <encompassingEncounter>
+      <effectiveTime nullFlavor="NA" />
+      <location>
+        <healthCareFacility>
+          <id root="0802c1df-1f8a-4183-a803-07aa2889a239" />
+          <code code="251511" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="Hospital Pharmacist" />
+          <serviceProviderOrganization>
+            <id root="3b8aecf8-8c74-473f-af03-cd7f41ad6126" />
+            <asOrganizationPartOf>
+              <wholeOrganization>
+                <name>West End Healthiness</name>
+                <telecom value="tel:0712341234" use="WP" />
+                <addr use="WP">
+                  <country>Australia</country>
+                  <state>QLD</state>
+                  <city>Nehtaville</city>
+                  <postalCode>5555</postalCode>
+                  <streetAddressLine>1 Clinician Street</streetAddressLine>
+                  <additionalLocator>32568931</additionalLocator>
+                </addr>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.3.4.5.66666" assigningAuthorityName="SampleAuthority" />
+                </ext:asEntityIdentifier>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.36.1.2001.1003.0.8003620833333789" assigningAuthorityName="HPI-O" />
+                  <ext:assigningGeographicArea classCode="PLC">
+                    <ext:name>National Identifier</ext:name>
+                  </ext:assigningGeographicArea>
+                </ext:asEntityIdentifier>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <code code="102.16211" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Prescription Item">
+            <originalText>Prescription Item</originalText>
+          </code>
+          <title>Prescription Item</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Prescription Item</caption>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Date and Time Prescription Written</td>
+                  <td>26 Feb 2013 15:56+1000</td>
+                </tr>
+                <tr>
+                  <td>Therapeutic Good Identification</td>
+                  <td>ALUMINIUM HYDROXIDE with MAGNESIUM HYDROXIDE</td>
+                </tr>
+                <tr>
+                  <td>Therapeutic Good Generic Name (Additional Therapeutic Good Detail)</td>
+                  <td>Therapeutic Good Generic Name</td>
+                </tr>
+                <tr>
+                  <td>Therapeutic Good Strength (Additional Therapeutic Good Detail)</td>
+                  <td>Therapeutic Good Strength</td>
+                </tr>
+                <tr>
+                  <td>Date and Time Prescription Expires</td>
+                  <td>26 Feb 2014 15:56+1000</td>
+                </tr>
+                <tr>
+                  <td>Formula</td>
+                  <td>Formula</td>
+                </tr>
+                <tr>
+                  <td>Form</td>
+                  <td>Film-coated tablet</td>
+                </tr>
+                <tr>
+                  <td>Directions</td>
+                  <td>Directions</td>
+                </tr>
+                <tr>
+                  <td>Clinical Indication</td>
+                  <td>Clinical Indication</td>
+                </tr>
+                <tr>
+                  <td>Route</td>
+                  <td>Oral route</td>
+                </tr>
+                <tr>
+                  <td>Quantity Description</td>
+                  <td>Dispensing Information - Quantity</td>
+                </tr>
+                <tr>
+                  <td>Maximum Number of Repeats (Number of Repeats)</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Minimum Interval Between Repeats</td>
+                  <td>1 week(s)</td>
+                </tr>
+                <tr>
+                  <td>PBS Manufacturer Code (Administrative Manufacturer Code)</td>
+                  <td>AB  (Australian PBS Manufacturer Code) </td>
+                </tr>
+                <tr>
+                  <td>Brand Substitution Permitted</td>
+                  <td>True</td>
+                </tr>
+                <tr>
+                  <td>Comment</td>
+                  <td>Comment</td>
+                </tr>
+                <tr>
+                  <td>Prescription Item Identifier</td>
+                  <td>6ff2081b-de87-43eb-8a6a-3689864682fa </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Subject Of Care Entitlement</caption>
+              <thead>
+                <tr>
+                  <th>Entitlement Type</th>
+                  <th>Validity Duration</th>
+                  <th>Entitlement Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Medicare Benefits</td>
+                  <td>1 year(s)</td>
+                  <td>1234567881  (Medicare Card Number) </td>
+                </tr>
+                <tr>
+                  <td>Medicare Benefits</td>
+                  <td>1 year(s)</td>
+                  <td>2244567891  (Medicare Card Number) </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Prescriber Entitlement</caption>
+              <thead>
+                <tr>
+                  <th>Entitlement Type</th>
+                  <th>Validity Duration</th>
+                  <th>Entitlement Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Medicare Prescriber Number</td>
+                  <td>1 year(s)</td>
+                  <td>1423444  (Prescriber Number) </td>
+                </tr>
+                <tr>
+                  <td>Medicare Prescriber Number</td>
+                  <td>1 year(s)</td>
+                  <td>1423444  (Prescriber Number) </td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="601dcead-d6e0-431d-ae5a-440357d6a32a" />
+              <code code="103.10104" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DateTime Prescription Expires" />
+              <effectiveTime value="20140226155638+1000" />
+            </observation>
+          </entry>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="RQO">
+              <id root="1.2.36.1.2001.1005.36" extension="6ff2081b-de87-43eb-8a6a-3689864682fa" />
+              <text>Directions</text>
+              <statusCode code="active" />
+              <repeatNumber>
+                <high value="6" />
+              </repeatNumber>
+              <routeCode code="26643006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="Oral route" />
+              <consumable>
+                <manufacturedProduct>
+                  <manufacturedMaterial>
+                    <code code="02157M" codeSystem="1.2.36.1.2001.1005.22" codeSystemName="Australian PBS Code" displayName="ALUMINIUM HYDROXIDE with MAGNESIUM HYDROXIDE" />
+                    <name>Therapeutic Good Generic Name</name>
+                    <ext:formCode code="385057009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="Film-coated tablet" />
+                  </manufacturedMaterial>
+                  <manufacturerOrganization>
+                    <id root="1.2.36.1.2001.1005.23" extension="AB" assigningAuthorityName="Australian PBS Manufacturer Code" />
+                  </manufacturerOrganization>
+                </manufacturedProduct>
+              </consumable>
+              <entryRelationship typeCode="COMP">
+                <act classCode="INFRM" moodCode="RQO">
+                  <id root="89896cd6-832b-4d57-8f87-4a61f62cc4cc" />
+                  <code code="103.16272" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Formula" />
+                  <text>Formula</text>
+                </act>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <supply classCode="SPLY" moodCode="RQO">
+                  <id root="e16784b4-5234-4271-a4e2-424f36e7f21e" />
+                  <effectiveTime xsi:type="PIVL_TS">
+                    <period value="1" unit="wk" />
+                  </effectiveTime>
+                  <independentInd value="false" />
+                  <entryRelationship typeCode="COMP">
+                    <act classCode="INFRM" moodCode="INT">
+                      <id root="08bae78b-455c-40a6-8109-631900ffa9a6" />
+                      <code code="246205007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" displayName="Quantity" />
+                      <text>Dispensing Information - Quantity</text>
+                    </act>
+                  </entryRelationship>
+                  <ext:subjectOf2>
+                    <ext:substitutionPermission classCode="SUBST" moodCode="PERM">
+                      <ext:code code="TE" codeSystem="2.16.840.1.113883.5.1070" codeSystemName="HL7:SubstanceAdminSubstitution" displayName="Therapeutic" />
+                    </ext:substitutionPermission>
+                  </ext:subjectOf2>
+                </supply>
+              </entryRelationship>
+              <entryRelationship typeCode="RSON">
+                <act classCode="INFRM" moodCode="RQO">
+                  <id root="17455a45-06b6-47fa-9cd1-0b4ac9f4068d" />
+                  <code code="103.10141" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Reason for Therapeutic Good" />
+                  <text>Clinical Indication</text>
+                </act>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <act classCode="INFRM" moodCode="EVN">
+                  <id root="f2579bb8-4c58-4a17-815e-33437f5e65db" />
+                  <code code="103.16044" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Additional Comments" />
+                  <text>Comment</text>
+                </act>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <act classCode="INFRM" moodCode="RQO">
+                  <id root="2c8ffbe6-47ea-4e09-8793-34f8ec8e6892" />
+                  <code code="103.16769.170.1.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Therapeutic Good Strength" />
+                  <text>Therapeutic Good Strength</text>
+                </act>
+              </entryRelationship>
+            </substanceAdministration>
+          </entry>
+          <ext:coverage2 typeCode="COVBY">
+            <ext:entitlement classCode="COV" moodCode="EVN">
+              <ext:id root="1.2.36.1.5001.1.0.7.1" extension="1234567881" assigningAuthorityName="Medicare Card Number" />
+              <ext:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16047" codeSystemName="NCTIS Entitlement Type Values" displayName="Medicare Benefits">
+                <originalText>Medicare Benefits</originalText>
+              </ext:code>
+              <ext:effectiveTime>
+                <width value="1" unit="a" />
+              </ext:effectiveTime>
+              <ext:participant typeCode="BEN">
+                <ext:participantRole classCode="PAT">
+                  <ext:id root="ac9803c2-bf64-41b2-84be-c2503039c847" />
+                </ext:participantRole>
+              </ext:participant>
+            </ext:entitlement>
+          </ext:coverage2>
+          <ext:coverage2 typeCode="COVBY">
+            <ext:entitlement classCode="COV" moodCode="EVN">
+              <ext:id root="1.2.36.1.5001.1.0.7.1" extension="2244567891" assigningAuthorityName="Medicare Card Number" />
+              <ext:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16047" codeSystemName="NCTIS Entitlement Type Values" displayName="Medicare Benefits">
+                <originalText>Medicare Benefits</originalText>
+              </ext:code>
+              <ext:effectiveTime>
+                <width value="1" unit="a" />
+              </ext:effectiveTime>
+              <ext:participant typeCode="BEN">
+                <ext:participantRole classCode="PAT">
+                  <ext:id root="ac9803c2-bf64-41b2-84be-c2503039c847" />
+                </ext:participantRole>
+              </ext:participant>
+            </ext:entitlement>
+          </ext:coverage2>
+          <ext:coverage2 typeCode="COVBY">
+            <ext:entitlement classCode="COV" moodCode="EVN">
+              <ext:id root="1.2.36.174030967.0.3" extension="1423444" assigningAuthorityName="Prescriber Number" />
+              <ext:code code="10" codeSystem="1.2.36.1.2001.1001.101.104.16047" codeSystemName="NCTIS Entitlement Type Values" displayName="Medicare Prescriber Number">
+                <originalText>Medicare Prescriber Number</originalText>
+              </ext:code>
+              <ext:effectiveTime>
+                <width value="1" unit="a" />
+              </ext:effectiveTime>
+              <ext:participant typeCode="HLD">
+                <ext:participantRole classCode="ASSIGNED">
+                  <ext:id root="02da8de8-ccdd-4451-86a0-c1c379684083" />
+                </ext:participantRole>
+              </ext:participant>
+            </ext:entitlement>
+          </ext:coverage2>
+          <ext:coverage2 typeCode="COVBY">
+            <ext:entitlement classCode="COV" moodCode="EVN">
+              <ext:id root="1.2.36.174030967.0.3" extension="1423444" assigningAuthorityName="Prescriber Number" />
+              <ext:code code="10" codeSystem="1.2.36.1.2001.1001.101.104.16047" codeSystemName="NCTIS Entitlement Type Values" displayName="Medicare Prescriber Number">
+                <originalText>Medicare Prescriber Number</originalText>
+              </ext:code>
+              <ext:effectiveTime>
+                <width value="1" unit="a" />
+              </ext:effectiveTime>
+              <ext:participant typeCode="HLD">
+                <ext:participantRole classCode="ASSIGNED">
+                  <ext:id root="02da8de8-ccdd-4451-86a0-c1c379684083" />
+                </ext:participantRole>
+              </ext:participant>
+            </ext:entitlement>
+          </ext:coverage2>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="84e8e225-3202-4e1a-91ce-9fed0093f702" />
+          <code code="102.16080" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Administrative Observations" />
+          <title>Administrative Observations</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Demographic Data</caption>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Date of Birth is Calculated From Age</td>
+                  <td>True</td>
+                </tr>
+                <tr>
+                  <td>Date of Birth Accuracy Indicator</td>
+                  <td>AAA</td>
+                </tr>
+                <tr>
+                  <td>Age Accuracy Indicator</td>
+                  <td>True</td>
+                </tr>
+                <tr>
+                  <td>Birth Plurality</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Age</td>
+                  <td>54y</td>
+                </tr>
+                <tr>
+                  <td>Date of Death Accuracy Indicator</td>
+                  <td>AAA</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="c2ec1eee-e7cd-4e8a-bfda-9845ac39a641" />
+              <code code="103.16233" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Birth is Calculated From Age" />
+              <value xsi:type="BL" value="true" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="c7bb18d7-33a2-4ba2-a8e1-0af914f5e2ae" />
+              <code code="102.16234" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Birth Accuracy Indicator" />
+              <value xsi:type="CS" code="AAA" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="31b19c35-674c-4728-a049-d98cf749c04b" />
+              <code code="103.16279" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Age Accuracy Indicator" />
+              <value xsi:type="BL" value="true" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="ffe939c1-b841-4a47-8eb8-39781d01a6a9" />
+              <code code="103.16249" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Birth Plurality" />
+              <value xsi:type="INT" value="3" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="1cb5865b-ecbb-4157-88a0-13abe35162f0" />
+              <code code="103.20109" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Age" />
+              <value xsi:type="PQ" value="54" unit="a" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="8c5e47ed-d315-48c7-8e51-68651324077e" />
+              <code code="102.16252" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Death Accuracy Indicator" />
+              <value xsi:type="CS" code="AAA" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <entry>
+            <observationMedia ID="LOGO" classCode="OBS" moodCode="EVN">
+              <id root="47cd7009-9fb5-4e3d-b325-b3aefe9e238a" />
+              <value mediaType="image/png" integrityCheck="9YrohydDw1atoMapcwcQdUBWcek=">
+                <reference value="logo.png" />
+              </value>
+            </observationMedia>
+          </entry>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

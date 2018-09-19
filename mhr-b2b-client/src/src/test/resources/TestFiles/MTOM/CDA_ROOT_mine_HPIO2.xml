@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--
+  ~ Copyright 2012 NEHTA
+  ~
+  ~ Licensed under the NEHTA Open Source (Apache) License; you may not use this
+  ~ file except in compliance with the License. A copy of the License is in the
+  ~ 'license.txt' file, which should be provided with this work.
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  ~ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing permissions and limitations
+  ~ under the License.
+  -->
+
+<ClinicalDocument xmlns:ext="http://ns.electronichealth.net.au/Ci/Cda/Extensions/3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3">
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="1.2.36.1.2001.1001.101.100.1002.4" extension="3.4" />
+  <templateId root="1.2.36.1.2001.1001.100.149" extension="1.0" />
+  <id root="1.2.3.4.5.6.7.8.9" />
+  <code code="18842-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Discharge Summarization Note" />
+  <title>Discharge Summary</title>
+  <effectiveTime value="20120427" />
+  <confidentialityCode nullFlavor="NA" />
+  <languageCode code="en-AU" />
+  <setId root="76497f0e-ce76-4652-8ae8-da99f78a1404" />
+  <versionNumber value="1" />
+  <ext:completionCode code="F" codeSystem="1.2.36.1.2001.1001.101.104.20104" codeSystemName="NCTIS Document Status Values" displayName="Final" />
+  <recordTarget typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id root="581b6ce5-b1f3-4dc6-b164-20cba7080380" />
+      <addr use="TMP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Greenslopes</city>
+        <postalCode>4120</postalCode>
+        <streetAddressLine>225 Mingilartor Court</streetAddressLine>
+      </addr>
+      <patient>
+        <name>
+          <family>Van Zyl</family>
+          <given>Andria</given>
+          <given>Maryanne</given>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.13.68" codeSystemName="AS 5017-2006 Health Care Client Identifier Sex" displayName="Female" />
+        <birthTime value="19990228" />
+        <birthplace>
+          <place>
+            <addr>
+              <country>Puerto Rico</country>
+            </addr>
+          </place>
+        </birthplace>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003601243017717" assigningAuthorityName="IHI" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT">
+    <time value="201204271307+1000" />
+    <assignedAuthor>
+      <id root="5b6a752d-fb1c-417d-8692-71644cfdd087" />
+      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+	  <!-- <code code="1234" codeSystem="0.1.2.3.4" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General" /> -->
+      <addr use="H">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Uppper Mount Gravatt</city>
+        <postalCode>4122</postalCode>
+        <houseNumber>255</houseNumber>
+        <streetName>Azanian</streetName>
+        <streetNameType>St</streetNameType>
+      </addr>
+      <telecom value="tel: 0345754566" use="WP" />
+      <assignedPerson>
+        <name>
+          <family>Button</family>
+          <given>Henry</given>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003618334357646" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEmployment classCode="EMP">
+          <ext:employerOrganization>
+            <name>Surgical Ward</name>
+            <asOrganizationPartOf>
+              <wholeOrganization>
+                <name use="ORGL">Good Hospital</name>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.36.1.2001.1003.0.8003627500001433" assigningAuthorityName="HPI-O" />
+                  <ext:assigningGeographicArea classCode="PLC">
+                    <ext:name>National Identifier</ext:name>
+                  </ext:assigningGeographicArea>
+                </ext:asEntityIdentifier>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </ext:employerOrganization>
+        </ext:asEmployment>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="fb712e18-d2cc-43b4-8bd0-78417b7955ae" />
+        <name>Burrill Lake Medical Centre</name>
+        <telecom value="tel: 0345754566" use="WP" />
+        <addr use="H">
+          <country>Australia</country>
+          <state>QLD</state>
+          <city>Nehtaville</city>
+          <postalCode>5555</postalCode>
+          <streetAddressLine>1 Custodian Street</streetAddressLine>
+          <additionalLocator>32568931</additionalLocator>
+        </addr>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.3.4.77777" assigningAuthorityName="SampleAuthority" />
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003620833337558" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient>
+    <intendedRecipient>
+      <id root="bd4ff1cf-382c-4768-8161-5dea363de470" />
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Albion</city>
+        <postalCode>4010</postalCode>
+        <houseNumber>5000</houseNumber>
+        <streetName>Sandgate</streetName>
+        <streetNameType>Rd</streetNameType>
+      </addr>
+      <telecom value="tel: 0345754544" use="WP" />
+      <informationRecipient>
+        <name use="L">
+          <family>Smithson</family>
+          <given>Jane</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003610833333764" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </informationRecipient>
+    </intendedRecipient>
+  </informationRecipient>
+  <legalAuthenticator>
+    <time value="201204271307+1000" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="114b89de-cc4f-48fd-804f-f68cda2636cc" />
+      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+      <addr use="H">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Albion</city>
+        <postalCode>4010</postalCode>
+        <houseNumber>534</houseNumber>
+        <streetName>Billson</streetName>
+        <streetNameType>St</streetNameType>
+      </addr>
+      <telecom value="tel: 0345754566" use="WP" />
+      <assignedPerson>
+        <name>
+          <family>Johns</family>
+          <given>Bill</given>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003610000001145" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </assignedPerson>
+      <representedOrganization>
+        <name>Oz Health Clinic</name>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+  <participant typeCode="ORG">
+    <associatedEntity classCode="SDLOC">
+      <id root="054f2eb4-6e20-472a-8290-a6f8300fae4a" />
+      <code>
+        <originalText>Ward 4F</originalText>
+      </code>
+    </associatedEntity>
+  </participant>
+  <participant typeCode="PART">
+    <functionCode code="PCP" />
+    <associatedEntity classCode="PROV">
+      <id root="acdee5c0-7452-4237-a1be-b16d0bbd3969" />
+      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Albion</city>
+        <postalCode>4010</postalCode>
+        <houseNumber>5000</houseNumber>
+        <streetName>Sandgate</streetName>
+        <streetNameType>Rd</streetNameType>
+      </addr>
+      <telecom value="tel: 0345754544" use="WP" />
+      <associatedPerson>
+        <name use="L">
+          <family>Smithson</family>
+          <given>Jane</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003610833333764" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </associatedPerson>
+    </associatedEntity>
+  </participant>
+  <componentOf>
+    <encompassingEncounter>
+      <effectiveTime>
+        <low value="201011101633+1000" />
+        <high value="201011111208+1000" />
+      </effectiveTime>
+      <dischargeDispositionCode code="3" codeSystem="2.16.840.1.113883.13.65" codeSystemName="Episode of admitted patient care-separation mode" displayName="Discharge/transfer to (an)other psychiatric hospital" />
+      <encounterParticipant typeCode="DIS">
+        <time>
+          <low value="20110111" />
+          <high value="20110112" />
+        </time>
+        <assignedEntity>
+          <id root="e6b59e99-e3db-4dfa-a553-3ba0a2ff2c93" />
+          <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+          <addr use="WP">
+            <country>Australia</country>
+            <state>QLD</state>
+            <city>Albion</city>
+            <postalCode>4010</postalCode>
+            <houseNumber>15</houseNumber>
+            <streetName>Sandgate</streetName>
+            <streetNameType>Rd</streetNameType>
+          </addr>
+          <assignedPerson>
+            <name use="L">
+              <family>Smith</family>
+              <given>John</given>
+              <prefix>Dr</prefix>
+            </name>
+            <ext:asEntityIdentifier classCode="IDENT">
+              <ext:id root="1.2.36.1.2001.1003.0.8003610833333723" assigningAuthorityName="HPI-I" />
+              <ext:assigningGeographicArea classCode="PLC">
+                <ext:name>National Identifier</ext:name>
+              </ext:assigningGeographicArea>
+            </ext:asEntityIdentifier>
+          </assignedPerson>
+        </assignedEntity>
+      </encounterParticipant>
+      <location>
+        <healthCareFacility>
+          <id root="8138e82a-4181-40f4-b273-6f4569c058b2" />
+          <!--<code code="HOSP" codeSystem="2.16.840.1.113883.1.11.17660" codeSystemName="HL7 ServiceDeliveryLocatonRoleType" displayName="Hospital" />-->
+		  <code code="HOSP" codeSystem="2.16.840.1.113883.1.11.17660" codeSystemName="HL7 ServiceDeliveryLocatonRoleType" displayName="Hospital" />
+          <serviceProviderOrganization>
+            <name>Accident and Emergency</name>
+            <asOrganizationPartOf>
+              <id root="51027f61-1eea-4e75-965d-833c16e5b2cf" />
+              <wholeOrganization>
+                <name use="ORGY">Franklin Hospital</name>
+                <telecom value="tel: 0712341234" use="WP" />
+                <addr use="WP">
+                  <country>Australia</country>
+                  <state>ACT</state>
+                  <city>Franklin</city>
+                  <postalCode>2607</postalCode>
+                  <houseNumber>1</houseNumber>
+                  <streetName>Stanley</streetName>
+                  <streetNameType>St</streetNameType>
+                </addr>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.36.1.2001.1003.0.8003620833337558" assigningAuthorityName="HPI-O" />
+                  <ext:assigningGeographicArea classCode="PLC">
+                    <ext:name>National Identifier</ext:name>
+                  </ext:assigningGeographicArea>
+                </ext:asEntityIdentifier>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </serviceProviderOrganization>
+        </healthCareFacility>
+      </location>
+    </encompassingEncounter>
+  </componentOf>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <id root="a74ea129-6b0a-4b8c-b6b1-cb1f345ce2fe" />
+          <code code="102.16080" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Administrative Observations" />
+          <title>Administrative Observations</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>DEMOGRAPHIC DATA</caption>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>ResultValue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Date of Birth is Calculated From Age</td>
+                  <td>False</td>
+                </tr>
+                <tr>
+                  <td>Date of Birth Accuracy Indicator</td>
+                  <td>AAA</td>
+                </tr>
+                <tr>
+                  <td>Age Accuracy Indicator</td>
+                  <td>True</td>
+                </tr>
+                <tr>
+                  <td>Birth Plurality</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Age</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>Medicare Benefits</td>
+                  <td>4950135291  (Medicare Card Number) </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Specialties</caption>
+              <thead>
+                <tr>
+                  <th>Specialty</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Specialist emergency physician</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="226c3b9f-a18c-4820-9e9b-bebf23cdbdab" />
+              <code code="103.16233" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Birth is Calculated From Age" />
+              <value xsi:type="BL" value="false" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="d93dd1f2-e454-4e71-b8ea-99f9788321f5" />
+              <code code="102.16234" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Birth Accuracy Indicator" />
+              <value xsi:type="CS" code="AAA" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="de09ec34-d7f6-4a46-9eda-ef8071983d34" />
+              <code code="103.16279" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Age Accuracy Indicator" />
+              <value xsi:type="BL" value="true" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="ff23c2c1-14a6-455a-819a-f964105d2836" />
+              <code code="103.16249" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Birth Plurality" />
+              <value xsi:type="INT" value="1" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="ace551f9-8d36-4109-a63b-25a1e676bb32" />
+              <code code="103.20109" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Age" />
+              <value xsi:type="PQ" value="13" unit="a" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="5d8004f4-ea0c-4815-a67b-c097563481bb" />
+              <code code="103.16028" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Specialty" />
+              <value xsi:type="CD">
+                <originalText>Specialist emergency physician</originalText>
+              </value>
+            </observation>
+          </entry>
+          <ext:coverage2 typeCode="COVBY">
+            <ext:entitlement classCode="COV" moodCode="EVN">
+              <ext:id root="1.2.36.1.5001.1.0.7.1" extension="4950135291" assigningAuthorityName="Medicare Card Number" />
+              <ext:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16047" codeSystemName="NCTIS Entitlement Type Values" displayName="Medicare Benefits">
+                <originalText>Medicare Benefits</originalText>
+              </ext:code>
+              <ext:participant typeCode="BEN">
+                <ext:participantRole classCode="PAT">
+                  <ext:id root="581b6ce5-b1f3-4dc6-b164-20cba7080380" />
+                </ext:participantRole>
+              </ext:participant>
+            </ext:entitlement>
+          </ext:coverage2>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="7fe2fcc4-eea5-4785-865c-e1a7e9e5cd20" />
+          <code code="101.16006" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Event" />
+          <title>Event</title>
+          <text mediaType="text/x-hl7-text+xml">This section may contain the following subsections Problems/Diagnoses This Visit, Clinical Interventions Performed This Visit and Clinical Synopsis and Diagnostic Investigations.</text>
+          <component>
+            <section>
+              <id root="98d97f52-f20f-41f4-b608-9a087d9c8435" />
+              <code code="101.16142" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Problems/Diagnoses This Visit" />
+              <title>Problems/Diagnoses This Visit</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Problems/Diagnoses</caption>
+                  <thead>
+                    <tr>
+                      <th>Type</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Primary Diagnosis</td>
+                      <td>Enteritis due to radiation</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry typeCode="DRIV">
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="802725f3-cde2-4f3a-ac72-f647bcf04416" />
+                  <code>
+                    <originalText>Primary Diagnosis</originalText>
+                  </code>
+                  <value xsi:type="CD" code="73817000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" codeSystemVersion="20110531" displayName="Enteritis due to radiation" />
+                </observation>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <id root="4baeb693-7667-4c5b-b336-c3db116332a4" />
+              <code code="102.15513.4.1.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Clinical Synopsis" />
+              <title>Clinical Synopsis</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Clinical Synopsis</caption>
+                  <thead>
+                    <tr>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>24 hours nausea, vomiting and diarrhoea. On admission, moderate dehydration. Rehydrated with IV fluids. Clinical status improved overnight.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry typeCode="DRIV">
+                <act classCode="ACT" moodCode="EVN">
+                  <id root="1fcfd300-31a2-4fee-9f01-ca0e70c78db6" />
+                  <code code="103.15582" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Clinical Synopsis Description" />
+                  <text xsi:type="ST">24 hours nausea, vomiting and diarrhoea. On admission, moderate dehydration. Rehydrated with IV fluids. Clinical status improved overnight.</text>
+                </act>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <id root="f2166df8-1e89-4d03-97ba-cc5ac0a31a2a" />
+              <code code="101.20117" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Diagnostic Investigations" />
+              <title>Diagnostic Investigations</title>
+              <text mediaType="text/x-hl7-text+xml">This section may contain the following subsections Pathology Test Result and Imaging Examination Result.</text>
+              <component>
+                <section>
+                  <id root="6d061564-8cc3-44c9-86a6-0dab76c24581" />
+                  <code code="102.16145" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result" />
+                  <title>Imaging Examination Result</title>
+                  <text mediaType="text/x-hl7-text+xml">
+                    <table>
+                      <caption>Imaging Examination Result Date Time</caption>
+                      <thead>
+                        <tr>
+                          <th>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>11 Nov 2010</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <caption>Imaging Examination Result Details</caption>
+                      <thead>
+                        <tr>
+                          <th>Result name</th>
+                          <th>Modality</th>
+                          <th>Result Status</th>
+                          <th>Clinical Information</th>
+                          <th>Findings</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Pelvic Ultrasound</td>
+                          <td>Ultrasound</td>
+                          <td>Final</td>
+                          <td>Patient pregnant. Confirm dates. Estimate from LMP 18 weeks</td>
+                          <td>Anechoic tubular structures present in the adnexal area</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <table>
+                      <caption>Result Group(s)</caption>
+                      <thead>
+                        <tr>
+                          <th>Result Group</th>
+                          <th>Result Name</th>
+                          <th>Result Value</th>
+                          <th>Result Value - Status</th>
+                          <th>Result Value - Range</th>
+                          <th>Result Comment</th>
+                          <th>Assocaited Site</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Appendicitis Turbo Ovarian Complex</td>
+                          <td>Appendicitis Turbo Ovarian Complex</td>
+                          <td>
+                            <list>
+                              <item>Turbo Ovarian Complex</item>
+                            </list>
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                          <td>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </text>
+                  <entry>
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="4e1cd873-89b0-4884-9e81-ace139f03fd3" />
+                      <code>
+                        <originalText>Pelvic Ultrasound</originalText>
+                      </code>
+                      <effectiveTime value="20120427130704+10" />
+                      <methodCode>
+                        <originalText>Ultrasound</originalText>
+                      </methodCode>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="308552006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT-AU" codeSystemVersion="20110531" displayName="report status" />
+                          <value xsi:type="CD" code="3" codeSystem="1.2.36.1.2001.1001.101.104.16501" codeSystemName="NCTIS Result Status Values" displayName="Final" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <act classCode="INFRM" moodCode="EVN">
+                          <code code="55752-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical Information" />
+                          <text xsi:type="ST">Patient pregnant. Confirm dates. Estimate from LMP 18 weeks</text>
+                        </act>
+                      </entryRelationship>
+                      <entryRelationship typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="338e7fd8-40dd-4148-8afa-07139e863b36" />
+                          <code code="103.16503" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Findings" />
+                          <text xsi:type="ST">Anechoic tubular structures present in the adnexal area</text>
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <organizer classCode="BATTERY" moodCode="EVN">
+                          <id root="819d317f-b830-44a7-b769-f3d6b093c05d" />
+                          <code>
+                            <originalText>Appendicitis Turbo Ovarian Complex</originalText>
+                          </code>
+                          <statusCode code="completed" />
+                          <component>
+                            <observation classCode="OBS" moodCode="EVN">
+                              <id root="b7154ee6-8536-43c0-b09b-2bb15e91ddda" />
+                              <code>
+                                <originalText>Appendicitis Turbo Ovarian Complex</originalText>
+                              </code>
+                              <value xsi:type="CD">
+                                <originalText>Turbo Ovarian Complex</originalText>
+                              </value>
+                            </observation>
+                          </component>
+                        </organizer>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="73e43341-987f-4018-8af4-0f9c93c8f10a" />
+                          <code code="103.16589" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result DateTime" />
+                          <effectiveTime value="20101111" />
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entry>
+                </section>
+              </component>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="7537af80-e485-4f55-8919-dc8db6dd3a91" />
+          <code code="101.16022" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Medications" />
+          <title>Medications</title>
+          <text mediaType="text/x-hl7-text+xml">This section may contain the following subsections Current Medications On Discharge and Ceased Medications.</text>
+          <component>
+            <section>
+              <id root="4d2827a9-14e2-4acb-bed9-b2dab3442a0c" />
+              <code code="101.16146.4.1.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Current Medications On Discharge" />
+              <title>Current Medications On Discharge</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Current Medications On Discharge</caption>
+                  <thead>
+                    <tr>
+                      <th>Item Status</th>
+                      <th>Item Description</th>
+                      <th>Duration</th>
+                      <th>Reason for Medication</th>
+                      <th>Unit of Use Quantity Dispensed</th>
+                      <th>Dose Instructions</th>
+                      <th>Change made</th>
+                      <th>Reason for change</th>
+                      <th>Additional Comments</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Changed</td>
+                      <td>Amoxycillin 500 mg capsule, 20</td>
+                      <td>1 week</td>
+                      <td>
+                      </td>
+                      <td>20 capsules</td>
+                      <td>Orally, 3 times a day until course if finished</td>
+                      <td>Dose increased to 10mg.</td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry typeCode="DRIV">
+                <substanceAdministration classCode="SBADM" moodCode="EVN">
+                  <id root="e0bbdb0b-258f-414e-ae06-703d2fd8221a" />
+                  <text xsi:type="ST">Orally, 3 times a day until course if finished</text>
+                  <statusCode code="active" />
+                  <effectiveTime xsi:type="IVL_TS">
+                    <width value="1" unit="wk" />
+                  </effectiveTime>
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedMaterial>
+                        <code code="28237011000036107" codeSystem="1.2.36.1.2001.1004.100" codeSystemName="Australian Medicines Terminology (AMT)" displayName="Amoxycillin 500 mg capsule, 20" />
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </consumable>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="c62461f7-8097-4d29-ae2d-92ed3f80d78b" />
+                      <code>
+                        <originalText>Changed</originalText>
+                      </code>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="REFR">
+                    <supply classCode="SPLY" moodCode="EVN">
+                      <id root="90c21651-8b74-4c12-ab13-5a72a6fbb70d" />
+                      <text xsi:type="ST">20 capsules</text>
+                    </supply>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SPRT">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="cc9c3b5c-bcce-4cc4-a291-268b4ab6ea97" />
+                      <code>
+                        <originalText>Dose increased to 10mg.</originalText>
+                      </code>
+                    </observation>
+                  </entryRelationship>
+                </substanceAdministration>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <id root="a1e737c0-1bee-4ef5-b41d-c82cafdf7049" />
+              <code code="101.16146.4.1.2" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Ceased Medications" />
+              <title>Ceased Medications</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Ceased Medications</caption>
+                  <thead>
+                    <tr>
+                      <th>Item Status</th>
+                      <th>Item Description</th>
+                      <th>Change Made</th>
+                      <th>Reason for Change</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Ceased</td>
+                      <td>Paracetamol and Codeine 500/30 (APO) tablet: uncoated, 20 tablets</td>
+                      <td>Drug therapy discontinued.</td>
+                      <td>Optimise drug therapy.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry typeCode="DRIV">
+                <substanceAdministration classCode="SBADM" moodCode="EVN">
+                  <id root="eeacc5a1-36bb-480e-97e8-75c3a5d8f78e" />
+                  <statusCode code="cancelled" />
+                  <consumable>
+                    <manufacturedProduct>
+                      <manufacturedMaterial>
+                        <code code="78865011000036106" codeSystem="1.2.36.1.2001.1004.100" codeSystemName="Australian Medicines Terminology (AMT)" codeSystemVersion="20120629" displayName="Paracetamol and Codeine 500/30 (APO) tablet: uncoated, 20 tablets" />
+                      </manufacturedMaterial>
+                    </manufacturedProduct>
+                  </consumable>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="f1de4d4c-cbac-4a57-bdbb-47427008af79" />
+                      <code>
+                        <originalText>Ceased</originalText>
+                      </code>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SPRT">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="8a5b8c14-9fec-4df5-a39b-635bbd0612c0" />
+                      <code>
+                        <originalText>Drug therapy discontinued.</originalText>
+                      </code>
+                      <entryRelationship typeCode="RSON">
+                        <act classCode="INFRM" moodCode="EVN">
+                          <id root="35136c10-159e-4511-9423-245ca26f2d3c" />
+                          <code code="103.10177" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Reason for Change" />
+                          <text xsi:type="ST">Optimise drug therapy.</text>
+                        </act>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                </substanceAdministration>
+              </entry>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="4685ae51-ae72-471b-8909-644383d6debb" />
+          <code code="101.16011" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Health Profile" />
+          <title>Health Profile</title>
+          <text mediaType="text/x-hl7-text+xml">This section may contain the following subsections Adverse Reactions and Alerts.</text>
+          <component>
+            <section>
+              <id root="478bf96a-038a-488d-9398-9f7eb69aceb1" />
+              <code code="101.20113" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Adverse Reactions" />
+              <title>Adverse Reactions</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Exclusion Statements</caption>
+                  <thead>
+                    <tr>
+                      <th>Exclusions</th>
+                      <th>Values</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Global Statement</td>
+                      <td>
+                        <list>
+                          <item>None known</item>
+                        </list>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="e42a0623-3046-4ee6-b4f5-0078e035f431" />
+                  <code code="103.16302.4.3.4" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Global Statement" />
+                  <value xsi:type="CD" code="01" codeSystem="1.2.36.1.2001.1001.101.104.16299" codeSystemName="NCTIS Global Statement Values" displayName="None known" />
+                </observation>
+              </entry>
+            </section>
+          </component>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="01ffe65d-db3d-43c5-9a2b-8a540f3af709" />
+          <code code="101.16020" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Plan" />
+          <title>Plan</title>
+          <text mediaType="text/x-hl7-text+xml">This section may contain the following subsections Arranged Services and Record Of Recommendations And Information Provided.</text>
+          <component>
+            <section>
+              <id root="c5e50905-a740-4c3d-ac5d-68eea57b4079" />
+              <code code="101.16021" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Arranged Services" />
+              <title>Arranged Services</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Arranged Services</caption>
+                  <thead>
+                    <tr>
+                      <th>Service Date</th>
+                      <th>Provider Role</th>
+                      <th>Provider Person Name</th>
+                      <th>Provider Organisation</th>
+                      <th>Address</th>
+                      <th>Contact</th>
+                      <th>Status</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12 Nov 2008 - 12 Dec 2010</td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td>
+                      </td>
+                      <td />
+                      <td>
+                      </td>
+                      <td>Event</td>
+                      <td>Dialysis</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry typeCode="DRIV">
+                <act classCode="ACT" moodCode="EVN">
+                  <id root="2b848e56-7f4f-4f78-8917-a3bd5a6257da" />
+                  <code>
+                    <originalText>Dialysis</originalText>
+                  </code>
+                  <effectiveTime>
+                    <low value="20081112" />
+                    <high value="20101212" />
+                  </effectiveTime>
+                </act>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <id root="3a7111f8-c697-4146-9dd4-583d7617a739" />
+              <code code="101.20016" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Record of Recommendations and Information Provided" />
+              <title>Record of Recommendations and Information Provided</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Record of Recommendations and Information Provided</caption>
+                  <thead>
+                    <tr>
+                      <th>Recipient Person Name</th>
+                      <th>Recipient Role</th>
+                      <th>Recipient Organisation</th>
+                      <th>Address</th>
+                      <th>Contact</th>
+                      <th>Note</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Dr Maryanne Smith</td>
+                      <td>General Medical Practitioner</td>
+                      <td>Super Healthy Hospital</td>
+                      <td>29, Sandgate, Albion, 4010</td>
+                      <td>tel: 0345754522</td>
+                      <td>Codalgin Forte to recommence at GP's discretion</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry typeCode="DRIV">
+                <act classCode="INFRM" moodCode="PRP">
+                  <id root="ecb3dce7-ac03-411e-8d0d-ea68a5b9d14a" />
+                  <code code="102.20016.4.1.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Recommendations Provided" />
+                  <text xsi:type="ST">Codalgin Forte to recommence at GP's discretion</text>
+                  <performer typeCode="PRF">
+                    <assignedEntity>
+                      <id root="efe7c34b-32f5-4737-a98c-a630bbab8322" />
+                      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="General Medical Practitioner" />
+                      <addr use="WP">
+                        <country>Australia</country>
+                        <state>QLD</state>
+                        <city>Albion</city>
+                        <postalCode>4010</postalCode>
+                        <houseNumber>29</houseNumber>
+                        <streetName>Sandgate</streetName>
+                        <streetNameType>Rd</streetNameType>
+                      </addr>
+                      <telecom value="tel: 0345754522" use="WP" />
+                      <assignedPerson>
+                        <name use="L">
+                          <family>Smith</family>
+                          <given>Maryanne</given>
+                          <prefix>Dr</prefix>
+                        </name>
+                        <ext:asEntityIdentifier classCode="IDENT">
+                          <ext:id root="1.2.36.1.2001.1003.0.8003618334357646" assigningAuthorityName="HPI-I" />
+                          <ext:assigningGeographicArea classCode="PLC">
+                            <ext:name>National Identifier</ext:name>
+                          </ext:assigningGeographicArea>
+                        </ext:asEntityIdentifier>
+                        <ext:asEmployment classCode="EMP">
+                          <ext:employerOrganization>
+                            <name>Urology</name>
+                            <asOrganizationPartOf>
+                              <wholeOrganization>
+                                <name use="ORGE">Super Healthy Hospital</name>
+                                <ext:asEntityIdentifier classCode="IDENT">
+                                  <ext:id root="1.2.36.1.2001.1003.0.8003620833337558" assigningAuthorityName="HPI-O" />
+                                  <ext:assigningGeographicArea classCode="PLC">
+                                    <ext:name>National Identifier</ext:name>
+                                  </ext:assigningGeographicArea>
+                                </ext:asEntityIdentifier>
+                              </wholeOrganization>
+                            </asOrganizationPartOf>
+                          </ext:employerOrganization>
+                        </ext:asEmployment>
+                      </assignedPerson>
+                    </assignedEntity>
+                  </performer>
+                </act>
+              </entry>
+            </section>
+          </component>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

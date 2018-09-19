@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<project name="eSignature"
+         default="dist">
+
+    <!-- Build properties file -->
+    <property file="build.properties"/>
+
+    <!-- Classpath for compilation -->
+    <path id="compile.path">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+
+    <!-- Classpath for XJC/JAXB -->
+    <path id="xjc.path">
+        <fileset dir="${lib.dir}"
+                 includes="**/*.jar"/>
+    </path>
+
+    <!-- XJC/JAXB task definiton -->
+    <taskdef name="xjc"
+             classname="com.sun.tools.xjc.XJCTask">
+        <classpath refid="xjc.path"/>
+    </taskdef>
+
+    <!-- clean: removes all temporary/rebuildable files/directories -->
+    <target name="clean"
+            description="Deletes the files and directories generated during the build">
+        <delete dir="${build.dir}"/>
+        <delete dir="${classes.dir}"/>
+        <delete dir="${src.dir}"/>
+        <delete dir="${doc.dir}"/>
+    </target>
+
+    <!-- prepare: create temporary directories -->
+    <target name="prepare"
+            depends="clean"
+            description="Does initialisation actions, e.g. create directories">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${src.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${doc.dir}"/>
+        <mkdir dir="${extern.dir}"/>
+    </target>
+
+    <!-- bld:generate: produces JAXB-generated source from schema(s) -->
+    <target name="bld:generate"
+            depends="prepare">
+        <xjc destdir="${src.dir}"
+             extension="true">
+            <schema dir="${xsd.dir}" includes="*.xsd"/>
+            <binding dir="${binding.dir}" includes="*.jxb"/>
+            <produces dir="${src.dir}" includes="**/*.java"/>
+        </xjc>
+    </target>
+
+    <!-- bld:compile: compiles the JAXB-generated source -->
+    <target name="bld:compile"
+            depends="bld:generate">
+        <javac srcdir="${src.dir}"
+               destdir="${classes.dir}"
+               includes="**/*.java"
+               debug="on"/>
+    </target>
+
+
+    <!-- bld: compiles the JAXB-generated source -->
+    <target name="bld"
+            depends="bld:compile"
+            description="Compiles the JAXB-generated source">
+    </target>
+
+    <!-- doc: generate javadoc from source -->
+    <target name="doc"
+            depends="bld"
+            description="Generate javadoc from source">
+
+        <javadoc destdir="${doc.dir}" classpathref="compile.path">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
+
+    <!-- package: packages classes/javadoc/source into JAR files -->
+    <target name="pkg"
+            depends="doc"
+            description="Packages the classes/WSDLS etc into JAR files">
+
+        <!-- Create a JAR file containing the core classes. -->
+        <jar destfile="${build.dir}/${jar.file}">
+            <fileset dir="${classes.dir}">
+                <include name="**/*.class"/>
+            </fileset>
+        </jar>
+
+        <!-- Create a JAR file containing the source files. -->
+        <jar destfile="${build.dir}/${src.jar.file}">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </jar>
+
+        <!-- Create a JAR file containing javadoc files. -->
+        <jar basedir="${doc.dir}" destfile="${build.dir}/${doc.jar.file}"/>
+    </target>
+
+    <!-- dist: packages all build artifacts into distributable ZIP -->
+    <target name="dist"
+            depends="pkg,doc"
+            description="Packages all build artifacts into distributable ZIP">
+
+        <zip destfile="${dist.file}">
+
+            <!-- Include package documentation -->
+            <zipfileset dir="${basedir}">
+                <include name="${license.file}"/>
+                <include name="${readme.file}"/>
+                <include name="${revision.file}"/>
+            </zipfileset>
+
+            <!-- Include src and wsdl/xsd files-->
+            <zipfileset dir="${resources.dir}" prefix="src/main/resources">
+                <include name="**/*.xsd"/>
+                <include name="**/*.wsdl"/>
+            </zipfileset>
+
+            <!--Include compiled client library jar, source and javadoc jars.-->
+            <zipfileset dir="${build.dir}" prefix="api">
+                <include name="${jar.file}"/>
+                <include name="${src.jar.file}"/>
+                <include name="${doc.jar.file}"/>
+            </zipfileset>
+
+            <!--Include dependency jar file-->
+            <zipfileset dir="${lib.provided.dir}" prefix="lib/provided">
+                <include name="**/*.jar"/>
+            </zipfileset>
+        </zip>
+
+        <!-- copy produced jars to extern directory -->
+        <copy todir="${extern.dir}">
+            <fileset dir="${build.dir}">
+                <include name="**/*.jar"/>
+            </fileset>
+        </copy>
+
+      
+    </target>
+</project>

@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+<!--
+Copyright 2012 NEHTA
+
+Licensed under the NEHTA Open Source (Apache) License; you may not use this
+file except in compliance with the License. A copy of the License is in the
+'license.txt' file, which should be provided with this work.
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.
+ -->
+
+<project name="PCEHR-client"
+         default="package">
+
+    <property file="build.properties"/>
+
+    <!-- Classpath for compilation -->
+    <path id="compile.path">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    </path>
+	
+    <path id="test.compile.path">
+        <fileset dir="${lib.dir}" includes="**/*.jar"/>
+    	<fileset dir="${jar.dir}" includes="${jar.file}"/>
+    </path>
+
+    <path id="lib.tasks.path">
+        <fileset dir="${tasklibs.dir}">
+            <exclude name="**/*.xml"/>
+            <exclude name="**/*.icns"/>
+        </fileset>
+    </path>
+
+    <path id="lib.findbugs.path">
+        <fileset dir="${findbugs.lib.dir}"/>
+    </path>
+
+    <path id="test.class.path">
+        <fileset dir="${classes.dir}"
+                 includes="**/AllTests.jar"/>
+    </path>
+
+    <path id="lib.test.path">
+        <fileset dir="${lib.test.dir}" includes="**/*.jar"/>
+    </path>
+
+    <target name="clean"
+            description="Delete files and directories generated during the build process.">
+        <delete dir="${classes.dir}"/>
+        <delete dir="${doc.dir}"/>
+        <delete dir="${jar.dir}"/>
+        <delete dir="${build.dir}"/>
+    </target>
+
+    <target name="prepare"
+            depends="clean"
+            description="Prepares the build environment.">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${classes.dir}"/>
+        <mkdir dir="${main.classes.dir}"/>
+        <mkdir dir="${test.classes.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${doc.dir}"/>
+        <mkdir dir="${jar.dir}"/>
+    </target>
+
+    <target name="pre-build"
+            depends="prepare,check-style,pmd"
+            description="Run pre-build targets."/>
+
+    <target name="check-style"
+            description="Generates a report of code convention violations.">
+        <taskdef resource="checkstyletask.properties"
+                 classpathref="lib.tasks.path"/>
+        <mkdir dir="${checkstyle.dir}"/>
+        <checkstyle config="${basedir}/${checkstyle.config.file}"
+                    failureProperty="checkstyle.failure"
+                    failOnViolation="false"
+                    classpathref="compile.path">
+            <formatter type="xml"
+                       toFile="${checkstyle.dir}/${checkstyle.report.file}"/>
+            <fileset dir="${src.dir}"
+                     includes="**/*.java"/>
+        </checkstyle>
+    </target>
+
+    <target name="pmd"
+            description="Generates a report of PMD violations.">
+        <taskdef name="pmd"
+                 classpathref="lib.tasks.path"
+                 classname="net.sourceforge.pmd.ant.PMDTask"/>
+        <mkdir dir="${pmd.dir}"/>
+        <pmd shortFilenames="true"
+             rulesetfiles="${tasklibs.dir}/rulesets/favorites.xml">
+            <formatter type="xml" toFile="${pmd.dir}/${pmd.report.file}"/>
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </pmd>
+    </target>
+
+    <!-- TODO instrument - add back -->
+    <target name="build"
+            depends="pre-build,compile-source,generate-docs"
+            description="Build all required artefacts."/>
+
+    <target name="compile-source"
+            description="Compiles source code.">
+
+        <!-- Build main module. -->
+        <javac destdir="${main.classes.dir}"
+               fork="true"
+               classpathref="compile.path"
+               includeAntRuntime="no">
+            <src path="${src.dir}"/>
+        </javac>
+    	
+		<!-- copy the metro.xml file --> 	
+	  <copy todir="${main.classes.dir}/META-INF">
+    		<fileset dir="${src.dir}/META-INF"/>
+        </copy>
+    </target>
+
+    <target name="compile-tests" depends="jar"
+            description="Compile unit tests.">
+        <!--&lt;!&ndash; Build test module. &ndash;&gt;-->
+        <javac destdir="${test.classes.dir}"
+               srcdir="${test.src.dir}"
+               fork="true"
+               classpathref="test.compile.path"
+              includeAntRuntime="no">
+            <src path="${test.src.dir}"/>
+       </javac>
+    </target>
+
+    <target name="generate-docs"
+            description="Generate javadoc from source.">
+        <javadoc destdir="${doc.dir}" classpathref="compile.path">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            </fileset>
+            <link offline="true"/>
+        </javadoc>
+    </target>
+
+    <!--<target name="instrument">-->
+        <!--<taskdef classpath="${tasklibs.dir}/cobertura-1.9.4.1.jar"-->
+                 <!--resource="tasks.properties"/>-->
+        <!--<cobertura-instrument todir="${instrumented.classes.dir}"/>-->
+        <!--<fileset dir="${main.classes.dir}">-->
+            <!--<include name="**/*.class"/>-->
+        <!--</fileset>-->
+    <!--</target>-->
+
+    <target name="jar"
+            depends="build"
+            description="Packages classes into JAR files">
+
+        <!-- Create a JAR file containing the main module classes. -->
+        <jar destfile="${jar.dir}/${jar.file}">
+            <fileset dir="${main.classes.dir}">
+                <include name="**/*.class"/>
+            	 <include name="**/*.xml"/>
+                <exclude name="**/*Test.java"/>
+            </fileset>
+        </jar>
+
+        <!-- Create a JAR file containing the source files. -->
+        <jar destfile="${jar.dir}/${src.jar.file}">
+            <fileset dir="${src.dir}">
+                <include name="**/*.java"/>
+            	 <include name="**/*.xml"/>
+            </fileset>
+        </jar>
+
+        <!-- Create a JAR file containing javadoc files. -->
+        <jar destfile="${jar.dir}/${doc.jar.file}">
+            <fileset dir="${doc.dir}">
+                <include name="**/*"/>
+            </fileset>
+        </jar>
+    </target>
+
+    <target name="post-build"
+            depends="jar"
+            description="Performs all post-build tasks."/>
+
+    <target name="findbugs"
+            depends="jar"
+            description="Generates a report of FindBugs violations.">
+        <taskdef name="findbugs"
+                 classpathref="lib.findbugs.path"
+                 classname="edu.umd.cs.findbugs.anttask.FindBugsTask"/>
+        <mkdir dir="${findbugs.dir}"/>
+        <findbugs home="${findbugs.lib.dir}"
+                  output="xml"
+                  outputFile="${findbugs.dir}/${findbugs.report.file}"
+                  failOnError="true">
+            <sourcePath path="${src.dir}"/>
+            <class location="${jar.dir}/${jar.file}"/>
+            <auxClasspath path="${lib.provided.dir}/nehta-vendorlibrary-java-pcehr-compiled-wsdl-2.4.3.jar"/>
+        	<auxClasspath path="${lib.provided.dir}/nehta-smi-xsp-1.2.0.jar"/>
+            <auxClasspath path="${lib.provided.dir}/nehta-vendorlibrary-java-common-1.1.0.jar"/>
+            <auxClasspath path="${lib.provided.dir}/nehta-smi-common-utils-latest.jar"/>
+        	<auxClasspath path="${lib.provided.dir}/joda-time-2.1.jar"/>
+        	<auxClasspath path="${lib.provided.dir}/commons-lang-2.6.jar"/>
+        	<auxClasspath path="${lib.provided.dir}/commons-io-2.3.jar"/>
+        	<auxClasspath path="${lib.provided.dir}/commons-codec-1.6.jar"/>
+        </findbugs>
+    </target>
+	
+	<target name="unit-test" >
+
+	  <junit printsummary="yes" haltonfailure="yes">
+
+	    <classpath>
+	      <pathelement location="${compile.path}"/>
+	      <pathelement location="${build.tests}"/>
+	      <pathelement path="${java.class.path}"/>
+	    </classpath>
+
+	    <test name="com.jenkov.test.MyUnitTest"
+	             haltonfailure="no" outfile="result">
+
+	      <formatter type="plain"/>
+	      <formatter type="xml"/>
+
+	    </test>
+
+	  </junit>
+	</target>
+
+    <target name="package"
+            depends="post-build,findbugs"
+            description="Packages all build artefacts into distributable ZIP.">
+
+        <!-- Include package metadata files. -->
+        <zip destfile="${dist.file}">
+            <zipfileset dir="${basedir}">
+                <include name="${license.file}"/>
+                <include name="${readme.file}"/>
+                <include name="${revision.file}"/>
+            </zipfileset>
+
+            <!-- Include main module source files. -->
+            <zipfileset dir="${src.dir}"
+                        prefix="src/main/java">
+                <include name="**/*.java"/>
+            </zipfileset>
+
+            <!-- Include sample java source files. -->
+            <zipfileset dir="${sample.src.dir}"
+                        prefix="src/sample/java">
+                <include name="**/*.java"/>
+            </zipfileset>
+
+            <!--Include compiled client library jar, source and javadoc jars.-->
+            <zipfileset dir="${jar.dir}" prefix="api">
+                <include name="${jar.file}"/>
+                <include name="${src.jar.file}"/>
+                <include name="${doc.jar.file}"/>
+            </zipfileset>
+
+            <!--Include dependency jar file-->
+            <zipfileset dir="${lib.provided.dir}" prefix="lib/provided">
+                <include name="**/*.jar"/>
+                <include name="**/*.txt"/>
+            </zipfileset>
+        </zip>
+    </target>
+</project>

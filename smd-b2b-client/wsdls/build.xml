@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<project name="SmdInterface" default="dist">
+
+    <import file="${basedir}/extern/buildInterface.xml"/>
+
+    <property file="${basedir}/build.properties"/>
+
+    <!-- Ant targets to generate the interface targets -->
+    <target name="SMD_SealedImmediateMessageDelivery" >
+
+        <generateWSDLArtifacts service="${smd.SIMD.wss}"
+                               interface="${smd.SIMD.wss.interface}"
+                               jarFilename="${smd.SIMD.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SIMD.wss}"
+                               package.name="${smd.SIMD.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"
+                />
+    </target>
+
+    <target name="SMD_SealedImmediateMessageDelivery_TLS" >
+
+        <generateWSDLArtifacts service="${smd.SIMD.tls}"
+                               interface="${smd.SIMD.tls.interface}"
+                               jarFilename="${smd.SIMD.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SIMD.tls}"
+                               package.name="${smd.SIMD.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+
+    <!-- SMID Sealed Immediate Message DeliverSmime -->
+    <target name="SMD_SealedImmediateMessageDeliverySmime" >
+        <generateWSDLArtifacts service="${smd.SIMDS.wss}"
+                               interface="${smd.SIMDS.wss.interface}"
+                               jarFilename="${smd.SIMDS.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SIMDS.wss}"
+                               package.name="${smd.SIMDS.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_SealedImmediateMessageDeliverySmime_TLS" >
+
+        <generateWSDLArtifacts service="${smd.SIMDS.tls}"
+                               interface="${smd.SIMDS.tls.interface}"
+                               jarFilename="${smd.SIMD.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SIMDS.tls}"
+                               package.name="${smd.SIMDS.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"
+                />
+    </target>
+
+    <!-- Sealed message Delivery -->
+    <target name="SMD_SealedMessageDelivery" >
+
+        <generateWSDLArtifacts service="${smd.SMD.wss}"
+                               interface="${smd.SMD.wss.interface}"
+                               jarFilename="${smd.SMD.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMD.wss}"
+                               package.name="${smd.SMD.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_SealedMessageDelivery_TLS" >
+
+        <generateWSDLArtifacts service="${smd.SMD.tls}"
+                               interface="${smd.SMD.tls.interface}"
+                               jarFilename="${smd.SMD.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMD.tls}"
+                               package.name="${smd.SMD.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+
+    <!-- SMID Sealed Message DeliverSmime -->
+    <target name="SMD_SealedMessageDeliverySmime" >
+        <generateWSDLArtifacts service="${smd.SMDS.wss}"
+                               interface="${smd.SMDS.wss.interface}"
+                               jarFilename="${smd.SMDS.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMDS.wss}"
+                               package.name="${smd.SMDS.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_SealedMessageDeliverySmime_TLS" >
+
+        <generateWSDLArtifacts service="${smd.SMDS.tls}"
+                               interface="${smd.SMDS.tls.interface}"
+                               jarFilename="${smd.SMDS.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMDS.tls}"
+                               package.name="${smd.SMDS.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+
+    <!-- Sealed message Retireval -->
+    <target name="SMD_SealedMessageRetrieval" >
+
+        <generateWSDLArtifacts service="${smd.SMR.wss}"
+                               interface="${smd.SMR.wss.interface}"
+                               jarFilename="${smd.SMR.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMR.wss}"
+                               package.name="${smd.SMR.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_SealedMessageRetrieval_TLS" >
+
+        <generateWSDLArtifacts service="${smd.SMR.tls}"
+                               interface="${smd.SMR.tls.interface}"
+                               jarFilename="${smd.SMR.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMR.tls}"
+                               package.name="${smd.SMR.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+
+    <!-- SMID Sealed Message DeliverSmime -->
+    <target name="SMD_SealedMessageRetrievalSmime" >
+        <generateWSDLArtifacts service="${smd.SMRS.wss}"
+                               interface="${smd.SMRS.wss.interface}"
+                               jarFilename="${smd.SMRS.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMRS.wss}"
+                               package.name="${smd.SMRS.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_SealedMessageRetrievalSmime_TLS" >
+
+        <generateWSDLArtifacts service="${smd.SMRS.tls}"
+                               interface="${smd.SMRS.tls.interface}"
+                               jarFilename="${smd.SMRS.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.SMRS.tls}"
+                               package.name="${smd.SMRS.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <!-- Transport Response Delivery -->
+    <target name="SMD_TransportResponseDelivery" >
+
+        <generateWSDLArtifacts service="${smd.TRD.wss}"
+                               interface="${smd.TRD.wss.interface}"
+                               jarFilename="${smd.TRD.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml, ${smd.type.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.TRD.wss}"
+                               package.name="${smd.TRD.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_TransportResponseDelivery_TLS" >
+
+        <generateWSDLArtifacts service="${smd.TRD.tls}"
+                               interface="${smd.TRD.tls.interface}"
+                               jarFilename="${smd.TRD.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.TRD.tls}"
+                               package.name="${smd.TRD.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+
+    <!-- Transport Response Retrieval -->
+    <target name="SMD_TransportResponseRetrieval" >
+
+        <generateWSDLArtifacts service="${smd.TRR.wss}"
+                               interface="${smd.TRR.wss.interface}"
+                               jarFilename="${smd.TRR.wss.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.TRR.wss}"
+                               package.name="${smd.TRR.wss.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+    <target name="SMD_TransportResponseRetrieval_TLS" >
+
+        <generateWSDLArtifacts service="${smd.TRR.tls}"
+                               interface="${smd.TRR.tls.interface}"
+                               jarFilename="${smd.TRR.tls.jarFileName}"
+                               schemas="../xsd/*.xsd,${smd.binding.prefix}.xml,${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               jaxbbinding="${smd.binding.prefix}.xml"
+                               jaxwsbinding="${jaxws.binding.prefix}.xml,${jaxwsInterface.binding.prefix}.xml"
+                               version="${smd.wsdl.version}" versionSepChar="-"
+                               serviceDir="${smd.TRR.tls}"
+                               package.name="${smd.TRR.tls.packageName}"
+                               wsdlRelativePath=""
+                               original.wsdl.dir="${basedir}/extern/smd2010/wsdl"
+                               original.xsd.dir="${basedir}/extern/smd2010/xsd"
+                               original.binding.dir="${basedir}/extern/smd2010/binding"/>
+    </target>
+
+
+    <target name="--cleanLib">
+        <delete dir="${basedir}/lib"/>
+    </target>
+
+    <target name="--createLib">
+        <mkdir dir="${basedir}/lib"/>
+        <copy todir="${basedir}/lib">
+            <fileset dir="${metro.dir}"
+                     includes="**/*" />
+        </copy>
+    </target>
+
+    <target name="compileSchema">
+
+        <echo message="This compiler depends on the Metro 2.1 files." />
+        <!-- Start generating the files-->
+        <echo message="Compiling the schema..." />
+        <!--mkdir dir="gen-src" /-->
+
+        <compileSchemaWithJAXB schema.dir="${basedir}/extern/smd2010/xsd" schemafile="smd-Message-2010.xsd"
+                               jaxbbinding="${smd.message.binding.prefix}.xml" packageName="${smd.message.packageName}"/>
+
+    </target>
+
+    <!-- Ant target for generating interface build files -->
+    <target name="--buildJars"   depends="--cleanLib, --createLib, --prepare"
+            description="Generates packaged jar files for all Interfaces"
+            >
+
+        <antcall target="SMD_SealedImmediateMessageDelivery_TLS"/>
+
+
+        <antcall target="SMD_SealedMessageDelivery_TLS"/>
+
+
+        <antcall target="SMD_SealedMessageRetrieval_TLS"/>
+
+
+        <antcall target="SMD_TransportResponseDelivery_TLS"/>
+
+        <antcall target="SMD_TransportResponseRetrieval_TLS"/>
+
+
+        <antcall target="compileSchema" />
+
+        <antcall target="--generateCommonJars"/>
+
+        <!-- Uncomment the following commented ant target to generate artefacts for WSS and SMIME WSDL. -->
+        <!--<antcall target="SMD_SealedImmediateMessageDelivery"/>-->
+        <!--<antcall target="SMD_SealedImmediateMessageDeliverySmime"/>-->
+        <!--<antcall target="SMD_SealedImmediateMessageDeliverySmime_TLS"/>-->
+        <!--<antcall target="SMD_SealedMessageDelivery"/>-->
+        <!--<antcall target="SMD_SealedMessageDeliverySmime"/>-->
+        <!--<antcall target="SMD_SealedMessageDeliverySmime_TLS"/>-->
+        <!--<antcall target="SMD_SealedMessageRetrieval"/>-->
+        <!--<antcall target="SMD_SealedMessageRetrievalSmime"/>-->
+        <!--<antcall target="SMD_SealedMessageRetrievalSmime_TLS"/>-->
+        <!--<antcall target="SMD_TransportResponseDelivery"/>-->
+        <!--<antcall target="SMD_TransportResponseRetrieval"/>-->
+
+
+    </target>
+
+    <!--Ant target to pack wsdls, jars and build scripts to a zip file-->
+    <target name="dist" depends="--buildJars">
+        <zip destfile="${dist.dir}/${dist.file}">
+            <zipfileset dir="${basedir}">
+                <include name="${license.file}"/>
+                <include name="${readme.file}"/>
+            </zipfileset>
+
+            <!--Include dependency jar file-->
+            <zipfileset dir="${resource.dir}">
+                <include name="${build.file}"/>
+                <include name="${build.properties.file}"/>
+                <include name="${buildInterface.file}"/>
+            </zipfileset>
+
+            <!--Include src and java files and metro.xml-->
+            <zipfileset dir="${binding.dir}" prefix="binding">
+                <include name="**/*.xml"/>
+            </zipfileset>
+
+            <!--Include compiled client library jar, source and javadoc jars.-->
+            <zipfileset dir="${dist.dir}" prefix="compiledJars">
+                <include name="**/*.jar" />
+            </zipfileset>
+
+            <zipfileset dir="${wsdl.dir}" prefix="wsdl">
+                <include name="**/*.*" />
+            </zipfileset>
+
+            <zipfileset dir="${schema.dir}" prefix="xsd">
+                <include name="**/*.*" />
+            </zipfileset>
+
+            <!--Include dependency jar file-->
+            <zipfileset dir="${metro.dir}" prefix="lib">
+                <include name="**/*.jar" />
+            </zipfileset>
+        </zip>
+    </target>
+
+</project>

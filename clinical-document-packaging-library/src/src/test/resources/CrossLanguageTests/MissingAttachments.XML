@@ -1,0 +1,1566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext="http://ns.electronichealth.net.au/Ci/Cda/Extensions/3.0" xmlns="urn:hl7-org:v3">
+  <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+  <templateId root="1.2.36.1.2001.1001.101.100.21000" extension="1.1" />
+  <templateId root="1.2.36.1.2001.1001.100.149" extension="1.0" />
+  <id root="abb216bd-9bbf-44ee-8d67-afeae4c31532" />
+  <code code="57133-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Referral Note" />
+  <title>Referral</title>
+  <effectiveTime value="20120110" />
+  <confidentialityCode nullFlavor="NA" />
+  <languageCode code="en-AU" />
+  <setId root="67d445ae-83b4-44e5-84b4-b1a8703c60c1" />
+  <versionNumber value="1" />
+  <ext:completionCode code="F" codeSystem="1.2.36.1.2001.1001.101.104.20104" codeSystemName="NCTIS Document Status Values" displayName="Final" />
+  <recordTarget typeCode="RCT">
+    <patientRole classCode="PAT">
+      <id root="c7886cfb-c817-4991-9d1b-414be302343a" />
+      <addr use="H">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>Clinician Street</streetAddressLine>
+        <houseNumber>21</houseNumber>
+        <additionalLocator>32568931</additionalLocator>
+        <unitID>1</unitID>
+        <unitType>Stu</unitType>
+      </addr>
+      <telecom value="tel: 0730238400" use="WP" />
+      <patient>
+        <name use="L">
+          <family>Grant</family>
+          <given>Sally</given>
+          <prefix>Miss</prefix>
+        </name>
+        <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.13.68" codeSystemName="AS 5017-2006 Health Care Client Identifier Sex" displayName="Female" />
+        <birthTime value="19580110" />
+        <ethnicGroupCode code="4" codeSystem="2.16.840.1.113883.3.879" codeSystemName="METeOR Indigenous Status" displayName="Neither Aboriginal nor Torres Strait Islander origin" />
+        <ext:multipleBirthInd value="true" />
+        <ext:multipleBirthOrderNumber value="2" />
+        <ext:deceasedInd value="true" />
+        <ext:deceasedTime value="20101201" />
+        <birthplace>
+          <place>
+            <addr>
+              <country>Australia</country>
+              <state>QLD</state>
+            </addr>
+          </place>
+        </birthplace>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003600000022222" assigningAuthorityName="IHI" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003620000000541" extension="542181" assigningAuthorityName="Croydon GP Centre" />
+          <ext:code code="MR" codeSystem="2.16.840.1.113883.12.203" codeSystemName="Identifier Type (HL7)" />
+        </ext:asEntityIdentifier>
+      </patient>
+    </patientRole>
+  </recordTarget>
+  <author typeCode="AUT">
+    <time value="20120110" />
+    <assignedAuthor>
+      <id root="bd2209db-dd74-4544-88d0-408011fa2a6a" />
+      <code code="253317" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="intensive care specialist">
+        <originalText>intensive care specialist</originalText>
+      </code>
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>41 Clinician Street</streetAddressLine>
+        <houseNumber>41</houseNumber>
+        <streetName>Clinician Street</streetName>
+        <streetNameType>St</streetNameType>
+        <additionalLocator>32568931</additionalLocator>
+        <unitID>12</unitID>
+        <unitType>Rm</unitType>
+        <deliveryAddressLine>PO Box</deliveryAddressLine>
+      </addr>
+      <telecom value="tel: 0712341234" use="WP" />
+      <assignedPerson>
+        <name use="L">
+          <family>Doctor</family>
+          <given>Good</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003615833334118" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+        <ext:asEmployment classCode="EMP">
+          <ext:employerOrganization>
+            <name>Surgical Ward</name>
+            <asOrganizationPartOf>
+              <wholeOrganization>
+                <name use="ORGL">Good Hospital</name>
+                <ext:asEntityIdentifier classCode="IDENT">
+                  <ext:id root="1.2.36.1.2001.1003.0.8003620833333783" assigningAuthorityName="HPI-O" />
+                  <ext:assigningGeographicArea classCode="PLC">
+                    <ext:name>National Identifier</ext:name>
+                  </ext:assigningGeographicArea>
+                </ext:asEntityIdentifier>
+              </wholeOrganization>
+            </asOrganizationPartOf>
+          </ext:employerOrganization>
+        </ext:asEmployment>
+      </assignedPerson>
+    </assignedAuthor>
+  </author>
+  <custodian>
+    <assignedCustodian>
+      <representedCustodianOrganization>
+        <id root="f3e4a50e-e48c-4913-bec6-d004612f4969" />
+        <name>Burrill Lake Medical Centre</name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003620833333789" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </representedCustodianOrganization>
+    </assignedCustodian>
+  </custodian>
+  <informationRecipient>
+    <intendedRecipient>
+      <id root="85950850-561a-433c-a8c7-e051a957d00e" />
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Primary Care Provider Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel: 0712341245" use="WP" />
+      <informationRecipient>
+        <name use="L">
+          <family>Recipient</family>
+          <given>Information</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003614444567890" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </informationRecipient>
+      <receivedOrganization>
+        <name>Burrill Lake Medical</name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003621231167888" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+  <informationRecipient typeCode="TRC">
+    <intendedRecipient>
+      <id root="9cdc13e0-566b-4c66-9673-c4f37775f90d" />
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>99 Rehab Road</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel: 0712345678" use="WP" />
+      <receivedOrganization>
+        <name>Foot Rehab Department </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.800362000022222" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </receivedOrganization>
+    </intendedRecipient>
+  </informationRecipient>
+  <legalAuthenticator>
+    <time value="20091020" />
+    <signatureCode code="S" />
+    <assignedEntity>
+      <id root="42bd0c98-7ffe-4c36-9d87-83b6016ee0b3" />
+      <code code="253111" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="general medical practitioner">
+        <originalText>general medical practitioner</originalText>
+      </code>
+      <addr use="H">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Clinician Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel: 0345754566" use="WP" />
+      <assignedPerson>
+        <name use="L">
+          <family>Doctor</family>
+          <given>Good</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003610000011111" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </assignedPerson>
+      <representedOrganization>
+        <name>Oz Health Clinic</name>
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003620000001144" assigningAuthorityName="HPI-O" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </representedOrganization>
+    </assignedEntity>
+  </legalAuthenticator>
+  <participant typeCode="REFT">
+    <associatedEntity classCode="PROV">
+      <id root="67ea404e-9814-4ccf-92d1-adc5b2c82b24" />
+      <code code="272311" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="clinical psychologist">
+        <originalText>clinical psychologist</originalText>
+      </code>
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Clinician Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel: 0345754566" use="WP" />
+      <associatedPerson>
+        <name use="L">
+          <family>Referee</family>
+          <given>X</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.13.68" codeSystemName="AS 5017-2006 Health Care Client Identifier Sex" displayName="Male" />
+        <ext:birthTime value="19900110" />
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003610000021121" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </associatedPerson>
+      <scopingOrganization>
+        <name>Burrill Lake Medical Centre</name>
+        <asOrganizationPartOf>
+          <wholeOrganization>
+            <name use="ORGL">Burrill Lake Medical Centre</name>
+            <ext:asEntityIdentifier classCode="IDENT">
+              <ext:id root="1.2.36.1.2001.1003.0.8003620000020052" assigningAuthorityName="HPI-O" />
+              <ext:assigningGeographicArea classCode="PLC">
+                <ext:name>National Identifier</ext:name>
+              </ext:assigningGeographicArea>
+            </ext:asEntityIdentifier>
+          </wholeOrganization>
+        </asOrganizationPartOf>
+      </scopingOrganization>
+    </associatedEntity>
+  </participant>
+  <participant typeCode="PART">
+    <functionCode code="PCP" displayName="Primary Care Physician" />
+    <associatedEntity classCode="PROV">
+      <id root="5b38e9b4-9a3e-4f93-ada9-4ce73a44fbaa" />
+      <code code="272311" codeSystem="2.16.840.1.113883.13.62" codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006" displayName="clinical psychologist">
+        <originalText>clinical psychologist</originalText>
+      </code>
+      <addr use="WP">
+        <country>Australia</country>
+        <state>QLD</state>
+        <city>Nehtaville</city>
+        <postalCode>5555</postalCode>
+        <streetAddressLine>1 Clinician Street</streetAddressLine>
+        <additionalLocator>32568931</additionalLocator>
+      </addr>
+      <telecom value="tel: 0345754566" use="WP" />
+      <associatedPerson>
+        <name use="L">
+          <family>GP</family>
+          <given>Usual</given>
+          <prefix>Dr</prefix>
+        </name>
+        <ext:administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.13.68" codeSystemName="AS 5017-2006 Health Care Client Identifier Sex" displayName="Male" />
+        <ext:birthTime value="19780110" />
+        <ext:asEntityIdentifier classCode="IDENT">
+          <ext:id root="1.2.36.1.2001.1003.0.8003610000021121" assigningAuthorityName="HPI-I" />
+          <ext:assigningGeographicArea classCode="PLC">
+            <ext:name>National Identifier</ext:name>
+          </ext:assigningGeographicArea>
+        </ext:asEntityIdentifier>
+      </associatedPerson>
+      <scopingOrganization>
+        <name>Bay hill hospital</name>
+        <asOrganizationPartOf>
+          <wholeOrganization>
+            <name use="ORGL">Bay hill hospital</name>
+            <ext:asEntityIdentifier classCode="IDENT">
+              <ext:id root="1.2.36.1.2001.1003.0.8003620000020052" assigningAuthorityName="HPI-O" />
+              <ext:assigningGeographicArea classCode="PLC">
+                <ext:name>National Identifier</ext:name>
+              </ext:assigningGeographicArea>
+            </ext:asEntityIdentifier>
+          </wholeOrganization>
+        </asOrganizationPartOf>
+      </scopingOrganization>
+    </associatedEntity>
+  </participant>
+  <component>
+    <structuredBody>
+      <component>
+        <section>
+          <id root="a753c91c-fbbb-4a72-9f6a-90345fb0591b" />
+          <code code="102.16080" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Administrative Observations" />
+          <title>Administrative Observations</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <thead>
+                <tr>
+                  <th>Field</th>
+                  <th>ResultValue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Date of Birth is Calculated From Age</td>
+                  <td>True</td>
+                </tr>
+                <tr>
+                  <td>Date of Birth Accuracy Indicator</td>
+                  <td>AAA</td>
+                </tr>
+                <tr>
+                  <td>Age Accuracy Indicator</td>
+                  <td>True</td>
+                </tr>
+                <tr>
+                  <td>Birth Plurality</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Age</td>
+                  <td>54</td>
+                </tr>
+                <tr>
+                  <td>Date of Death Accuracy Indicator</td>
+                  <td>AAA</td>
+                </tr>
+                <tr>
+                  <td>Medicare Benefits</td>
+                  <td>1.2.36.1.2001.1001.101.102  (Individual Medicare Card Number)  - 10296</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="efab77de-99f1-4370-8a5f-e384e654ad84" />
+              <code code="103.16233" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Birth is Calculated From Age" />
+              <value xsi:type="BL" value="true" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="4eeb58d6-8f8c-426e-a92e-28320d3495c9" />
+              <code code="102.16234" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Birth Accuracy Indicator" />
+              <value xsi:type="CS" code="AAA" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="bd17fb16-d300-4a81-b358-f32f9a9f2602" />
+              <code code="103.16279" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Age Accuracy Indicator" />
+              <value xsi:type="BL" value="true" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="3749ef05-5c6e-4921-9ec2-384c85ecbcc5" />
+              <code code="103.16249" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Birth Plurality" />
+              <value xsi:type="INT" value="3" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="303c55f3-e916-41ce-a5c0-3e3966869580" />
+              <code code="103.20109" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Age" />
+              <value xsi:type="PQ" value="54" unit="a" />
+            </observation>
+          </entry>
+          <entry typeCode="DRIV">
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="294d3e2a-a3bc-49bb-b1e3-1ff00c2e87f3" />
+              <code code="102.16252" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Death Accuracy Indicator" />
+              <value xsi:type="CS" code="AAA" />
+            </observation>
+          </entry>
+          <ext:coverage2 typeCode="COVBY">
+            <ext:entitlement classCode="COV" moodCode="EVN">
+              <ext:id root="1.2.36.1.5001.1.0.7" extension="1.2.36.1.2001.1001.101.102" assigningAuthorityName="Individual Medicare Card Number" />
+              <ext:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16047" codeSystemName="NCTIS Entitlement Type Values" displayName="Medicare Benefits">
+                <originalText>Medicare Benefits</originalText>
+              </ext:code>
+              <ext:effectiveTime>
+                <high value="20120109" />
+              </ext:effectiveTime>
+              <ext:participant typeCode="BEN">
+                <ext:participantRole classCode="PAT">
+                  <ext:id root="c7886cfb-c817-4991-9d1b-414be302343a" />
+                </ext:participantRole>
+              </ext:participant>
+            </ext:entitlement>
+          </ext:coverage2>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="8caa6dc8-3216-4799-bcae-4c8aa19ac472" />
+          <code code="102.16347" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Referral Detail" />
+          <title>Referral Detail</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Date and Duration</caption>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Duration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10 Jan 2012 14:11:50</td>
+                  <td>From: 10 Jan 2012 To: 10 Jan 2012   (0 Days, 2 Hours, 0 Minutes)</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Reason for Referral</caption>
+              <thead>
+                <tr>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Referral reason needs to be populated here</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="521568d0-b9b9-4688-b6b1-9a6528fb31b4" />
+              <code code="103.16622" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Referral Validity Duration" />
+              <value xsi:type="IVL_TS">
+                <low value="20120110" />
+                <high value="20120110" />
+              </value>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="5fee6ad9-f5eb-4ff0-b12a-cddda60b1a37" />
+              <code code="103.16620" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Referral DateTime" />
+              <value xsi:type="TS" value="20120110020150+10" />
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="9bb10905-e1af-4163-87f3-67bb092a11ca" />
+              <code code="42349-1" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Reason for referral" />
+              <effectiveTime value="20120110020150+10" />
+              <value xsi:type="ST">Referral reason needs to be populated here</value>
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="026594b1-eae5-4898-9b4e-8b0f1a19935f" />
+          <code code="101.16022" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Medications" />
+          <title>Medications</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Medications</caption>
+              <thead>
+                <tr>
+                  <th>Medication</th>
+                  <th>Directions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>paracetamol 500 mg + codeine phosphate 30 mg tablet</td>
+                  <td>As directed by packaging.</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Medications - Exclusion Statement</caption>
+              <thead>
+                <tr>
+                  <th>Exclusion Statement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>None known</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <substanceAdministration classCode="SBADM" moodCode="EVN">
+              <id root="24b4d998-561a-4f69-901b-72d0f1f2c41e" />
+              <text xsi:type="ST">As directed by packaging.</text>
+              <consumable>
+                <manufacturedProduct>
+                  <manufacturedMaterial>
+                    <code code="23641011000036102" codeSystem="1.2.36.1.2001.1004.100" codeSystemName="Australian Medicines Terminology (AMT)" displayName="paracetamol 500 mg + codeine phosphate 30 mg tablet" />
+                  </manufacturedMaterial>
+                </manufacturedProduct>
+              </consumable>
+            </substanceAdministration>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="54fbd1f9-a157-4b55-8b85-ac8691f3358b" />
+              <code code="103.16302.2.2.3" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Global Statement" />
+              <value xsi:type="CD" code="01" codeSystem="1.2.36.1.2001.1001.101.104.16299" codeSystemName="NCTIS Global Statement Values" displayName="None known" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="b4917a67-4a88-428f-b0ce-9a4aa728a641" />
+          <code code="101.16117" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Medical History" />
+          <title>Medical History</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Medical History - Procedures</caption>
+              <thead>
+                <tr>
+                  <th>Date Time</th>
+                  <th>Procedure</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>29 Dec 2011 14:11:50</td>
+                  <td>hip replacement</td>
+                  <td>Procedure Comment goes here.</td>
+                </tr>
+                <tr>
+                  <td>1 Dec 2011 14:11:50</td>
+                  <td>Procedure Comment</td>
+                  <td>Procedure Comment goes here.</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Medical History - Procedures - Exclusion Statement</caption>
+              <thead>
+                <tr>
+                  <th>Exclusion Statement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>None known</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Medical History - Problem / Diagnosis</caption>
+              <thead>
+                <tr>
+                  <th>Onset Date / Time</th>
+                  <th>Resolution Date / Time</th>
+                  <th>Problem / Diagnosis</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10 Jan 2012 14:11:50</td>
+                  <td>10 Jan 2012 14:11:50</td>
+                  <td>Comorbidity</td>
+                  <td>Problem/Diagnosis Comment goes here.</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Medical History - Problem Diagnosis - Exclusion Statement</caption>
+              <thead>
+                <tr>
+                  <th>Exclusion Statement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>None known</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Medical History - Other Medical History</caption>
+              <thead>
+                <tr>
+                  <th>Date Time</th>
+                  <th>Item Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10 Jan 2012 14:11:50</td>
+                  <td>Other Medical History Item</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="524e770a-b307-4f23-a90b-10965c1d08a0" />
+              <code code="282291009" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Diagnosis interpretation" />
+              <effectiveTime value="20120110020150+10" />
+              <value xsi:type="CD" code="116223007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Comorbidity" />
+              <entryRelationship typeCode="SUBJ">
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="e46da52d-bae4-4221-9055-cf461fce4d3f" />
+                  <code code="103.15510" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Date of Resolution/Remission" />
+                  <value xsi:type="IVL_TS" value="20120110020150+10" />
+                </observation>
+              </entryRelationship>
+              <entryRelationship typeCode="COMP">
+                <act classCode="INFRM" moodCode="EVN">
+                  <code code="103.16545" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Problem/Diagnosis Comment" />
+                  <text xsi:type="ST">Problem/Diagnosis Comment goes here.</text>
+                </act>
+              </entryRelationship>
+            </observation>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="d6006304-c48a-41a0-888d-75918344fa2c" />
+              <code code="103.16302.2.2.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Global Statement" />
+              <value xsi:type="CD" code="01" codeSystem="1.2.36.1.2001.1001.101.104.16299" codeSystemName="NCTIS Global Statement Values" displayName="None known" />
+            </observation>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <id root="4907a1e4-5f11-48df-a042-0264d74b8568" />
+              <code code="397956004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="hip replacement" />
+              <effectiveTime value="20111229021250+10" />
+              <entryRelationship typeCode="COMP">
+                <act classCode="INFRM" moodCode="EVN">
+                  <code code="103.15595" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Procedure Comment" />
+                  <text xsi:type="ST">Procedure Comment goes here.</text>
+                </act>
+              </entryRelationship>
+            </procedure>
+          </entry>
+          <entry>
+            <procedure classCode="PROC" moodCode="EVN">
+              <id root="29261092-bb4f-45db-bd76-a5e818046c9d" />
+              <code code="397956004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Procedure Comment" />
+              <effectiveTime value="20111201021250+10" />
+              <entryRelationship typeCode="COMP">
+                <act classCode="INFRM" moodCode="EVN">
+                  <code code="103.15595" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Procedure Comment" />
+                  <text xsi:type="ST">Procedure Comment goes here.</text>
+                </act>
+              </entryRelationship>
+            </procedure>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="b9a57946-332f-41e8-b718-4deb2f90af4b" />
+              <code code="103.16302.2.2.2" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Global Statement" />
+              <value xsi:type="CD" code="01" codeSystem="1.2.36.1.2001.1001.101.104.16299" codeSystemName="NCTIS Global Statement Values" displayName="None known" />
+            </observation>
+          </entry>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <id root="060aeff2-12a7-4f30-afb9-861cddece651" />
+              <code code="102.15513" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Other Medical History Item" />
+              <text xsi:type="ST">Other Medical History Item</text>
+              <author>
+                <time value="20120110" />
+                <assignedAuthor nullFlavor="NA">
+                  <id nullFlavor="NA" />
+                </assignedAuthor>
+              </author>
+            </act>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="238252c5-a5ae-4289-beb0-b1bdfb73a718" />
+          <code code="101.20113" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Adverse Substance Reactions" />
+          <title>Adverse Substance Reactions</title>
+          <text mediaType="text/x-hl7-text+xml">
+            <table>
+              <caption>Adverse Substance Reactions</caption>
+              <thead>
+                <tr>
+                  <th>Substance/Agent</th>
+                  <th>Manifestation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Fish</td>
+                  <td>
+                    <list>
+                      <item>Skin Rash</item>
+                    </list>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <caption>Adverse Substance Reactions - Exclusion Statement</caption>
+              <thead>
+                <tr>
+                  <th>Exclusion Statement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>None known</td>
+                </tr>
+              </tbody>
+            </table>
+          </text>
+          <entry>
+            <act classCode="ACT" moodCode="EVN">
+              <id root="c7c7ed88-6ab0-450b-a4fb-a55037e1e4a3" />
+              <code code="102.16473" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Adverse Substance Reaction" />
+              <participant typeCode="CAGNT">
+                <participantRole>
+                  <playingEntity>
+                    <code code="90580008" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Fish">
+                      <originalText>Fish</originalText>
+                    </code>
+                  </playingEntity>
+                </participantRole>
+              </participant>
+              <entryRelationship typeCode="CAUS">
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="2099ecd7-a79a-4abe-b270-2eab53037bc2" />
+                  <code code="102.16474" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Reaction Event" />
+                  <entryRelationship typeCode="MFST" inversionInd="true">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="9a8b4b4c-0288-49a5-ba20-bdccea560377" />
+                      <code code="271807003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Skin Rash" />
+                      <text>Skin Rash</text>
+                    </observation>
+                  </entryRelationship>
+                </observation>
+              </entryRelationship>
+            </act>
+          </entry>
+          <entry>
+            <observation classCode="OBS" moodCode="EVN">
+              <id root="d0360d53-dfac-4506-b6d8-031300cd8731" />
+              <code code="103.16302.2.2.4" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Global Statement" />
+              <value xsi:type="CD" code="01" codeSystem="1.2.36.1.2001.1001.101.104.16299" codeSystemName="NCTIS Global Statement Values" displayName="None known" />
+            </observation>
+          </entry>
+        </section>
+      </component>
+      <component>
+        <section>
+          <id root="1f8361a5-f167-4b99-bd67-bbe1bab1c696" />
+          <code code="101.20117" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Diagnostic Investigations" />
+          <title>Diagnostic Investigations</title>
+          <text mediaType="text/x-hl7-text+xml" />
+          <component>
+            <section>
+              <id root="57eda204-e033-4c24-a5bc-96051161eccb" />
+              <code code="102.16144" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Pathology Test Result" />
+              <title>Pathology Test Result</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Pathology Test Result(s)</caption>
+                  <thead>
+                    <tr>
+                      <th>Test Result DateTime</th>
+                      <th>Test Result Name</th>
+                      <th>Diagnostic Service</th>
+                      <th>Overall Test Result Status</th>
+                      <th>Clinical Information Provided</th>
+                      <th>Pathological Diagnosis</th>
+                      <th>Pathology Test Conclusion</th>
+                      <th>Test Comment</th>
+                      <th>Image / File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>08 Jan 2012</td>
+                      <td>Chemisty studies (set)</td>
+                      <td>pathology service</td>
+                      <td>Final</td>
+                      <td>Hepatitus</td>
+                      <td>
+                        <list>
+                          <item>normal</item>
+                        </list>
+                      </td>
+                      <td>testResultGroup-Conclusion</td>
+                      <td>testResultGroup-Comment</td>
+                      <td>
+                        <renderMultiMedia referencedObject="ebeezeczdzbfzbaddzfezazezddaabfefzfzdzbadzddad">
+                          <caption>Results- Test Result Representation</caption>
+                        </renderMultiMedia>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Test Request Details</caption>
+                  <thead>
+                    <tr>
+                      <th>Laboratory Test Result Identifier</th>
+                      <th>Test Requested Name(s)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td> - 11018</td>
+                      <td>
+                        <list>
+                          <item>testRequest-TestsRequested-1</item>
+                        </list>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Pathology Test Specimen Detail</caption>
+                  <thead>
+                    <tr>
+                      <th>Received DateTime</th>
+                      <th>Identifier</th>
+                      <th>Parent Identifier</th>
+                      <th>Container</th>
+                      <th>Tissue Type</th>
+                      <th>Physical Description</th>
+                      <th>Physical Details</th>
+                      <th>Sampling Preconditions</th>
+                      <th>Collection Date</th>
+                      <th>Collection Procedure</th>
+                      <th>Collection Setting</th>
+                      <th>Image / File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10 Jan 2012</td>
+                      <td>103.16187</td>
+                      <td>AGFTYVF</td>
+                      <td>CNH45218964</td>
+                      <td>DisplayName</td>
+                      <td>physicalDetails-Description</td>
+                      <td>
+                        <list>
+                          <item>6ml</item>
+                        </list>
+                      </td>
+                      <td>fasting</td>
+                      <td>19 Dec 2011</td>
+                      <td>blood draw</td>
+                      <td>Ward 1A</td>
+                      <td>
+                        <renderMultiMedia referencedObject="ccbzdfdezeddzbbzffecbeezfzfzfzbacfbbcazfdczczzccf">
+                          <caption>X-Ray</caption>
+                        </renderMultiMedia>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Result Group Specimen Detail</caption>
+                  <thead>
+                    <tr>
+                      <th>Received DateTime</th>
+                      <th>Identifier</th>
+                      <th>Parent Identifier</th>
+                      <th>Container</th>
+                      <th>Tissue Type</th>
+                      <th>Physical Description</th>
+                      <th>Physical Details</th>
+                      <th>Sampling Preconditions</th>
+                      <th>Collection Date</th>
+                      <th>Collection Procedure</th>
+                      <th>Collection Setting</th>
+                      <th>Image / File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10 Jan 2012</td>
+                      <td>103.16187</td>
+                      <td>GHRTYVF</td>
+                      <td>AZH45218964</td>
+                      <td></td>
+                      <td>Urine sample</td>
+                      <td>
+                        <list>
+                          <item>6ml</item>
+                        </list>
+                      </td>
+                      <td>fasting</td>
+                      <td>29 Dec 2011</td>
+                      <td>Urine sample</td>
+                      <td>Ward 3B</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Test Result Group</caption>
+                  <thead>
+                    <tr>
+                      <th>Group Name</th>
+                      <th>Result Name</th>
+                      <th>Result Value</th>
+                      <th>Result Value Status</th>
+                      <th>Result Value Reference Range Details</th>
+                      <th>Result Comment</th>
+                      <th>Reference Range Guidance</th>
+                      <th>Result Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Chemistry Studies (Set)</td>
+                      <td>Sodium</td>
+                      <td>
+                        <list>
+                          <item>12ml</item>
+                        </list>
+                      </td>
+                      <td>Normal</td>
+                      <td>
+                        <list>
+                          <item>normal range</item>
+                          <item>High: 17ml Low: 13ml</item>
+                        </list>
+                      </td>
+                      <td>
+                        <list>
+                          <item>Sodium test result comments</item>
+                        </list>
+                      </td>
+                      <td>Reference range guidance comments for Sodium; eg. the quantity should be between the high and low values</td>
+                      <td>Normal</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Anatomical Site(s)</caption>
+                  <thead>
+                    <tr>
+                      <th>Specimen Identifier</th>
+                      <th>Description</th>
+                      <th>Location</th>
+                      <th>Side</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>103.16187</td>
+                      <td>Cubital fossa</td>
+                      <td>left Femur</td>
+                      <td>left</td>
+                    </tr>
+                    <tr>
+                      <td>103.16187</td>
+                      <td>Femur Length</td>
+                      <td>left Femur</td>
+                      <td>left</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="ea8bba27-e872-4d1b-9f71-ecc66426726b" />
+                  <code code="18719-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chemisty studies (set)" />
+                  <effectiveTime value="20120110020150+10" />
+                  <value xsi:type="ED" integrityCheck="dweOC8ewe+q5/NLHZZcLPmGqKgY=">
+                    <reference value="PATH1234.TXT" />
+                  </value>
+                  <entryRelationship typeCode="SUBJ">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="24722a2c-0bba-4911-9ece-a3158515d12f" />
+                      <code code="102.16156.2.2.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Test Specimen Detail" />
+                      <effectiveTime value="20111219021250+10" />
+                      <methodCode code="82078001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="blood draw" />
+                      <targetSiteCode code="50496076" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="left Femur">
+                        <originalText>Cubital fossa</originalText>
+                        <qualifier>
+                          <name code="78615007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="with laterality" />
+                          <value code="8006542" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="left" />
+                        </qualifier>
+                      </targetSiteCode>
+                      <specimen>
+                        <specimenRole>
+                          <id root="e3fe2ef1-154d-4472-9e32-d92e6c53cee7" />
+                          <specimenPlayingEntity>
+                            <code code="specimenDetail-SpecimenTissueType-someCode" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="DisplayName" />
+                            <quantity value="6" unit="ml" />
+                            <desc xsi:type="ST">physicalDetails-Description</desc>
+                            <ext:asSpecimenInContainer classCode="CONT">
+                              <ext:container>
+                                <ext:id root="CNH45218964" />
+                              </ext:container>
+                            </ext:asSpecimenInContainer>
+                          </specimenPlayingEntity>
+                        </specimenRole>
+                      </specimen>
+                      <entryRelationship typeCode="SPRT">
+                        <observationMedia ID="ccbzdfdezeddzbbzffecbeezfzfzfzbacfbbcazfdczczzccf" classCode="OBS" moodCode="EVN">
+                          <id root="e4f39e62-5ed5-41a9-8ddf-2f30646f7b2d" />
+                          <value integrityCheck="lhLqOPCLR6GsAB7BBL8D5JsJd1s=">
+                            <reference value="x-ray.jpg" />
+                          </value>
+                        </observationMedia>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.16171" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Sampling Preconditions" />
+                          <value xsi:type="CD" code="16985007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="fasting" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.16529" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Collection Setting" />
+                          <text xsi:type="ST">Ward 1A</text>
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.11014" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DateTime Received" />
+                          <effectiveTime value="20120110020150+10" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.16187" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Parent Specimen Identifier" />
+                          <specimen>
+                            <specimenRole>
+                              <id root="8b3d2b8c-d99f-48a0-af6c-28d886da0751" />
+                              <specimenPlayingEntity>
+                                <code code="specimenDetail-SpecimenTissueType-someCode" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="DisplayName" />
+                                <desc xsi:type="ST">physicalDetails-Description</desc>
+                                <ext:asSpecimenInContainer classCode="CONT">
+                                  <ext:container>
+                                    <ext:id root="AGFTYVF" />
+                                  </ext:container>
+                                </ext:asSpecimenInContainer>
+                              </specimenPlayingEntity>
+                            </specimenRole>
+                          </specimen>
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <organizer classCode="BATTERY" moodCode="EVN">
+                      <id root="bf72e246-0f18-41c7-a6bb-4a0aa1fc47ab" />
+                      <code code="18719-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Chemistry Studies (Set)" />
+                      <statusCode code="completed" />
+                      <component>
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="289017ac-45e9-4d8e-9a11-2d72cf2f460e" />
+                          <code code="2951-2" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Sodium" />
+                          <value xsi:type="PQ" value="12" unit="ml" />
+                          <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7 ObservationInterpretationNormality" displayName="Normal" />
+                          <entryRelationship typeCode="COMP">
+                            <act classCode="INFRM" moodCode="EVN">
+                              <code code="281296001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="result comments" />
+                              <text xsi:type="ST">Sodium test result comments</text>
+                            </act>
+                          </entryRelationship>
+                          <entryRelationship typeCode="COMP">
+                            <act classCode="INFRM" moodCode="EVN">
+                              <code code="281298000" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="reference range comments" />
+                              <text xsi:type="ST">Reference range guidance comments for Sodium; eg. the quantity should be between the high and low values</text>
+                            </act>
+                          </entryRelationship>
+                          <referenceRange>
+                            <observationRange>
+                              <code code="86228006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="normal range" />
+                              <value xsi:type="IVL_PQ" unit="ml">
+                                <low value="13" unit="ml" />
+                                <high value="17" unit="ml" />
+                              </value>
+                            </observationRange>
+                          </referenceRange>
+                        </observation>
+                      </component>
+                    </organizer>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="2f254188-e435-471a-ba1d-3abc5f053239" />
+                      <code code="102.16156.2.2.1" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Test Specimen Detail" />
+                      <effectiveTime value="20111229021250+10" />
+                      <methodCode code="82078002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Urine sample" />
+                      <targetSiteCode code="50496004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="left Femur">
+                        <originalText>Femur Length</originalText>
+                        <qualifier>
+                          <name code="78615007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="with laterality" />
+                          <value code="8006542" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="left" />
+                        </qualifier>
+                      </targetSiteCode>
+                      <specimen>
+                        <specimenRole>
+                          <id root="0292e41d-9d34-4828-8a69-97187fc246c8" />
+                          <specimenPlayingEntity>
+                            <quantity value="6" unit="ml" />
+                            <desc xsi:type="ST">Urine sample</desc>
+                            <ext:asSpecimenInContainer classCode="CONT">
+                              <ext:container>
+                                <ext:id root="AZH45218964" />
+                              </ext:container>
+                            </ext:asSpecimenInContainer>
+                          </specimenPlayingEntity>
+                        </specimenRole>
+                      </specimen>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.16171" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Sampling Preconditions" />
+                          <value xsi:type="CD" code="16985007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="fasting" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.16529" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Collection Setting" />
+                          <text xsi:type="ST">Ward 3B</text>
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.11014" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DateTime Received" />
+                          <effectiveTime value="20120110020150+10" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <code code="103.16187" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Parent Specimen Identifier" />
+                          <specimen>
+                            <specimenRole>
+                              <id root="39c22066-6d10-4d28-81a8-c6ac0d39e2ab" />
+                              <specimenPlayingEntity>
+                                <desc xsi:type="ST">Urine sample</desc>
+                                <ext:asSpecimenInContainer classCode="CONT">
+                                  <ext:container>
+                                    <ext:id root="GHRTYVF" />
+                                  </ext:container>
+                                </ext:asSpecimenInContainer>
+                              </specimenPlayingEntity>
+                            </specimenRole>
+                          </specimen>
+                        </observation>
+                      </entryRelationship>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="4d4225f4-5ac6-42e7-b95b-39318e6fe5af" />
+                      <code code="310074003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="pathology service" />
+                      <value xsi:type="CD" code="310074003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="pathology service" />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="308552006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="report status" />
+                      <value xsi:type="CD" code="3" codeSystem="1.2.36.1.2001.1001.101.104.16502" codeSystemName="NCTIS Result Status Values" displayName="Final" />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <act classCode="INFRM" moodCode="EVN">
+                      <code code="55752-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical Information" />
+                      <text xsi:type="ST">Hepatitus</text>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="9b701882-e842-4d83-bb6b-068ff0a18a1d" />
+                      <code code="88101002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Pathology diagnosis" />
+                      <value xsi:type="CD" code="17621005" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="normal" />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="ecb761e6-ef17-4bbb-8c0b-d53a67db91e0" />
+                      <code code="386344002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="Laboratory findings data interpretation" />
+                      <value xsi:type="ST">testResultGroup-Conclusion</value>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <act classCode="INFRM" moodCode="EVN">
+                      <code code="103.16468" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Test Comment" />
+                      <text xsi:type="ST">testResultGroup-Comment</text>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <id root="1.2.36.1.2001.1001.101.103" />
+                      <code code="102.16160" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Test Request Details" />
+                      <entryRelationship typeCode="COMP">
+                        <act classCode="ACT" moodCode="RQO">
+                          <code code="103.11017" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Test Requested Name" />
+                          <text>testRequest-TestsRequested-1</text>
+                        </act>
+                      </entryRelationship>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="3d8a09bb-89f3-4303-bc3c-5a7b22c7c4f1" />
+                      <code code="103.16605" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Pathology Test Result DateTime" />
+                      <effectiveTime value="20120108" />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="REFR">
+                    <observationMedia ID="ebeezeczdzbfzbaddzfezazezddaabfefzfzdzbadzddad" classCode="OBS" moodCode="EVN">
+                      <id root="d5d86250-a0cd-4e54-835a-41ca5b8b31bd" />
+                      <value integrityCheck="dweOC8ewe+q5/NLHZZcLPmGqKgY=">
+                        <reference value="PATH1234.TXT" />
+                      </value>
+                    </observationMedia>
+                  </entryRelationship>
+                </observation>
+              </entry>
+            </section>
+          </component>
+          <component>
+            <section>
+              <id root="4744c043-ed85-41f4-8ada-304cf3f3461f" />
+              <code code="102.16145" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result" />
+              <title>Imaging Examination Result</title>
+              <text mediaType="text/x-hl7-text+xml">
+                <table>
+                  <caption>Imaging Examination Result Date Time</caption>
+                  <thead>
+                    <tr>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>8 Jan 2012 14:11:50</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Imaging Examination Result Details</caption>
+                  <thead>
+                    <tr>
+                      <th>Result name</th>
+                      <th>Modality</th>
+                      <th>Result Status</th>
+                      <th>Clinical Information</th>
+                      <th>Findings</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ExaminationResultName</td>
+                      <td>ultrasound</td>
+                      <td>Final</td>
+                      <td>Patient pregnant. Confirm dates. Estimate from LNMP 18 weeks.</td>
+                      <td>Normal obstetric ultrasound with foetal biometry indicating getational age of 18W0D.</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Result Group(s)</caption>
+                  <thead>
+                    <tr>
+                      <th>Result Group</th>
+                      <th>Result Name</th>
+                      <th>Result Value</th>
+                      <th>Result Value - Status</th>
+                      <th>Result Value - Range</th>
+                      <th>Result Comment</th>
+                      <th>Assocaited Site</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>ultrasound scan - obstetric</td>
+                      <td>ultrasound scan</td>
+                      <td>
+                        <list>
+                          <item>ultrasound scan description</item>
+                        </list>
+                      </td>
+                      <td>Normal</td>
+                      <td>
+                        <list>
+                          <item>normal range</item>
+                          <item>High: 17ml Low: 13ml</item>
+                        </list>
+                      </td>
+                      <td>
+                        <list>
+                          <item>Femur measured during ultrasound scan.</item>
+                        </list>
+                      </td>
+                      <td>left Femur</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Examination Request(s) - Image Details</caption>
+                  <thead>
+                    <tr>
+                      <th>Image Date</th>
+                      <th>Requested Examination Name</th>
+                      <th>Identifiers</th>
+                      <th>Subject Position</th>
+                      <th>Image / File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10 Jan 2012</td>
+                      <td>A/U Obstetric - Dating</td>
+                      <td>
+                        <list>
+                          <item>DICOM Study ID:  - 16206</item>
+                          <item>Report ID:  - 16514</item>
+                          <item>DICOM Series ID:  - 16206</item>
+                        </list>
+                      </td>
+                      <td>Supine</td>
+                      <td>
+                        <renderMultiMedia referencedObject="cefczcafzzzbbbafczeezzabzabcabdzdzcbzadzeadae">
+                          <caption>X-Ray - A/U Obstetric - Dating</caption>
+                        </renderMultiMedia>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <caption>Examination Request(s) - Image Details</caption>
+                  <thead>
+                    <tr>
+                      <th>Image Date</th>
+                      <th>Requested Examination Name</th>
+                      <th>Identifiers</th>
+                      <th>Subject Position</th>
+                      <th>Image / File</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>10 Jan 2012</td>
+                      <td>U/S Obstetric - Dating</td>
+                      <td>
+                        <list>
+                          <item>DICOM Study ID:  - 16206</item>
+                          <item>Report ID:  - 16514</item>
+                          <item>DICOM Series ID:  - 16206</item>
+                        </list>
+                      </td>
+                      <td>Supine2</td>
+                      <td>
+                        <renderMultiMedia referencedObject="ecdzdbzzdzcecazcczcbzzbcadcazcdzazbzefacb">
+                          <caption>X-Ray - U/S Obstetric - Dating</caption>
+                        </renderMultiMedia>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </text>
+              <entry>
+                <observation classCode="OBS" moodCode="EVN">
+                  <id root="a7c1a7c2-aa23-49c8-87a7-2c617059cb9b" />
+                  <code code="16310003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="ExaminationResultName" />
+                  <effectiveTime value="20120110020150+10" />
+                  <methodCode code="16310003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="ultrasound" />
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <code code="308552006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="report status" />
+                      <value xsi:type="CD" code="3" codeSystem="1.2.36.1.2001.1001.101.104.16502" codeSystemName="NCTIS Result Status Values" displayName="Final" />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <act classCode="INFRM" moodCode="EVN">
+                      <code code="55752-0" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Clinical Information" />
+                      <text xsi:type="ST">Patient pregnant. Confirm dates. Estimate from LNMP 18 weeks.</text>
+                    </act>
+                  </entryRelationship>
+                  <entryRelationship typeCode="REFR">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="877308cd-fa8c-41da-930f-502be04edbec" />
+                      <code code="103.16503" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Findings" />
+                      <text xsi:type="ST">Normal obstetric ultrasound with foetal biometry indicating getational age of 18W0D.</text>
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <organizer classCode="BATTERY" moodCode="EVN">
+                      <id root="0a06b6c3-04e7-4746-8abc-e97f14a554c1" />
+                      <code code="268445003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="ultrasound scan - obstetric" />
+                      <statusCode code="completed" />
+                      <component>
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="1a3a3d31-34f5-427b-858c-119d61c978a3" />
+                          <code code="16310003" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="ultrasound scan" />
+                          <value xsi:type="CD" code="876787678" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="ultrasound scan description" />
+                          <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" codeSystemName="HL7 ObservationInterpretationNormality" displayName="Normal" />
+                          <targetSiteCode code="50496004" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="left Femur">
+                            <originalText>Femur Length</originalText>
+                            <qualifier>
+                              <name code="78615007" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="with laterality" />
+                              <value code="8006542" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="left" />
+                            </qualifier>
+                          </targetSiteCode>
+                          <entryRelationship typeCode="COMP">
+                            <act classCode="INFRM" moodCode="EVN">
+                              <code code="281296001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="result comments" />
+                              <text xsi:type="ST">Femur measured during ultrasound scan.</text>
+                            </act>
+                          </entryRelationship>
+                          <referenceRange>
+                            <observationRange>
+                              <code code="86228006" codeSystem="2.16.840.1.113883.6.96" codeSystemName="Snomed CT-AU" codeSystemVersion="20110531" displayName="normal range" />
+                              <value xsi:type="PQ" value="17" unit="ml" />
+                            </observationRange>
+                          </referenceRange>
+                        </observation>
+                      </component>
+                    </organizer>
+                  </entryRelationship>
+                  <entryRelationship typeCode="COMP">
+                    <observation classCode="OBS" moodCode="EVN">
+                      <id root="42efe8de-aaa7-470c-a008-e93ef79eb1a5" />
+                      <code code="103.16589" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Imaging Examination Result DateTime" />
+                      <effectiveTime value="20120108" />
+                    </observation>
+                  </entryRelationship>
+                  <entryRelationship typeCode="SUBJ" inversionInd="true">
+                    <act classCode="ACT" moodCode="EVN">
+                      <code code="102.16511" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Request Details" />
+                      <entryRelationship typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="d57052b6-b7c4-4ca1-afd1-8bd28543c013" />
+                          <code code="103.16512" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Requested Name" />
+                          <text xsi:type="ST">A/U Obstetric - Dating</text>
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="1.2.36.1.2001.1001.101.103" />
+                          <code code="103.16514" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Report Identifier" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <act classCode="ACT" moodCode="EVN">
+                          <id root="1.2.36.1.2001.1001.101.103" />
+                          <code code="103.16513" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DICOM Study Identifier" />
+                          <entryRelationship typeCode="COMP" inversionInd="true">
+                            <observation classCode="OBS" moodCode="EVN">
+                              <id root="40ef3527-4849-43e9-8f80-b0c4e536aead" />
+                              <code code="103.16515" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Image Details" />
+                              <effectiveTime value="20120110" />
+                              <entryRelationship typeCode="REFR" inversionInd="true">
+                                <act classCode="ACT" moodCode="EVN">
+                                  <id root="1.2.36.1.2001.1001.101.103" />
+                                  <code code="103.16517" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DICOM Series Identifier" />
+                                </act>
+                              </entryRelationship>
+                              <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                  <id root="603282ad-e17c-41f3-b537-ec902e710cb2" />
+                                  <code code="103.16519" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Subject Position" />
+                                  <value xsi:type="ST">Supine</value>
+                                </observation>
+                              </entryRelationship>
+                              <entryRelationship typeCode="SPRT">
+                                <observationMedia ID="cefczcafzzzbbbafczeezzabzabcabdzdzcbzadzeadae" classCode="OBS" moodCode="EVN">
+                                  <id root="e305ae7b-08fa-440c-874f-489a48729a64" />
+                                  <value integrityCheck="lhLqOPCLR6GsAB7BBL8D5JsJd1s=">
+                                    <reference value="x-ray.jpg" />
+                                  </value>
+                                </observationMedia>
+                              </entryRelationship>
+                            </observation>
+                          </entryRelationship>
+                        </act>
+                      </entryRelationship>
+                      <entryRelationship typeCode="REFR">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="989dd4b7-9ab5-431f-b982-f07d2fbce503" />
+                          <code code="103.16512" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Examination Requested Name" />
+                          <text xsi:type="ST">U/S Obstetric - Dating</text>
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                          <id root="1.2.36.1.2001.1001.101.103" />
+                          <code code="103.16514" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Report Identifier" />
+                        </observation>
+                      </entryRelationship>
+                      <entryRelationship typeCode="SUBJ" inversionInd="true">
+                        <act classCode="ACT" moodCode="EVN">
+                          <id root="1.2.36.1.2001.1001.101.103" />
+                          <code code="103.16513" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DICOM Study Identifier" />
+                          <entryRelationship typeCode="COMP" inversionInd="true">
+                            <observation classCode="OBS" moodCode="EVN">
+                              <id root="94ff67be-68c6-434c-9699-4818801723ea" />
+                              <code code="103.16515" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Image Details" />
+                              <effectiveTime value="20120110" />
+                              <entryRelationship typeCode="REFR" inversionInd="true">
+                                <act classCode="ACT" moodCode="EVN">
+                                  <id root="1.2.36.1.2001.1001.101.103" />
+                                  <code code="103.16517" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="DICOM Series Identifier" />
+                                </act>
+                              </entryRelationship>
+                              <entryRelationship typeCode="REFR">
+                                <observation classCode="OBS" moodCode="EVN">
+                                  <id root="ede331df-ae31-42f9-bf59-6eb3897b4b3c" />
+                                  <code code="103.16519" codeSystem="1.2.36.1.2001.1001.101" codeSystemName="NCTIS Data Components" displayName="Subject Position" />
+                                  <value xsi:type="ST">Supine2</value>
+                                </observation>
+                              </entryRelationship>
+                            </observation>
+                          </entryRelationship>
+                        </act>
+                      </entryRelationship>
+                    </act>
+                  </entryRelationship>
+                </observation>
+              </entry>
+            </section>
+          </component>
+        </section>
+      </component>
+    </structuredBody>
+  </component>
+</ClinicalDocument>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jaxb:bindings jaxb:version="2.0" 
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- Schema scope bindings -->
+  <jaxb:bindings schemaLocation="../xsd/xsp-EncryptedPayload-2010.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="au.net.electronichealth.ns.smd.core.types.encryptedpayload.v2010"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/xsp-EncryptedPayload-2010.xsd" node="/xsd:schema/xsd:complexType[@name='EncryptedPayloadDataType']/xsd:sequence/xsd:element[@ref='xenc:EncryptedData']">
+    <jaxb:dom/>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/xsp-EncryptedPayload-2010.xsd" node="/xsd:schema/xsd:complexType[@name='KeyListType']/xsd:sequence/xsd:element[@ref='xenc:EncryptedKey']">
+    <jaxb:dom/>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/qcr-QualifiedCertRef-2010.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="au.net.electronichealth.ns.smd.core.types.qualifiedcertref.V2010"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/wsp-StandardError-2010.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="au.net.electronichealth.ns.smd.core.types.standarderror.V2010"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/els-DataTypes-2010.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="au.net.electronichealth.ns.smd.els.types.V2010"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/smd-SealedMessage-2010.xsd" node="/xsd:schema">
+    <jaxb:schemaBindings>
+      <jaxb:package name="au.net.electronichealth.ns.smd.types.sealedmessage.V2010"/>
+    </jaxb:schemaBindings>
+  </jaxb:bindings>
+
+  <jaxb:bindings schemaLocation="../xsd/smd-SealedMessage-2010.xsd" node="/xsd:schema/xsd:complexType[@name='SealedMessageType']/xsd:sequence/xsd:element[@ref='ep:encryptedPayload']">
+    <jaxb:dom/>
+  </jaxb:bindings>
+  
+
+</jaxb:bindings> 

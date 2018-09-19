@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  
+
+	****************************************************
+	NOTE: This file has been modified from the original  
+	****************************************************
+	
+	view xsd's and namespaces have been manually added to this schema
+	to trigger the Java build process to creating JAXB Bindings for those files 
+	
+	the entries are: xmlns:xxx, for example
+		xmlns:adv="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/AchievementDiaryView/1.0" 
+	
+	and the associated import, for example:
+		<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/AchievementDiaryView/1.0" schemaLocation="view/PCEHR_AchievementDiaryView.xsd"/> 
+
+	modifications also exist in the view/PCEHR_XXXView.xsd 
+
+-->
+
+
+<!--Version 1.0.0 issued 19 November 2012-->
+<xs:schema 
+targetNamespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/GetView/1.0" 
+elementFormDefault="qualified" 
+attributeFormDefault="unqualified" 
+ 
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns:ns1="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0" 
+xmlns:ns2="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/GetView/1.0" 
+xmlns:di="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/DiagnosticImagingReportView/1.0" 
+xmlns:mco="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/MedicareOverview/1.0" 
+xmlns:obv="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/ObservationView/1.0" 
+xmlns:pnd="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PrescriptionAndDispenseView/1.0" 
+xmlns:hcs="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthCheckScheduleView/1.0"
+xmlns:hro="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0"
+xmlns:prv="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PathologyReportView/1.0"
+>
+
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0" schemaLocation="../Common/PCEHR_CommonTypes.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/DiagnosticImagingReportView/1.0" schemaLocation="view/PCEHR_DiagnosticImagingReportView.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/DiagnosticImagingReportView/1.0" schemaLocation="view/PCEHR_DiagnosticImagingReportView_Response.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/MedicareOverview/1.0" schemaLocation="view/PCEHR_MedicareOverview.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/ObservationView/1.0" schemaLocation="view/PCEHR_ObservationView.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PrescriptionAndDispenseView/1.0" schemaLocation="view/PCEHR_PrescriptionAndDispenseView.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthCheckScheduleView/1.0" schemaLocation="view/PCEHR_HealthCheckScheduleView.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0" schemaLocation="view/PCEHR_HealthRecordOverview_Response.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0" schemaLocation="view/PCEHR_HealthRecordOverview.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PathologyReportView/1.0" schemaLocation="view/PCEHR_PathologyReportView_Response.xsd"/>
+	<xs:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PathologyReportView/1.0" schemaLocation="view/PCEHR_PathologyReportView.xsd"/>
+	
+	
+	
+	<xs:element name="getView"  >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="view" type="xs:anyType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="getViewResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="responseStatus" type="ns1:responseStatusType"/>
+				<xs:element name="view" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="templateID" type="xs:string"/>
+							<xs:element name="data" type="xs:base64Binary"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
+
