@@ -1,0 +1,951 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="NEHTA_Generic_CDA_Stylesheet.xsl"?><ClinicalDocument xmlns="urn:hl7-org:v3"
+                  xmlns:ns2="http://ns.electronichealth.net.au/Ci/Cda/Extensions/3.0">
+   <failtypeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+   <templateId extension="2.1" root="1.2.36.1.2001.1001.101.100.1002.74"/>
+   <templateId extension="1.0" root="1.2.36.1.2001.1001.100.149"/>
+   <id root="2.25.55074898267842091450180204647137375939"/>
+   <code code="64287-6" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+         displayName="Prescription Document"/>
+   <title>Prescripition Document</title>
+   <effectiveTime value="20131030153144+1000"/>
+   <confidentialityCode nullFlavor="NA"/>
+   <languageCode code="en-AU"/>
+   <setId root="479443b1-7ad4-4a51-8f52-0f80a26ae419"/>
+   <versionNumber value="1"/>
+   <recordTarget typeCode="RCT">
+      <patientRole classCode="PAT">
+         <id root="a0cb1772-b925-44ab-946a-400cb8c9b6e1"/>
+         <addr use="H">
+            <postalCode>4101</postalCode>
+            <unitType>U</unitType>
+            <unitID>1</unitID>
+            <additionalLocator>FANCY APARTMENTS</additionalLocator>
+            <additionalLocator>FL</additionalLocator>
+            <additionalLocator>2</additionalLocator>
+            <houseNumber>10</houseNumber>
+            <additionalLocator>10</additionalLocator>
+            <streetName>Browning</streetName>
+            <streetNameType>ST</streetNameType>
+            <direction>N</direction>
+         </addr>
+         <telecom use="H" value="tel:0712345678"/>
+         <telecom use="H" value="mailto:frank.harding@electronichealth.net.au"/>
+         <patient>
+            <name use="M">
+               <prefix>Mr</prefix>
+               <family>Harding</family>
+               <given>Frank</given>
+               <suffix>Jnr</suffix>
+            </name>
+            <administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.13.68"
+                                      codeSystemName="AS 5017-2006 Health Care Client Identifier Sex"
+                                      displayName="Male"/>
+            <birthTime value="19350921"/>
+            <ethnicGroupCode code="9" codeSystem="2.16.840.1.113883.3.879.291036"
+                             codeSystemName="METeOR Indigenous Status"
+                             displayName="Not stated/inadequately described"/>
+            <ns2:multipleBirthInd value="true"/>
+            <ns2:multipleBirthOrderNumber value="2"/>
+            <ns2:asEntityIdentifier classCode="IDENT">
+               <ns2:id assigningAuthorityName="IHI" root="1.2.36.1.2001.1003.0.8003600300001283"/>
+               <ns2:assigningGeographicArea classCode="PLC">
+                  <ns2:name>National Identifier</ns2:name>
+               </ns2:assigningGeographicArea>
+            </ns2:asEntityIdentifier>
+            <ns2:asEntityIdentifier classCode="IDENT">
+               <ns2:id assigningAuthorityName="Medicare Card Number" extension="4324567871"
+                       root="1.2.36.1.5001.1.0.7.1"/>
+               <ns2:code code="MC" codeSystem="2.16.840.1.113883.12.203"
+                         codeSystemName="Identifier Type (HL7)"/>
+            </ns2:asEntityIdentifier>
+         </patient>
+      </patientRole>
+   </recordTarget>
+   <author typeCode="AUT">
+      <time value="20091020123500+1000"/>
+      <assignedAuthor>
+         <id root="732c2442-b711-4b86-98a5-50db6a0aba3d"/>
+         <code code="253111" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006"
+               displayName="General Medical Practitioner"/>
+         <addr use="WP">
+            <streetAddressLine>level 2, 10 browning street</streetAddressLine>
+            <postalCode>4101</postalCode>
+         </addr>
+         <telecom use="H" value="tel:0756781234"/>
+         <telecom use="H" value="mailto:dr_gp@electronichealth.net.au"/>
+         <assignedPerson>
+            <name>
+               <family>Duncan</family>
+            </name>
+            <ns2:asEntityIdentifier classCode="IDENT">
+               <ns2:id assigningAuthorityName="HPI-I" root="1.2.36.1.2001.1003.0.8003610000001145"/>
+               <ns2:assigningGeographicArea classCode="PLC">
+                  <ns2:name>National Identifier</ns2:name>
+               </ns2:assigningGeographicArea>
+            </ns2:asEntityIdentifier>
+            <ns2:asEmployment classCode="EMP">
+               <ns2:jobCode code="253111" codeSystem="2.16.840.1.113883.13.62"
+                            codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006"
+                            displayName="General Medical Practitioner">
+                  <originalText>General Medical Practitioner</originalText>
+               </ns2:jobCode>
+            </ns2:asEmployment>
+            <ns2:asQualifications classCode="QUAL">
+               <ns2:code>
+                  <originalText>MD</originalText>
+               </ns2:code>
+            </ns2:asQualifications>
+         </assignedPerson>
+      </assignedAuthor>
+   </author>
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <id root="479443b1-7ad4-4a51-8f52-0f80a26ae419"/>
+            <id root="976bfbe7-db1c-4619-a270-97decf0d25ef"/>
+            <name>Oz Health Clinic</name>
+            <telecom use="WP" value="tel:0712341234"/>
+            <addr use="PST">
+               <streetAddressLine>99 Clinician Street</streetAddressLine>
+               <state>QLD</state>
+               <postalCode>5555</postalCode>
+               <streetAddressLine>99 Clinician Street</streetAddressLine>
+               <city>Nehtaville</city>
+               <additionalLocator>32568931</additionalLocator>
+            </addr>
+            <ns2:asEntityIdentifier classCode="IDENT">
+               <ns2:id assigningAuthorityName="HPI-O" root="1.2.36.1.2001.1003.0.8003621231167886"/>
+               <ns2:assigningGeographicArea classCode="PLC">
+                  <ns2:name>National Identifier</ns2:name>
+               </ns2:assigningGeographicArea>
+            </ns2:asEntityIdentifier>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <legalAuthenticator>
+      <time value="20131030153144+1000"/>
+      <signatureCode code="S"/>
+      <assignedEntity>
+         <id root="479443b1-7ad4-4a51-8f52-0f80a26ae419"/>
+         <code code="253111" codeSystem="2.16.840.1.113883.13.62"
+               codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006"
+               displayName="General Medical Practitioner"/>
+         <addr use="WP">
+            <streetAddressLine>10 Browning Street</streetAddressLine>
+            <state>QLD</state>
+            <postalCode>4101</postalCode>
+            <streetAddressLine>10 Browning Street</streetAddressLine>
+            <city>Brisbane</city>
+         </addr>
+         <telecom use="WP H" value="mailto:example@sample.com"/>
+         <assignedPerson>
+            <name use="L">
+               <prefix>Mrs</prefix>
+               <family>Black</family>
+               <given>Jane</given>
+               <suffix>Jnr</suffix>
+            </name>
+            <name use="M">
+               <prefix>Miss</prefix>
+               <family>Alias</family>
+               <given>other</given>
+            </name>
+            <ns2:asEntityIdentifier classCode="IDENT">
+               <ns2:id assigningAuthorityName="HPI-I" root="1.2.36.1.2001.1003.0.8003610000001145"/>
+               <ns2:assigningGeographicArea classCode="PLC">
+                  <ns2:name>National Identifier</ns2:name>
+               </ns2:assigningGeographicArea>
+            </ns2:asEntityIdentifier>
+         </assignedPerson>
+         <representedOrganization>
+            <name>Primary Healthcare Clinic Name</name>
+            <ns2:asEntityIdentifier classCode="IDENT">
+               <ns2:id assigningAuthorityName="HPI-O" root="1.2.36.1.2001.1003.0.8003621231167886"/>
+               <ns2:assigningGeographicArea classCode="PLC">
+                  <ns2:name>National Identifier</ns2:name>
+               </ns2:assigningGeographicArea>
+            </ns2:asEntityIdentifier>
+         </representedOrganization>
+      </assignedEntity>
+   </legalAuthenticator>
+   <componentOf>
+      <encompassingEncounter>
+         <effectiveTime nullFlavor="NA"/>
+         <location>
+            <healthCareFacility>
+               <id root="112a06b5-6dd8-4baf-a5a6-6b0829fb5c2e"/>
+               <code code="234518" codeSystem="2.16.840.1.113883.13.62"
+                     codeSystemName="1220.0 - ANZSCO - Australian and New Zealand Standard Classification of Occupations, First Edition, 2006"
+                     displayName="Zoologist"/>
+               <serviceProviderOrganization>
+                  <id root="54135dd7-df35-4467-a31f-ad1528cd2aa6"/>
+                  <name>SOME DEPARTMENT</name>
+                  <asOrganizationPartOf>
+                     <wholeOrganization>
+                        <name use="ORGB">GP Australia</name>
+                        <telecom use="WP" value="mailto:info@some-gp.com.au"/>
+                        <telecom use="WP" value="tel:0212345678"/>
+                        <addr use="WP">
+                           <streetAddressLine>Level 1, 10 Browning streed</streetAddressLine>
+                           <postalCode>4101</postalCode>
+                           <additionalLocator>UNKNOWN</additionalLocator>
+                        </addr>
+                        <ns2:asEntityIdentifier classCode="IDENT">
+                           <ns2:id assigningAuthorityName="HPI-O" root="1.2.36.1.2001.1003.0.8003621231167886"/>
+                           <ns2:assigningGeographicArea classCode="PLC">
+                              <ns2:name>National Identifier</ns2:name>
+                           </ns2:assigningGeographicArea>
+                        </ns2:asEntityIdentifier>
+                     </wholeOrganization>
+                  </asOrganizationPartOf>
+               </serviceProviderOrganization>
+            </healthCareFacility>
+         </location>
+      </encompassingEncounter>
+   </componentOf>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <code code="102.16211" codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"
+                     displayName="Prescription Item"/>
+               <title>Prescription Item</title>
+               <text mediaType="text/x-hl7-text+xml">
+                  <table>
+                     <caption>Prescription Item</caption>
+                     <thead>
+                        <tr>
+                           <th>Field</th>
+                           <th>Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Date and Time Prescription Written</td>
+                           <td>20 Oct 2009 12:35:00+1000</td>
+                        </tr>
+                        <tr>
+                           <td>Date and Time Prescription Expires</td>
+                           <td>30 Oct 2014 15:31:44+1000</td>
+                        </tr>
+                        <tr>
+                           <td>Prescription Item Identifier</td>
+                           <td>AA=SV3Cg3FNwYyD#xE</td>
+                        </tr>
+                        <tr>
+                           <td>Therapeutic Good Identification</td>
+                           <td>paracetamol 500 mg + codeine phosphate 30 mg tablet</td>
+                        </tr>
+                        <tr>
+                           <td>Formula</td>
+                           <td>N-(4-Hydroxyphenyl)acetamide C8H9NO2</td>
+                        </tr>
+                        <tr>
+                           <td>Directions</td>
+                           <td>Take one and call me in the morning</td>
+                        </tr>
+                        <tr>
+                           <td>Brand Substitution Allowed</td>
+                           <td>Yes</td>
+                        </tr>
+                        <tr>
+                           <td>Maximum number of Repeats</td>
+                           <td>31</td>
+                        </tr>
+                        <tr>
+                           <td>Minimum Interval Between Repeats</td>
+                           <td>3 weeks</td>
+                        </tr>
+                        <tr>
+                           <td>PBS Prescription Type</td>
+                           <td>PBS/RPBS Standard Prescription</td>
+                        </tr>
+                        <tr>
+                           <td>Medical Benefit Category Type</td>
+                           <td>PBS</td>
+                        </tr>
+                        <tr>
+                           <td>PBS Close the Gap Benefit</td>
+                           <td>CTG06X</td>
+                        </tr>
+                        <tr>
+                           <td>PBS/RPBS Item Code</td>
+                           <td> - null</td>
+                        </tr>
+                        <tr>
+                           <td>PBS/RPBS Manufacturer Code</td>
+                           <td>The PBSRPBS Manufacturer Code</td>
+                        </tr>
+                        <tr>
+                           <td>Grounds for Concurrent Supply</td>
+                           <td>Supply is in accord with Regulation 24 of the National Health (Pharmaceutical Benefits) Regulations 1960.</td>
+                        </tr>
+                        <tr>
+                           <td>PBS/RPBS Authority Prescription Number</td>
+                           <td>my PBS authority prescription approval Number </td>
+                        </tr>
+                        <tr>
+                           <td>PBS/RPBS Authority Approval Number</td>
+                           <td>Some PBS/RPBS Authority Approval Number</td>
+                        </tr>
+                        <tr>
+                           <td>Streamlined Authority Approval Number</td>
+                           <td>my streamlined authority approval Number </td>
+                        </tr>
+                        <tr>
+                           <td>State Authority Number</td>
+                           <td>my state auth number</td>
+                        </tr>
+                        <tr>
+                           <td>Reason for Therapeutic Good</td>
+                           <td>Long-term treatment of Clinical Document Anxiety disorder</td>
+                        </tr>
+                        <tr>
+                           <td>Additional Comments</td>
+                           <td>Patient must retrun for a checkup at the end of treatment</td>
+                        </tr>
+                        <tr>
+                           <td>Dispense Item Identifier</td>
+                           <td>dispenseIdentifier</td>
+                        </tr>
+                        <tr>
+                           <td>Medication Instruction Identifier</td>
+                           <td>instructionId</td>
+                        </tr>
+                        <tr>
+                           <td>Prescription Note Detail</td>
+                           <td>Call me in the morning</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table>
+                     <caption>Timing</caption>
+                     <thead>
+                        <tr>
+                           <th>Field</th>
+                           <th>Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Timing Description</td>
+                           <td>307448006</td>
+                        </tr>
+                        <tr>
+                           <td>Effective Time</td>
+                           <td>Once every twenty four (24) Hours&lt;br /&gt;for a fortnight&lt;br /&gt;</td>
+                        </tr>
+                        <tr>
+                           <td>PRN</td>
+                           <td>true</td>
+                        </tr>
+                        <tr>
+                           <td>Start Criterion</td>
+                           <td>Yes</td>
+                        </tr>
+                        <tr>
+                           <td>Start Date</td>
+                           <td>30 Oct 2013 15:31:44+1000</td>
+                        </tr>
+                        <tr>
+                           <td>Stop Criterion</td>
+                           <td>Yes</td>
+                        </tr>
+                        <tr>
+                           <td>Stop Date</td>
+                           <td>13 Nov 2013 15:31:44+1000</td>
+                        </tr>
+                        <tr>
+                           <td>Maximum Dose</td>
+                           <td>4 Tablet(s) / 24 h</td>
+                        </tr>
+                        <tr>
+                           <td>Long term</td>
+                           <td>true</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table>
+                     <caption>Structured Dose</caption>
+                     <thead>
+                        <tr>
+                           <th>Field</th>
+                           <th>Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Quantity</td>
+                           <td>30</td>
+                        </tr>
+                        <tr>
+                           <td>Dispensing Unit</td>
+                           <td>Film-coated tablet</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table>
+                     <caption>PBS Extemporaneous Ingredient</caption>
+                     <thead>
+                        <tr>
+                           <th>Ingredient</th>
+                           <th>Ingredient Quantity</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Glucose</td>
+                           <td>10 mg</td>
+                        </tr>
+                        <tr>
+                           <td>Sodium Chloride</td>
+                           <td>5 mg</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table>
+                     <caption>Administration Details</caption>
+                     <thead>
+                        <tr>
+                           <th>Field</th>
+                           <th>Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Route</td>
+                           <td>SampleRouteCode</td>
+                        </tr>
+                        <tr>
+                           <td>Anatomical Site</td>
+                           <td>SampleAnatomicalSite</td>
+                        </tr>
+                        <tr>
+                           <td>Medication Delivery Method</td>
+                           <td>MedicationDeliveryMethod</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <table>
+                     <caption>Entitlement Details</caption>
+                     <thead>
+                        <tr>
+                           <th>Field</th>
+                           <th>Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Medicare Benefits</td>
+                           <td>4324567871</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <author>
+                  <time value="20091020123500+1000"/>
+                  <assignedAuthor>
+                     <id root="732c2442-b711-4b86-98a5-50db6a0aba3d"/>
+                  </assignedAuthor>
+               </author>
+               <entry typeCode="DRIV">
+                  <substanceAdministration classCode="SBADM" moodCode="RQO">
+                     <id extension="AA=SV3Cg3FNwYyD#xE" root="96a484dd-15a6-44c7-876d-6046f060c8f3"/>
+                     <text>Take one and call me in the morning</text>
+                     <statusCode code="active"/>
+                     <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PIVL_TS">
+                        <frequency>
+                           <numerator unit="d" value="1" xsi:type="PQ"/>
+                           <denominator value="1" xsi:type="PQ"/>
+                        </frequency>
+                     </effectiveTime>
+                     <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="IVL_TS">
+                        <low value="20131030"/>
+                        <high value="20131113"/>
+                     </effectiveTime>
+                     <repeatNumber>
+                        <high value="31"/>
+                     </repeatNumber>
+                     <ns2:methodCode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="70655008"
+                                     codeSystem="2.16.840.1.113883.6.96"
+                                     codeSystemName="SNOMED CT-AU"
+                                     displayName="MedicationDeliveryMethod"
+                                     xsi:type="CE"/>
+                     <routeCode code="26643006" codeSystem="2.16.840.1.113883.6.96"
+                                codeSystemName="SNOMED CT-AU"
+                                displayName="SampleRouteCode"/>
+                     <approachSiteCode xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="110731006"
+                                       codeSystem="2.16.840.1.113883.6.96"
+                                       codeSystemName="SNOMED CT-AU"
+                                       displayName="SampleAnatomicalSite"
+                                       xsi:type="CE"/>
+                     <doseQuantity value="30"/>
+                     <maxDoseQuantity>
+                        <numerator unit="Tablet(s)" value="4"/>
+                        <denominator unit="h" value="24"/>
+                     </maxDoseQuantity>
+                     <consumable>
+                        <manufacturedProduct>
+                           <manufacturedMaterial>
+                              <code code="23641011000036102" codeSystem="1.2.36.1.2001.1004.100"
+                                    codeSystemName="Australian Medicines Terminology (AMT)"
+                                    displayName="paracetamol 500 mg + codeine phosphate 30 mg tablet">
+                                 <originalText>some original text</originalText>
+                                 <translation code="1.1.1.1.1.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                              codeSystemName="NCTIS Data Components"
+                                              displayName="PBSRPBSItemCode"/>
+                              </code>
+                              <ns2:asIngredient classCode="INGR">
+                                 <ns2:ingredientManufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                    <ns2:code code="1.1.1.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                              codeSystemName="NCTIS Data Components"
+                                              displayName="PBS Extemporaneous Ingredient Name">
+                                       <originalText>Glucose</originalText>
+                                    </ns2:code>
+                                    <ns2:quantity>
+                                       <numerator unit="mg" value="10"/>
+                                       <denominator value="1"/>
+                                    </ns2:quantity>
+                                 </ns2:ingredientManufacturedMaterial>
+                              </ns2:asIngredient>
+                              <ns2:asIngredient classCode="INGR">
+                                 <ns2:ingredientManufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                    <ns2:code code="1.1.1.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                              codeSystemName="NCTIS Data Components"
+                                              displayName="PBS Extemporaneous Ingredient Name">
+                                       <originalText>Sodium Chloride</originalText>
+                                    </ns2:code>
+                                    <ns2:quantity>
+                                       <numerator unit="mg" value="5"/>
+                                       <denominator value="1"/>
+                                    </ns2:quantity>
+                                 </ns2:ingredientManufacturedMaterial>
+                              </ns2:asIngredient>
+                              <ns2:asIngredient classCode="INGR">
+                                 <ns2:ingredientManufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                    <ns2:code code="1.1.1.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                              codeSystemName="NCTIS Data Components"
+                                              displayName="PBS Extemporaneous Ingredient Name">
+                                       <originalText>Glucose</originalText>
+                                    </ns2:code>
+                                    <ns2:quantity>
+                                       <numerator unit="mg" value="10"/>
+                                       <denominator value="1"/>
+                                    </ns2:quantity>
+                                 </ns2:ingredientManufacturedMaterial>
+                              </ns2:asIngredient>
+                              <ns2:asIngredient classCode="INGR">
+                                 <ns2:ingredientManufacturedMaterial classCode="MMAT" determinerCode="KIND">
+                                    <ns2:code code="1.1.1.1.1" codeSystem="1.2.36.1.2001.1001.101"
+                                              codeSystemName="NCTIS Data Components"
+                                              displayName="PBS Extemporaneous Ingredient Name">
+                                       <originalText>Sodium Chloride</originalText>
+                                    </ns2:code>
+                                    <ns2:quantity>
+                                       <numerator unit="mg" value="5"/>
+                                       <denominator value="1"/>
+                                    </ns2:quantity>
+                                 </ns2:ingredientManufacturedMaterial>
+                              </ns2:asIngredient>
+                              <ns2:formCode code="385057009" codeSystem="2.16.840.1.113883.6.96"
+                                            codeSystemName="SNOMED CT-AU"
+                                            displayName="Film-coated tablet"/>
+                           </manufacturedMaterial>
+                           <ns2:subjectOf1>
+                              <ns2:policy classCode="JURISPOL" moodCode="PERM">
+                                 <ns2:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16085"
+                                           codeSystemName="NCTIS Concurrent Supply Grounds Values"
+                                           displayName="Pursuant to Regulation 24">
+                                    <originalText>Pursuant to Regulation 24</originalText>
+                                 </ns2:code>
+                              </ns2:policy>
+                           </ns2:subjectOf1>
+                           <ns2:subjectOf1>
+                              <ns2:policy classCode="JURISPOL" moodCode="PERM">
+                                 <ns2:id extension="my state auth number" root="1964e7fa-a951-41e8-acc3-42910543efc8"/>
+                                 <ns2:code code="103.16018" codeSystem="1.2.36.1.2001.1001.101"
+                                           codeSystemName="NCTIS Data Components"
+                                           displayName="State Authority Number"/>
+                              </ns2:policy>
+                           </ns2:subjectOf1>
+                           <ns2:subjectOf1>
+                              <ns2:policy classCode="JURISPOL" moodCode="PERM">
+                                 <ns2:id extension="my PBS authority prescription approval Number "
+                                         root="1.2.36.1.5001.1.1.3.2.2"/>
+                                 <ns2:code code="103.16719" codeSystem="1.2.36.1.2001.1001.101"
+                                           codeSystemName="NCTIS Data Components"
+                                           displayName="PBS/RPBS Authority Prescription Number"/>
+                              </ns2:policy>
+                           </ns2:subjectOf1>
+                           <ns2:subjectOf1>
+                              <ns2:policy classCode="JURISPOL" moodCode="PERM">
+                                 <ns2:id extension="my streamlined authority approval Number "
+                                         root="1.2.36.1.2001.1005.24"/>
+                                 <ns2:code code="103.16718" codeSystem="1.2.36.1.2001.1001.101"
+                                           codeSystemName="NCTIS Data Components"
+                                           displayName="Streamlined Authority Approval Number"/>
+                              </ns2:policy>
+                           </ns2:subjectOf1>
+                        </manufacturedProduct>
+                     </consumable>
+                     <entryRelationship typeCode="RSON">
+                        <act classCode="INFRM" moodCode="RQO">
+                           <id root="62c6179c-3d24-4c91-88c4-9491cd289339"/>
+                           <code code="103.10141" codeSystem="1.2.36.1.2001.1001.101"
+                                 codeSystemName="NCTIS Data Components"
+                                 displayName="Reason for Therapeutic Good"/>
+                           <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ST">Long-term treatment of Clinical Document Anxiety disorder</text>
+                        </act>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <act classCode="INFRM" moodCode="EVN">
+                           <id root="d0c88ac6-ead7-4ff8-b19a-acf49d9b63f0"/>
+                           <code code="103.16044" codeSystem="1.2.36.1.2001.1001.101"
+                                 codeSystemName="NCTIS Data Components"
+                                 displayName="Additional Comments"/>
+                           <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ST">Patient must retrun for a checkup at the end of treatment</text>
+                        </act>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <act classCode="ACT" moodCode="EVN">
+                           <code code="246512002" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT"
+                                 displayName="Timing"/>
+                           <text>307448006</text>
+                        </act>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <code code="103.16440" codeSystem="1.2.36.1.2001.1001.101"
+                                 codeSystemName="NCTIS Data Components"
+                                 displayName="Long-Term"/>
+                           <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" value="true" xsi:type="BL"/>
+                        </observation>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <act classCode="INFRM" moodCode="RQO">
+                           <id root="36f575be-44a6-403c-b651-6e7650b861f2"/>
+                           <code code="103.16272" codeSystem="1.2.36.1.2001.1001.101"
+                                 codeSystemName="NCTIS Data Components"
+                                 displayName="Formula"/>
+                           <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ST">N-(4-Hydroxyphenyl)acetamide C8H9NO2</text>
+                        </act>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <ns2:controlAct classCode="CACT" moodCode="EVN">
+                           <ns2:code code="103.16434" codeSystem="1.2.36.1.2001.1001.101"
+                                     codeSystemName="NCTIS Data Components"
+                                     displayName="Stop Criterion"/>
+                           <ns2:effectiveTime value="20131030153144+1000"/>
+                        </ns2:controlAct>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <ns2:controlAct classCode="CACT" moodCode="EVN">
+                           <ns2:code code="103.16436" codeSystem="1.2.36.1.2001.1001.101"
+                                     codeSystemName="NCTIS Data Components"
+                                     displayName="Start Criterion"/>
+                           <ns2:effectiveTime value="20131030153144+1000"/>
+                        </ns2:controlAct>
+                     </entryRelationship>
+                     <entryRelationship typeCode="COMP">
+                        <supply classCode="SPLY" moodCode="RQO">
+                           <id extension="dispenseIdentifier" root="d9fe3e1b-9b5f-4cc8-a228-6ce41eabd3bc"/>
+                           <effectiveTime xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PIVL_TS">
+                              <period unit="wk" value="3"/>
+                           </effectiveTime>
+                           <quantity value="3"/>
+                           <product>
+                              <manufacturedProduct>
+                                 <manufacturedMaterial>
+                                    <ns2:formCode code="32570641000036102" codeSystem="2.16.840.1.113883.6.96"
+                                                  codeSystemName="SNOMED CT-AU"
+                                                  displayName="foo bar disepnsing unit">
+                                       <originalText>more elaborate text here if needed</originalText>
+                                    </ns2:formCode>
+                                 </manufacturedMaterial>
+                                 <manufacturerOrganization>
+                                    <id extension="The PBSRPBS Manufacturer Code" root="1.1.1.1.1.1.1.1"/>
+                                 </manufacturerOrganization>
+                              </manufacturedProduct>
+                           </product>
+                           <ns2:subjectOf2>
+                              <ns2:substitutionPermission classCode="SUBST" moodCode="PERM">
+                                 <ns2:code code="N" codeSystem="2.16.840.1.113883.5.1070"
+                                           codeSystemName="HL7:SubstanceAdminSubstitution"
+                                           displayName="Therapeutic"/>
+                              </ns2:substitutionPermission>
+                           </ns2:subjectOf2>
+                           <ns2:coverage typeCode="COVBY">
+                              <ns2:policyOrAccount classCode="COV" moodCode="PERM">
+                                 <ns2:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16095"
+                                           codeSystemName="NCTIS Medical Benefit Category Type Values"
+                                           displayName="PBS"/>
+                              </ns2:policyOrAccount>
+                           </ns2:coverage>
+                           <ns2:coverage typeCode="COVBY">
+                              <ns2:policyOrAccount classCode="COV" moodCode="PERM">
+                                 <ns2:code code="1" codeSystem="1.2.3.4" codeSystemName="xxxxx"
+                                           displayName="PBS/RPBS Standard Prescription"/>
+                              </ns2:policyOrAccount>
+                           </ns2:coverage>
+                           <ns2:coverage typeCode="COVBY">
+                              <ns2:policyOrAccount classCode="COV" moodCode="PERM">
+                                 <ns2:id extension="CTG06X" root="4b0413a8-9bfc-4b44-ad33-65137fa89b62"/>
+                                 <ns2:code code="103.16095.3" codeSystem="1.2.36.1.2001.1001.101"
+                                           codeSystemName="NCTIS Data Components"
+                                           displayName="PBS Close the Gap Benefit"/>
+                              </ns2:policyOrAccount>
+                           </ns2:coverage>
+                           <ns2:coverage typeCode="COVBY">
+                              <ns2:policyOrAccount classCode="COV" moodCode="PERM">
+                                 <ns2:id extension="Some PBS/RPBS Authority Approval Number"
+                                         root="1.2.36.1.5001.1.1.3.2.3"/>
+                                 <ns2:code code="103.10159" codeSystem="1.2.36.1.2001.1001.101"
+                                           codeSystemName="NCTIS Data Components"
+                                           displayName="PBS/RPBS Authority Approval Number"/>
+                              </ns2:policyOrAccount>
+                           </ns2:coverage>
+                        </supply>
+                     </entryRelationship>
+                     <reference typeCode="SPRT">
+                        <seperatableInd value="true"/>
+                        <externalAct moodCode="EVN">
+                           <id extension="instructionId" root="52f8a6e0-d5f0-4e8a-8d1a-2b0c010e60ef"/>
+                           <code code="103.16444" codeSystem="1.2.36.1.2001.1001.101"
+                                 codeSystemName="NCTIS Data Components"
+                                 displayName="Medication Instruction Identifier"/>
+                        </externalAct>
+                     </reference>
+                     <precondition>
+                        <criterion>
+                           <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" value="true" xsi:type="BL"/>
+                        </criterion>
+                     </precondition>
+                  </substanceAdministration>
+               </entry>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="7d071fdd-a58b-47e0-9882-2fd5fe52eafb"/>
+                     <code code="103.10104" codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"
+                           displayName="DateTime Prescription Expires"/>
+                     <effectiveTime value="20141030"/>
+                  </observation>
+               </entry>
+               <entry typeCode="DRIV">
+                  <act classCode="INFRM" moodCode="EVN">
+                     <id root="1f38243b-3c84-4de3-8310-1548fa07b359"/>
+                     <code code="102.16212" codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"
+                           displayName="Prescription Note Detail"/>
+                     <text xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ST">Call me in the morning</text>
+                  </act>
+               </entry>
+               <ns2:coverage2 typeCode="COVBY">
+                  <ns2:entitlement classCode="COV" moodCode="EVN">
+                     <ns2:id assigningAuthorityName="Medicare Card Number" extension="4324567871"
+                             root="1.2.36.1.5001.1.0.7.1"/>
+                     <ns2:code code="1" codeSystem="1.2.36.1.2001.1001.101.104.16047"
+                               codeSystemName="NCTIS Entitlement Type Values"
+                               displayName="Medicare Benefits">
+                        <originalText>Medicare Benefits</originalText>
+                     </ns2:code>
+                     <ns2:effectiveTime>
+                        <low value="20131030"/>
+                        <width unit="wk" value="2"/>
+                     </ns2:effectiveTime>
+                     <ns2:participant typeCode="BEN">
+                        <ns2:participantRole classCode="PAT">
+                           <ns2:id root="a0cb1772-b925-44ab-946a-400cb8c9b6e1"/>
+                        </ns2:participantRole>
+                     </ns2:participant>
+                  </ns2:entitlement>
+               </ns2:coverage2>
+               <ns2:coverage2 typeCode="COVBY">
+                  <ns2:entitlement classCode="COV" moodCode="EVN">
+                     <ns2:id extension="12345678" root="1.22.333.4444.55555"/>
+                     <ns2:code code="10" codeSystem="1.2.36.1.2001.1001.101.104.16047"
+                               codeSystemName="NCTIS Entitlement Type Values"
+                               displayName="Medicare Prescriber Number"/>
+                     <ns2:effectiveTime>
+                        <low value="20131030"/>
+                     </ns2:effectiveTime>
+                     <ns2:participant typeCode="HLD">
+                        <ns2:participantRole classCode="ASSIGNED">
+                           <ns2:id root="732c2442-b711-4b86-98a5-50db6a0aba3d"/>
+                        </ns2:participantRole>
+                     </ns2:participant>
+                  </ns2:entitlement>
+               </ns2:coverage2>
+            </section>
+         </component>
+         <component>
+            <section>
+               <code code="102.16080" codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"
+                     displayName="Administrative Observations"/>
+               <title>Administrative Observations</title>
+               <text>
+                  <table>
+                     <caption>Demographic Data</caption>
+                     <thead>
+                        <tr>
+                           <th>Name</th>
+                           <th>Value</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Date Of Birth is Calculated from Age</td>
+                           <td>Yes</td>
+                        </tr>
+                        <tr>
+                           <td>Date of Birth Accuracy Indicator</td>
+                           <td>AAA</td>
+                        </tr>
+                        <tr>
+                           <td>Birth Plurality</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td>Age Accuracy Indicator</td>
+                           <td>Yes</td>
+                        </tr>
+                        <tr>
+                           <td>Age</td>
+                           <td>35</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="be091e47-1fdc-4b86-8a14-eb99a87c7c87"/>
+                     <code xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="103.16233"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"
+                           displayName="Date of Birth is Calculated From Age"
+                           xsi:type="CE"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" value="true" xsi:type="BL"/>
+                  </observation>
+               </entry>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="fc8cba66-d9b8-4e9a-96e1-e9692ca4f109"/>
+                     <code xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="102.16234"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"
+                           displayName="Date of Birth Accuracy Indicator"
+                           xsi:type="CE"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="AAA" xsi:type="CS"/>
+                  </observation>
+               </entry>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="3c1484e4-8af8-4add-b954-774a8a12aa2b"/>
+                     <code xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="103.20109"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"
+                           displayName="Age"
+                           xsi:type="CE"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" unit="a" value="35"
+                            xsi:type="PQ"/>
+                  </observation>
+               </entry>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="b2edc819-4eb0-460c-b854-76db828febd6"/>
+                     <code xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="103.16279"
+                           
+                           codeSystemName="NCTIS Data Components"
+                           displayName="Age Accuracy Indicator"
+                           xsi:type="CE"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" value="true" xsi:type="BL"/>
+                  </observation>
+               </entry>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="9aef777f-3b28-45fe-93bb-d71b315a82fe"/>
+                     <code xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" code="103.16249"
+                           codeSystem="1.2.36.1.2001.1001.101"
+                           codeSystemName="NCTIS Data Components"
+                           displayName="Birth Plurality"
+                           xsi:type="CE"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" value="5" xsi:type="INT"/>
+                  </observation>
+               </entry>
+            </section>
+         </component>
+         <component>
+            <section>
+               <code code="101.16280" codeSystem="1.2.36.1.2001.1001.101"
+                     codeSystemName="NCTIS Data Components"
+                     displayName="Observations"/>
+               <title>Observations</title>
+               <text>
+                  <table>
+                     <caption>Observations </caption>
+                     <thead>
+                        <tr>
+                           <th>Name</th>
+                           <th>Value</th>
+                           <th>Date</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>Body Weight</td>
+                           <td>75 Kg</td>
+                           <td>30 Oct 2013 15:31:44+1000</td>
+                        </tr>
+                        <tr>
+                           <td>Body Height</td>
+                           <td>180 cm</td>
+                           <td>30 Oct 2013 15:31:44+1000</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="67ddaafd-41e4-4978-8b25-36058bd2caa5"/>
+                     <code code="27113001" codeSystem="2.16.840.1.113883.6.96"
+                           codeSystemName="SNOMED CT-AU"
+                           codeSystemVersion="20101130"
+                           displayName="Body Weight"/>
+                     <effectiveTime value="20131030"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" unit="Kg" value="75"
+                            xsi:type="PQ"/>
+                  </observation>
+               </entry>
+               <entry typeCode="DRIV">
+                  <observation classCode="OBS" moodCode="EVN">
+                     <id root="26d1ee4f-dcef-4493-bae7-14365e20810e"/>
+                     <code code="50373000" codeSystem="2.16.840.1.113883.6.96"
+                           codeSystemName="SNOMED CT-AU"
+                           codeSystemVersion="20101130"
+                           displayName="Body Height"/>
+                     <effectiveTime value="20131030"/>
+                     <value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" unit="cm" value="180"
+                            xsi:type="PQ"/>
+                  </observation>
+               </entry>
+            </section>
+         </component>
+         <component>
+            <section>
+               <entry>
+                  <observationMedia ID="LOGO" classCode="OBS" moodCode="EVN">
+                     <value integrityCheck="9YrohydDw1atoMapcwcQdUBWcek=" integrityCheckAlgorithm="SHA-1"
+                            mediaType="image/png">
+                        <reference value="logo.png"/>
+                     </value>
+                  </observationMedia>
+               </entry>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>
