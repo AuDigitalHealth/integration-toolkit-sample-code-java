@@ -1,3 +1,0 @@
-Modifications of HL7 CDA xsd's
-
-- removed imports in EXTENSION.xsd
